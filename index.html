@@ -192,6 +192,22 @@
       transition: background-color 250ms ease, color 250ms ease;
       overflow-x: hidden;
     }
+    html, body {
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100vw;
+    }
+    .num-nowrap {
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      display: inline-block;
+    }
+    @media (max-width: 639px) {
+      .num-nowrap {
+        white-space: normal !important;
+        display: inline !important;
+      }
+    }
     /* GPU Ambient Aurora Orbs */
     @keyframes floatAurora1 {
       0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
@@ -267,14 +283,16 @@
       <!-- Brand Logo: Official Newman Center 35-Year Anniversary Logo from newman.co.il -->
       <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="Newman Center Home">
         <div class="h-10 sm:h-12 px-2.5 py-1 rounded-2xl bg-white flex items-center justify-center shadow-lg border border-violet-400/30 group-hover:scale-105 transition-transform">
-          <img src="assets/newman_donor_logo.png" alt="Newman Center מרכז ניומן" class="h-7 sm:h-9 w-auto max-w-[140px] sm:max-w-[180px] object-contain" />
+          <img src="assets/newman_donor_logo.png" alt="Newman Center מרכז ניומן" class="h-7 sm:h-9 w-auto max-w-[130px] sm:max-w-[180px] object-contain" />
         </div>
-        <div class="hidden sm:block">
-          <div class="flex items-center gap-2 flex-wrap">
-            <span class="font-display font-extrabold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">Newman Center</span>
-            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-gradient-to-r from-violet-600 to-sky-500 text-white shadow-sm">מרכז ניומן • Est. 1991</span>
+        <div class="flex flex-col justify-center">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="font-display font-extrabold text-sm sm:text-lg tracking-tight text-slate-900 dark:text-white">Newman Center</span>
+            <span class="hidden sm:inline-flex text-[11px] font-bold px-2 py-0.5 rounded-full bg-gradient-to-r from-violet-600 to-sky-500 text-white shadow-sm">Est. 1991</span>
           </div>
-          <p class="text-[11px] text-slate-600 dark:text-sky-100/80" data-i18n="brand_sub">Тель-Авив, Дерех ха-Агана 34 • 1-800-22-06-07 • +972-3-560-30-46</p>
+          <a href="tel:1800220607" class="text-xs sm:text-sm font-black text-sky-400 hover:text-sky-300 transition-colors flex items-center gap-1" data-i18n="brand_sub">
+            <span>📞</span> <span>1-800-22-06-07</span>
+          </a>
         </div>
       </a>
 
@@ -320,9 +338,6 @@
           <a href="tel:1800220607" class="font-display font-extrabold text-xs sm:text-sm text-sky-400 hover:text-sky-300">1-800-22-06-07</a>
           <a href="tel:+97235603046" class="text-[11px] font-bold text-slate-600 dark:text-sky-200 hover:underline">+972-3-560-30-46</a>
         </div>
-        <a href="tel:1800220607" class="sm:hidden px-3 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-sky-500 text-white font-extrabold text-xs shadow-md">
-          📞 1-800
-        </a>
       </div>
     </div>
 
@@ -450,7 +465,7 @@
 
           <!-- Subheadline with exact official rules and solid salary figures -->
           <p class="text-sm sm:text-base text-slate-700 dark:text-sky-100/90 leading-relaxed" data-i18n="hero_sub">
-            Новые репатрианты (до 10 лет, выпускники Ульпана Алеф) и Тошавим Хозрим (до 2 лет) получают государственный ваучер (<strong class="text-violet-600 dark:text-sky-300">שובר להכשרה מקצועית</strong>) с покрытием <strong class="text-violet-600 dark:text-white">до 80% стоимости курса (максимум до 7000₪ / 1900$)</strong> при официальном обязательстве по трудоустройству! Для солдат ЦАХАЛ — <strong class="text-violet-600 dark:text-sky-300">до 100% из армейского Пикадона</strong>. Практика 85%, трудоустройство 92%, выход на доход <strong class="text-violet-600 dark:text-white">15000–28000₪ (4000–7500$)</strong>!
+            Новые репатрианты (до 10 лет, выпускники Ульпана Алеф) и Тошавим Хозрим (до 2 лет) получают государственный ваучер (<strong class="text-violet-600 dark:text-sky-300">שובר להכשרה מקצועית</strong>) с покрытием <strong class="text-violet-600 dark:text-white">до 80% стоимости курса (до 7 000 ₪)</strong> при официальном обязательстве по трудоустройству! Для солдат ЦАХАЛ — <strong class="text-violet-600 dark:text-sky-300">до 100% из армейского Пикадона</strong>. Практика 85%, трудоустройство 92%, выход на доход <strong class="text-violet-600 dark:text-white">15 000 – 28 000 ₪</strong>!
           </p>
 
           <!-- 1.5s Interactive Hook: Instant Express Voucher Eligibility Check -->
@@ -465,11 +480,11 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
               <button type="button" onclick="quickSelectStatus('oleh_voucher_80')" class="p-3 rounded-xl border border-violet-400/35 hover:border-sky-400 bg-violet-950/60 hover:bg-violet-900/70 text-left transition-all group">
                 <div class="text-xs font-extrabold text-white group-hover:text-sky-300" data-i18n="hook_btn1_title">Оле Хадаш (до 10 лет)</div>
-                <div class="text-[11px] text-sky-200 font-bold mt-0.5" data-i18n="hook_btn1_sub">Ваучер до 80% (до 7000₪ / 1900$)</div>
+                <div class="text-[11px] text-sky-200 font-bold mt-0.5" data-i18n="hook_btn1_sub">Ваучер до 80% (до 7 000 ₪)</div>
               </button>
               <button type="button" onclick="quickSelectStatus('toshav_voucher_80')" class="p-3 rounded-xl border border-violet-400/35 hover:border-sky-400 bg-violet-950/60 hover:bg-violet-900/70 text-left transition-all group">
                 <div class="text-xs font-extrabold text-white group-hover:text-sky-300" data-i18n="hook_btn2_title">Тошав Хозер (до 2 лет)</div>
-                <div class="text-[11px] text-violet-200 font-bold mt-0.5" data-i18n="hook_btn2_sub">Ваучер до 80% (до 7000₪ / 1900$)</div>
+                <div class="text-[11px] text-violet-200 font-bold mt-0.5" data-i18n="hook_btn2_sub">Ваучер до 80% (до 7 000 ₪)</div>
               </button>
               <button type="button" onclick="quickSelectStatus('idf_pikadon_100')" class="p-3 rounded-xl border border-sky-400/35 hover:border-fuchsia-400 bg-sky-950/60 hover:bg-sky-900/70 text-left transition-all group">
                 <div class="text-xs font-extrabold text-white group-hover:text-fuchsia-300" data-i18n="hook_btn3_title">Солдат ЦАХАЛ (Пикадон)</div>
@@ -698,7 +713,7 @@
     <div class="marquee-track flex items-center gap-8">
       <div class="flex items-center gap-8 shrink-0">
         <span class="flex items-center gap-2"><span class="text-sky-400">✦</span> <span data-i18n="mq_1">Newman Center (Est. 1991) — 35 лет лидерства в Израиле • Трудоустройство 92%!</span></span>
-        <span class="flex items-center gap-2"><span class="text-violet-400">✦</span> <span data-i18n="mq_2">Гос. ваучер Миналии (שובר להכשרה מקצועית): покрытие до 80% курса (до 7000₪ / 1900$)!</span></span>
+        <span class="flex items-center gap-2"><span class="text-violet-400">✦</span> <span data-i18n="mq_2">Гос. ваучер Миналии (שובר להכשרה מקצועית): покрытие до 80% курса (до 7 000 ₪)!</span></span>
         <span class="flex items-center gap-2"><span class="text-fuchsia-400">✦</span> <span data-i18n="mq_3">Демобилизованным солдатам ЦАХАЛ — до 100% оплаты из средств Пикадона (до 15500₪)!</span></span>
         <span class="flex items-center gap-2"><span class="text-sky-400">✦</span> <span data-i18n="mq_4">НОВИНКА: AI-Инженерия, Интернет-Маркетинг и Трафик GEO / AEO / SEO (доход 15000–28000₪)!</span></span>
         <span class="flex items-center gap-2"><span class="text-violet-400">✦</span> <span data-i18n="mq_5">Практика 85% времени + письменное обязательство по трудоустройству (התחייבות להשמה בעבודה)!</span></span>
@@ -707,7 +722,7 @@
       <!-- Duplicate for seamless loop -->
       <div class="flex items-center gap-8 shrink-0" aria-hidden="true">
         <span class="flex items-center gap-2"><span class="text-sky-400">✦</span> <span data-i18n="mq_1">Newman Center (Est. 1991) — 35 лет лидерства в Израиле • Трудоустройство 92%!</span></span>
-        <span class="flex items-center gap-2"><span class="text-violet-400">✦</span> <span data-i18n="mq_2">Гос. ваучер Миналии (שובר להכשרה מקצועית): покрытие до 80% курса (до 7000₪ / 1900$)!</span></span>
+        <span class="flex items-center gap-2"><span class="text-violet-400">✦</span> <span data-i18n="mq_2">Гос. ваучер Миналии (שובר להכשרה מקצועית): покрытие до 80% курса (до 7 000 ₪)!</span></span>
         <span class="flex items-center gap-2"><span class="text-fuchsia-400">✦</span> <span data-i18n="mq_3">Демобилизованным солдатам ЦАХАЛ — до 100% оплаты из средств Пикадона (до 15500₪)!</span></span>
         <span class="flex items-center gap-2"><span class="text-sky-400">✦</span> <span data-i18n="mq_4">НОВИНКА: AI-Инженерия, Интернет-Маркетинг и Трафик GEO / AEO / SEO (доход 15000–28000₪)!</span></span>
         <span class="flex items-center gap-2"><span class="text-violet-400">✦</span> <span data-i18n="mq_5">Практика 85% времени + письменное обязательство по трудоустройству (התחייבות להשמה בעבודה)!</span></span>
@@ -785,7 +800,7 @@
               </p>
             </div>
             <div class="pt-3 border-t border-white/10 text-xs font-bold text-fuchsia-300" data-i18n="hook3_foot">
-              ✦ Стартовые зарплаты выпускников: 15000–28000₪ (4000–7500$)!
+              ✦ Стартовые зарплаты выпускников: 15 000 – 28 000 ₪!
             </div>
           </div>
         </div>
@@ -796,7 +811,7 @@
         <div class="text-center max-w-3xl mx-auto space-y-2">
           <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gradient-to-r from-sky-500/20 to-violet-500/20 border border-sky-400/40 text-violet-700 dark:text-sky-200 text-xs font-extrabold">
             <span>🚀</span>
-            <span data-i18n="build_badge">От идеи до запуска • Практика 85% • Зарплата 15000–28000₪ (4000–7500$)</span>
+            <span data-i18n="build_badge">От идеи до запуска • Практика 85% • Зарплата 15 000 – 28 000 ₪</span>
           </div>
           <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 dark:text-white" data-i18n="build_title">
             Создавайте технологии будущего своими руками — от идеи до запуска!
@@ -1018,7 +1033,7 @@
             <div>
               <span class="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white font-extrabold text-[11px] uppercase" data-i18n="flagship_tag">Практика 85% • Рост дохода +15%</span>
               <h3 class="font-display font-extrabold text-lg sm:text-xl mt-1 text-white" data-i18n="lab_card_title">Факультет Hi-Tech, AI & GEO/AEO Трафика</h3>
-              <p class="text-xs text-sky-100" data-i18n="lab_card_sub">Зарплата выпускника: 15000–28000₪ (4000–7500$) • Трудоустройство 92%</p>
+              <p class="text-xs text-sky-100" data-i18n="lab_card_sub">Зарплата выпускника: 15 000 – 28 000 ₪ • Трудоустройство 92%</p>
             </div>
             <a href="offer.html" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-violet-600 hover:from-sky-400 hover:to-violet-500 text-white text-xs font-extrabold shrink-0 shadow-lg transition-all" data-i18n="lab_card_btn">Калькулятор →</a>
           </div>
@@ -1471,7 +1486,7 @@
       <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-sky-500 flex items-center justify-center text-base shrink-0 text-white font-bold">✦</div>
       <div class="text-xs">
         <div id="toastTitle" class="font-extrabold text-white">Давид (Хайфа) получил ваучер 80%</div>
-        <div id="toastSub" class="text-[11px] text-sky-300 font-semibold">AI & GEO/AEO Маркетинг • Субсидия 7000₪ (1900$)</div>
+        <div id="toastSub" class="text-[11px] text-sky-300 font-semibold">AI & GEO/AEO Маркетинг • Субсидия 7 000 ₪</div>
       </div>
     </div>
   </div>
@@ -1510,7 +1525,7 @@
     // ==========================================
     const i18nDict = {
       ru: {
-        brand_sub: 'Тель-Авив, Дерех ха-Агана 34 • Финансирование до 80%–100% • 1-800-22-06-07 / +972-3-560-30-46',
+        brand_sub: '1-800-22-06-07',
                 nav_hub: 'Главная',
         nav_courses: 'Все 40 курсов',
         nav_offer: 'Субсидия/скидка до 80%',
@@ -1555,13 +1570,13 @@
         hero_badge: 'Гос. признание с 1991 г. • Ваучер до 80% (до 7000₪) • Пикадон ЦАХАЛ до 100%',
         hero_h1_part1: 'Ворвитесь в израильский Hi-Tech, AI и бизнес с финансированием',
         hero_h1_highlight: ' до 80%–100% от государства!',
-        hero_sub: 'Новые репатрианты (до 10 лет, выпускники Ульпана Алеф) и Тошавим Хозрим (до 2 лет) получают государственный ваучер (שובר להכשרה מקצועית) с покрытием до 80% стоимости курса (максимум до 7000₪ / 1900$) при официальном обязательстве по трудоустройству! Для солдат ЦАХАЛ — до 100% из армейского Пикадона. Практика 85%, трудоустройство 92%, выход на доход 15000–28000₪ (4000–7500$)!',
+        hero_sub: 'Новые репатрианты (до 10 лет, выпускники Ульпана Алеф) и Тошавим Хозрим (до 2 лет) получают государственный ваучер (שובר להכשרה מקצועית) с покрытием до 80% стоимости курса (до 7 000 ₪) при официальном обязательстве по трудоустройству! Для солдат ЦАХАЛ — до 100% из армейского Пикадона. Практика 85%, трудоустройство 92%, выход на доход 15 000 – 28 000 ₪!',
         hook_title: 'Экспресс-проверка вашей субсидии за 1 клик (gov.il / kolzchut):',
         hook_badge: 'Экономия до 80%–100%',
         hook_btn1_title: 'Оле Хадаш (до 10 лет)',
-        hook_btn1_sub: 'Ваучер до 80% (до 7000₪ / 1900$)',
+        hook_btn1_sub: 'Ваучер до 80% (до 7 000 ₪)',
         hook_btn2_title: 'Тошав Хозер (до 2 лет)',
-        hook_btn2_sub: 'Ваучер до 80% (до 7000₪ / 1900$)',
+        hook_btn2_sub: 'Ваучер до 80% (до 7 000 ₪)',
         hook_btn3_title: 'Солдат ЦАХАЛ (Пикадон)',
         hook_btn3_sub: 'До 100% Пикадон (до 15500₪)',
         search_placeholder: 'Найти курс: AI, GEO/AEO трафик, QA, Full-Stack, Python, Android, Бухгалтерия...',
@@ -1572,7 +1587,7 @@
         hero_tag_acc: '📊 Бухгалтерия 1+2',
         hero_tag_realtor: '🏢 Риелтор (Минюст)',
         hero_cta_primary: 'Рассчитать ваучер до 80% (7000₪) за 60 сек',
-        hero_cta_secondary: 'Калькулятор зарплаты 15000–28000₪',
+        hero_cta_secondary: 'Калькулятор зарплаты 15 000 – 28 000 ₪',
         campus_live_badge: 'Тель-Авив, Дерех ха-Агана 34 (2 мин от ж/д)',
         stat_1_label: 'Ваучер / Пикадон',
         stat_2_label: 'Доход (+15%)',
@@ -1580,13 +1595,13 @@
         campus_formats: 'Очно в Тель-Авиве • Live Online • Гибрид',
         campus_cta: 'Записаться →',
         mq_1: 'Newman Center (Est. 1991) — 35 лет лидерства в Израиле • Трудоустройство 92%!',
-        mq_2: 'Гос. ваучер Миналии (שובר להכשרה מקצועית): покрытие до 80% курса (до 7000₪ / 1900$)!',
+        mq_2: 'Гос. ваучер Миналии (שובר להכשרה מקצועית): покрытие до 80% курса (до 7 000 ₪)!',
         mq_3: 'Демобилизованным солдатам ЦАХАЛ — до 100% оплаты из средств Пикадона (до 15500₪)!',
-        mq_4: 'НОВИНКА: AI-Инженерия, Интернет-Маркетинг и Трафик GEO / AEO / SEO (доход 15000–28000₪)!',
+        mq_4: 'НОВИНКА: AI-Инженерия, Интернет-Маркетинг и Трафик GEO / AEO / SEO (доход 15 000 – 28 000 ₪)!',
         mq_5: 'Практика 85% времени + письменное обязательство по трудоустройству (התחייבות להשמה בעבודה)!',
         mq_6: 'Тель-Авив, Дерех ха-Агана 34 (2 мин от ж/д) • Короткий номер 1-800-22-06-07 / +972-3-560-30-46',
         manifesto_badge: 'Золотой стандарт Newman Center • Выгода до 80%–100%',
-        manifesto_title: 'Почему 92% наших выпускников выходят на доход 15000–28000₪?',
+        manifesto_title: 'Почему 92% наших выпускников выходят на доход 15 000 – 28 000 ₪?',
         manifesto_cta: 'Забронировать ваучер до 7000₪ →',
         hook1_pill: 'Практика 85%',
         hook1_title: 'Современная программа обучения!',
@@ -1599,8 +1614,8 @@
         hook3_pill: 'Трудоустройство 92%',
         hook3_title: 'Помощь с трудоустройством!',
         hook3_desc: 'Официальное письменное обязательство по трудоустройству (התחייבות להשמה בעבודה) для получения ваучера до 80% (7000₪) и личное доведение до оффера!',
-        hook3_foot: '✦ Стартовые зарплаты выпускников: 15000–28000₪ (4000–7500$)!',
-        build_badge: 'От идеи до запуска • Практика 85% • Зарплата 15000–28000₪ (4000–7500$)',
+        hook3_foot: '✦ Стартовые зарплаты выпускников: 15 000 – 28 000 ₪!',
+        build_badge: 'От идеи до запуска • Практика 85% • Зарплата 15 000 – 28 000 ₪',
         build_title: 'Создавайте технологии будущего своими руками — от идеи до запуска!',
         build_sub: 'Нажмите на любое направление разработки из программы Newman Center, чтобы сразу забронировать ваучер до 80% (до 7000₪) или Пикадон до 100%:',
         bcard1_pct: 'Спрос +12%',
@@ -1666,7 +1681,7 @@
         sheet_call_now: '📞 Позвонить сразу: 1-800-22-06-07 / +972-3-560-30-46'
       },
       he: {
-        brand_sub: 'תל אביב, דרך ההגנה 34 • מימון ממשלתי עד 80%–100% • 3331*',
+        brand_sub: '1-800-22-06-07',
                 nav_hub: 'דף ראשי',
         nav_courses: 'כל 40 הקורסים',
         nav_offer: 'סבסוד / הנחה עד 80%',
@@ -1711,13 +1726,13 @@
         hero_badge: 'מוסד מוכר משנת 1991 • שובר משרד הקליטה עד 80% (עד 7000₪) • פיקדון צבאי עד 100%',
         hero_h1_part1: 'פרצו להייטק, לעולם ה-AI ולעסקים בישראל במימון ממשלתי של',
         hero_h1_highlight: ' עד 80%–100% מעלות הקורס!',
-        hero_sub: 'עולים חדשים (עד 10 שנים בארץ, בוגרי אולפן א\') ותושבים חוזרים (עד שנתיים) זכאים לשובר להכשרה מקצועית המכסה עד 80% מעלות הקורס (עד 7000₪ / 1900$) בפיקוח ממשלתי או בהתחייבות להשמה בעבודה! לחיילים משוחררים — עד 100% מכספי הפיקדון הצבאי. 85% פרקטיקה, 92% השמה ושכר של 15000–28000₪ (4000–7500$)!',
+        hero_sub: 'עולים חדשים (עד 10 שנים בארץ, בוגרי אולפן א\') ותושבים חוזרים (עד שנתיים) זכאים לשובר להכשרה מקצועית המכסה עד 80% מעלות הקורס (עד 7 000 ₪) בפיקוח ממשלתי או בהתחייבות להשמה בעבודה! לחיילים משוחררים — עד 100% מכספי הפיקדון הצבאי. 85% פרקטיקה, 92% השמה ושכר של 15 000 – 28 000 ₪!',
         hook_title: 'בדיקת זכאות מהירה לשובר בלחיצה אחת (gov.il / כל-זכות):',
         hook_badge: 'חיסכון עד 80%–100%',
         hook_btn1_title: 'עולה חדש (עד 10 שנים)',
-        hook_btn1_sub: 'שובר עד 80% (עד 7000₪ / 1900$)',
+        hook_btn1_sub: 'שובר עד 80% (עד 7 000 ₪)',
         hook_btn2_title: 'תושב חוזר (עד שנתיים)',
-        hook_btn2_sub: 'שובר עד 80% (עד 7000₪ / 1900$)',
+        hook_btn2_sub: 'שובר עד 80% (עד 7 000 ₪)',
         hook_btn3_title: 'חייל משוחרר (פיקדון)',
         hook_btn3_sub: 'עד 100% מהפיקדון (עד 15500₪)',
         search_placeholder: 'חפשו קורס: AI, קידום GEO/AEO, בדיקות QA, Full-Stack, Python, אנדרואיד, הנהלת חשבונות...',
@@ -1728,7 +1743,7 @@
         hero_tag_acc: '📊 הנהלת חשבונות 1+2',
         hero_tag_realtor: '🏢 תיווך נדל״ן (משרד המשפטים)',
         hero_cta_primary: 'חשבו זכאות לשובר עד 80% (7000₪) ב-60 שניות',
-        hero_cta_secondary: 'מחשבון שכר 15000–28000₪',
+        hero_cta_secondary: 'מחשבון שכר 15 000 – 28 000 ₪',
         campus_live_badge: 'תל אביב, דרך ההגנה 34 (2 דק\' מרכבת ההגנה)',
         stat_1_label: 'שובר / פיקדון',
         stat_2_label: 'שכר (+15%)',
@@ -1736,13 +1751,13 @@
         campus_formats: 'פרונטלי בתל אביב • Live Online • היברידי',
         campus_cta: 'להרשמה ←',
         mq_1: 'Newman Center (Est. 1991) — 35 שנות מצוינות בישראל • 92% הצלחה בהשמה!',
-        mq_2: 'שובר להכשרה מקצועית של משרד הקליטה: מימון עד 80% מעלות הקורס (עד 7000₪ / 1900$)!',
+        mq_2: 'שובר להכשרה מקצועית של משרד הקליטה: מימון עד 80% מעלות הקורס (עד 7 000 ₪)!',
         mq_3: 'לחיילים משוחררים ומסיימי שירות לאומי — עד 100% מימון מכספי הפיקדון (עד 15500₪)!',
-        mq_4: 'חדש! הנדסת AI, שיווק דיגיטלי וטראפיק GEO / AEO / SEO (שכר בוגרים 15000–28000₪)!',
+        mq_4: 'חדש! הנדסת AI, שיווק דיגיטלי וטראפיק GEO / AEO / SEO (שכר בוגרים 15 000 – 28 000 ₪)!',
         mq_5: '85% תרגול מעשי + התחייבות רשמית בכתב להשמה בעבודה!',
-        mq_6: 'תל אביב, דרך ההגנה 34 (2 דק\' מרכבת ההגנה) • חיוג מקוצר 3331*',
+        mq_6: 'תל אביב, דרך ההגנה 34 (2 דק\' מרכבת ההגנה) • חיוג מקוצר 1-800-22-06-07',
         manifesto_badge: 'סטנדרט הזהב של Newman Center • חיסכון עד 80%–100%',
-        manifesto_title: 'למה 92% מהבוגרים שלנו מגיעים לשכר של 15000–28000₪?',
+        manifesto_title: 'למה 92% מהבוגרים שלנו מגיעים לשכר של 15 000 – 28 000 ₪?',
         manifesto_cta: 'שריינו שובר עד 7000₪ ←',
         hook1_pill: 'פרקטיקה 85%',
         hook1_title: 'תוכנית לימודים מתקדמת ועדכנית!',
@@ -1755,8 +1770,8 @@
         hook3_pill: 'השמה 92%',
         hook3_title: 'סיוע והתחייבות להשמה בעבודה!',
         hook3_desc: 'התחייבות רשמית בכתב להשמה בעבודה לצורך קבלת שובר משרד הקליטה עד 80% (7000₪) וליווי אישי עד לחתימה על חוזה!',
-        hook3_foot: '✦ שכר התחלתי לבוגרים: 15000–28000₪ (4000–7500$)!',
-        build_badge: 'מהרעיון ועד ההשקה • 85% פרקטיקה • שכר 15000–28000₪ (4000–7500$)',
+        hook3_foot: '✦ שכר התחלתי לבוגרים: 15 000 – 28 000 ₪!',
+        build_badge: 'מהרעיון ועד ההשקה • 85% פרקטיקה • שכר 15 000 – 28 000 ₪',
         build_title: 'בנו את טכנולוגיות העתיד במו ידיכם — מהרעיון ועד ההשקה!',
         build_sub: 'לחצו על כל אחד מתחומי הפיתוח של Newman Center כדי לשריין מיד שובר עד 80% (עד 7000₪) או פיקדון עד 100%:',
         bcard1_pct: 'ביקוש +12%',
@@ -1822,7 +1837,7 @@
         sheet_call_now: '📞 חייגו עכשיו: 3331*'
       },
       en: {
-        brand_sub: 'Tel Aviv, Derech HaHagana 34 • Up to 80%–100% Gov Funding • 1-800-22-06-07 / +972-3-560-30-46',
+        brand_sub: '1-800-22-06-07',
                 nav_hub: 'Home',
         nav_courses: 'All 40 Courses',
         nav_offer: 'Up to 80% Subsidy / Discount',
@@ -1867,13 +1882,13 @@
         hero_badge: 'Gov Recognized Since 1991 • Up to 80% Aliyah Voucher (7000₪) • 100% IDF Pikadon',
         hero_h1_part1: 'Launch Your Israeli Hi-Tech, AI & Business Career With',
         hero_h1_highlight: ' Up to 80%–100% Government Funding!',
-        hero_sub: 'New immigrants (Olim Hadashim up to 10 years, Ulpan Alef graduates) & Returning Residents (up to 2 years) receive an official Ministry of Aliyah training voucher (שובר להכשרה מקצועית) covering up to 80% of tuition (up to 7000₪ / 1900$) with written job placement commitment! Discharged IDF soldiers get up to 100% coverage via Pikadon. 85% hands-on practice, 92% employment rate, and 15000–28000₪ (4000–7500$) monthly salaries!',
+        hero_sub: 'New immigrants (Olim Hadashim up to 10 years, Ulpan Alef graduates) & Returning Residents (up to 2 years) receive an official Ministry of Aliyah training voucher (שובר להכשרה מקצועית) covering up to 80% of tuition (up to 7 000 ₪) with written job placement commitment! Discharged IDF soldiers get up to 100% coverage via Pikadon. 85% hands-on practice, 92% employment rate, and 15 000 – 28 000 ₪ monthly salaries!',
         hook_title: '1-Click Official Subsidy Eligibility Check (gov.il / kolzchut):',
         hook_badge: 'Save Up to 80%–100%',
         hook_btn1_title: 'Oleh Hadash (Up to 10 Yrs)',
-        hook_btn1_sub: 'Voucher up to 80% (7000₪ / 1900$)',
+        hook_btn1_sub: 'Voucher up to 80% (7 000 ₪)',
         hook_btn2_title: 'Toshav Chozer (Up to 2 Yrs)',
-        hook_btn2_sub: 'Voucher up to 80% (7000₪ / 1900$)',
+        hook_btn2_sub: 'Voucher up to 80% (7 000 ₪)',
         hook_btn3_title: 'IDF Soldier (Pikadon)',
         hook_btn3_sub: 'Up to 100% Pikadon (15500₪)',
         search_placeholder: 'Search courses: AI, GEO/AEO Traffic, QA, Full-Stack, Python, Android, Accounting...',
@@ -1884,7 +1899,7 @@
         hero_tag_acc: '📊 Accounting 1+2',
         hero_tag_realtor: '🏢 Real Estate License',
         hero_cta_primary: 'Calculate Your 80% Voucher (7000₪) in 60s',
-        hero_cta_secondary: 'Salary Calculator 15000–28000₪',
+        hero_cta_secondary: 'Salary Calculator 15 000 – 28 000 ₪',
         campus_live_badge: 'Tel Aviv, Derech HaHagana 34 (2 min from train)',
         stat_1_label: 'Voucher / Pikadon',
         stat_2_label: 'Salary (+15%)',
@@ -1892,13 +1907,13 @@
         campus_formats: 'Tel Aviv Campus • Live Online • Hybrid',
         campus_cta: 'Enroll Now →',
         mq_1: 'Newman Center (Est. 1991) — 35 Years of Excellence in Israel • 92% Job Placement!',
-        mq_2: 'Official Ministry of Aliyah Voucher (שובר להכשרה מקצועית): Up to 80% Coverage (7000₪ / 1900$)!',
+        mq_2: 'Official Ministry of Aliyah Voucher (שובר להכשרה מקצועית): Up to 80% Coverage (7 000 ₪)!',
         mq_3: 'Discharged IDF Soldiers — Up to 100% Tuition Covered by IDF Pikadon (up to 15500₪)!',
-        mq_4: 'NEW FLAGSHIP: AI Engineering, Digital Marketing & GEO / AEO / SEO Traffic (15000–28000₪)!',
+        mq_4: 'NEW FLAGSHIP: AI Engineering, Digital Marketing & GEO / AEO / SEO Traffic (15 000 – 28 000 ₪)!',
         mq_5: '85% Hands-On Coding & Projects + Written Job Placement Commitment (התחייבות להשמה בעבודה)!',
         mq_6: 'Tel Aviv, Derech HaHagana 34 (2 min from train station) • Short Dial 1-800-22-06-07 / +972-3-560-30-46',
         manifesto_badge: 'Newman Center Gold Standard • Save Up to 80%–100%',
-        manifesto_title: 'Why Do 92% of Our Graduates Earn 15000–28000₪?',
+        manifesto_title: 'Why Do 92% of Our Graduates Earn 15 000 – 28 000 ₪?',
         manifesto_cta: 'Reserve 7000₪ Voucher →',
         hook1_pill: '85% Practice',
         hook1_title: 'Modern Training Curriculum!',
@@ -1911,8 +1926,8 @@
         hook3_pill: '92% Placement',
         hook3_title: 'Job Placement Assistance!',
         hook3_desc: 'Official written job placement commitment (התחייבות להשמה בעבודה) unlocking your 80% voucher (7000₪) and guiding you straight to an offer!',
-        hook3_foot: '✦ Graduate starting salaries: 15000–28000₪ (4000–7500$)!',
-        build_badge: 'From Idea to Launch • 85% Practice • Salary 15000–28000₪ (4000–7500$)',
+        hook3_foot: '✦ Graduate starting salaries: 15 000 – 28 000 ₪!',
+        build_badge: 'From Idea to Launch • 85% Practice • Salary 15 000 – 28 000 ₪',
         build_title: 'Build Future Technologies With Your Own Hands — From Idea to Launch!',
         build_sub: 'Click any development specialization from the Newman Center curriculum to reserve your 80% voucher (up to 7000₪) or 100% Pikadon:',
         bcard1_pct: 'Demand +12%',
@@ -2039,9 +2054,9 @@
         text_ru: 'Разрабатывайте мобильные приложения (Android), настольные и веб-приложения, серверы и игры! Опытные преподаватели уровня Senior & Team Lead доведут вас до реального оффера в израильском Hi-Tech.',
         text_he: 'פתחו אפליקציות מובייל (אנדרואיד), אפליקציות שולחן עבודה ו-Web, שרתים ומשחקים! מרצים בכירים מהתעשייה ילוו אתכם עד להשתלבות בחברת הייטק בישראל.',
         text_en: 'Build mobile apps (Android), desktop & web applications, backend servers, and games! Senior Israeli Team Leads mentor you all the way to your first tech job offer.',
-        metric_ru: '✦ Стартовая зарплата: 15000–28000₪ (4000–7500$) • Оффер 92%!',
-        metric_he: '✦ שכר התחלתי: 15000–28000₪ (4000–7500$) • 92% השמה!',
-        metric_en: '✦ Starting Salary: 15000–28000₪ (4000–7500$) • 92% Placement!'
+        metric_ru: '✦ Стартовая зарплата: 15 000 – 28 000 ₪ • Оффер 92%!',
+        metric_he: '✦ שכר התחלתי: 15 000 – 28 000 ₪ • 92% השמה!',
+        metric_en: '✦ Starting Salary: 15 000 – 28 000 ₪ • 92% Placement!'
       },
       {
         emoji: '📊',
@@ -2054,9 +2069,9 @@
         text_ru: 'Стабильная финансовая профессия в Израиле! Изучение налогового законодательства, программ Priority/Hashavshevet и вся профессиональная лексика на иврите для сдачи госэкзамена с первого раза.',
         text_he: 'מקצוע פיננסי יציב ומבוקש בכל ארגון בישראל! שליטה מלאה בתוכנות פיננסיות והכנה ממוקדת למעבר מבחני הממשלה בהצלחה.',
         text_en: 'A rock-solid financial career in Israel! Master Israeli tax law, Priority/Hashavshevet software, and Hebrew financial terminology to pass state exams on your first try.',
-        metric_ru: '✦ Доход выпускника: 12000–22000₪ (3200–5900$) • Ваучер до 80%!',
-        metric_he: '✦ שכר בוגרים: 12000–22000₪ (3200–5900$) • שובר עד 80%!',
-        metric_en: '✦ Graduate Income: 12000–22000₪ (3200–5900$) • Up to 80% Voucher!'
+        metric_ru: '✦ Доход выпускника: 12 000 – 22 000 ₪ • Ваучер до 80%!',
+        metric_he: '✦ שכר בוגרים: 12 000 – 22 000 ₪ • שובר עד 80%!',
+        metric_en: '✦ Graduate Income: 12 000 – 22 000 ₪ • Up to 80% Voucher!'
       },
       {
         emoji: '🏢',
@@ -2069,9 +2084,9 @@
         text_ru: 'Экспресс-подготовка к государственному экзамену Регистратора маклеров Минюста Израиля (Рашам ха-Метавхим). Законы о недвижимости и практика закрытия сделок с высокими комиссионными!',
         text_he: 'הכנה ממוקדת למבחן רשם המתווכים של משרד המשפטים תוך 3 חודשים בלבד, כולל דיני מקרקעין ופרקטיקה של סגירת עסקאות נדל"ן!',
         text_en: 'Fast-track 3-month preparation for the Israeli Ministry of Justice Real Estate Broker Exam (Rasham HaMetavchim), including property law and deal closing!',
-        metric_ru: '✦ Доход с комиссий: 15000–28000₪ (4000–7500$) • Курс 5500₪!',
-        metric_he: '✦ הכנסה מעמלות: 15000–28000₪ (4000–7500$) • עלות 5500₪!',
-        metric_en: '✦ Commission Income: 15000–28000₪ (4000–7500$) • Tuition 5500₪!'
+        metric_ru: '✦ Доход с комиссий: 15 000 – 28 000 ₪ • Курс 5500₪!',
+        metric_he: '✦ הכנסה מעמלות: 15 000 – 28 000 ₪ • עלות 5500₪!',
+        metric_en: '✦ Commission Income: 15 000 – 28 000 ₪ • Tuition 5500₪!'
       },
       {
         emoji: '🚀',
@@ -2510,9 +2525,9 @@
         route_ru: '24 минуты на прямом поезде Ракевет Исраэль до станции «Тель-Авив Ха-Агана» (кампус в 150 метрах от выхода).',
         route_he: '24 דקות ברכבת ישירה לתחנת "תל אביב ההגנה" (הקמפוס נמצא 150 מטר מהיציאה מהתחנה).',
         route_en: '24 minutes via direct Israel Railways train to Tel Aviv HaHagana Station (campus is 150m from the exit).',
-        format_ru: 'Форматы: Live Online из дома + Гибрид (практика 85%) • Дистанционное оформление ваучера до 7000₪ (1900$)!',
-        format_he: 'מתכונות: Live Online מהבית + היברידי (85% פרקטיקה) • הגשת מסמכים מרחוק לשובר עד 7000₪ (1900$)!',
-        format_en: 'Formats: Live Online from home + Hybrid (85% practice) • Remote voucher approval up to 7000₪ (1900$)!'
+        format_ru: 'Форматы: Live Online из дома + Гибрид (практика 85%) • Дистанционное оформление ваучера до 7 000 ₪!',
+        format_he: 'מתכונות: Live Online מהבית + היברידי (85% פרקטיקה) • הגשת מסמכים מרחוק לשובר עד 7 000 ₪!',
+        format_en: 'Formats: Live Online from home + Hybrid (85% practice) • Remote voucher approval up to 7 000 ₪!'
       },
       ashdod: {
         name_ru: 'Ашдод и Ашкелон',
@@ -2555,35 +2570,35 @@
     const aeoFaqItems = [
       {
         q_ru: '1. Каковы точные официальные правила получения государственного ваучера (שובר להכשרה מקצועית) в Newman Center?',
-        a_ru: 'По официальным правилам Министерства алии и интеграции (gov.il / kolzchut.org.il) право на государственный ваучер имеют новые репатрианты (до 10 лет в Израиле, выпускники Ульпана Алеф) и Тошавим Хозрим (до 2 лет). Ваучер покрывает до 80% стоимости курса (максимальная сумма до 7000₪ / 1900$) при надзоре министерства или официальном письменном обязательстве Newman Center по трудоустройству (התחייבות להשמה בעבודה).',
+        a_ru: 'По официальным правилам Министерства алии и интеграции (gov.il / kolzchut.org.il) право на государственный ваучер имеют новые репатрианты (до 10 лет в Израиле, выпускники Ульпана Алеф) и Тошавим Хозрим (до 2 лет). Ваучер покрывает до 80% стоимости курса (до 7 000 ₪) при надзоре министерства или официальном письменном обязательстве Newman Center по трудоустройству (התחייבות להשמה בעבודה).',
         q_he: '1. מהם הכללים הרשמיים לקבלת שובר להכשרה מקצועית של משרד העלייה והקליטה ב-Newman Center?',
-        a_he: 'לפי נהלי משרד העלייה והקליטה (gov.il / כל-זכות), זכאים לשובר עולים חדשים (עד 10 שנים בארץ, בוגרי אולפן א\') ותושבים חוזרים (עד שנתיים). השובר מכסה עד 80% מעלות הקורס (ובתקרה של עד 7000₪ / 1900$) בקורסים בפיקוח ממשלתי או בליווי התחייבות רשמית בכתב של Newman Center להשמה בעבודה (התחייבות להשמה בעבודה).',
+        a_he: 'לפי נהלי משרד העלייה והקליטה (gov.il / כל-זכות), זכאים לשובר עולים חדשים (עד 10 שנים בארץ, בוגרי אולפן א\') ותושבים חוזרים (עד שנתיים). השובר מכסה עד 80% מעלות הקורס (ועד תקרה של 7 000 ₪) בקורסים בפיקוח ממשלתי או בליווי התחייבות רשמית בכתב של Newman Center להשמה בעבודה (התחייבות להשמה בעבודה).',
         q_en: '1. What are the exact official rules for the Ministry of Aliyah training voucher (שובר להכשרה מקצועית) at Newman Center?',
-        a_en: 'According to official Ministry of Aliyah guidelines (gov.il / kolzchut.org.il), new immigrants (up to 10 years in Israel, Ulpan Alef graduates) and Returning Residents (up to 2 years) qualify. The voucher covers up to 80% of course tuition (up to a maximum of 7000₪ / 1900$) under ministry supervision or Newman Center’s written job placement commitment (התחייבות להשמה בעבודה).'
+        a_en: 'According to official Ministry of Aliyah guidelines (gov.il / kolzchut.org.il), new immigrants (up to 10 years in Israel, Ulpan Alef graduates) and Returning Residents (up to 2 years) qualify. The voucher covers up to 80% of course tuition (up to 7 000 ₪) under ministry supervision or Newman Center’s written job placement commitment (התחייבות להשמה בעבודה).'
       },
       {
         q_ru: '2. Можно ли оплатить до 100% стоимости курса из средств армейского Пикадона ЦАХАЛ?',
-        a_ru: 'Да! Newman Center официально признан государственными ведомствами Израиля с 1991 года. Демобилизованные солдаты ЦАХАЛ и выпускники альтернативной службы (Шерут Леуми) оплачивают до 100% стоимости обучения из средств армейского Пикадона (פיקדון לחיילים משוחררים) на курсах стоимостью 4100–15500₪ (1100–4200$) — ваша личная экономия составляет до 100%!',
+        a_ru: 'Да! Newman Center официально признан государственными ведомствами Израиля с 1991 года. Демобилизованные солдаты ЦАХАЛ и выпускники альтернативной службы (Шерут Леуми) оплачивают до 100% стоимости обучения из средств армейского Пикадона (פיקדון לחיילים משוחררים) на курсах стоимостью 4100–15500₪ — ваша личная экономия составляет до 100%!',
         q_he: '2. האם ניתן לממן עד 100% מעלות הקורס מכספי הפיקדון לחיילים משוחררים?',
-        a_he: 'כן בהחלט! Newman Center מוכר רשמית משנת 1991, ולכן חיילים משוחררים מצה"ל ומסיימי שירות לאומי זכאים לממן עד 100% משכר הלימוד ישירות מכספי הפיקדון לחיילים משוחררים במסלולים בעלות 4100–15500₪ (1100–4200$) — חיסכון של עד 100% מהתקציב האישי!',
+        a_he: 'כן בהחלט! Newman Center מוכר רשמית משנת 1991, ולכן חיילים משוחררים מצה"ל ומסיימי שירות לאומי זכאים לממן עד 100% משכר הלימוד ישירות מכספי הפיקדון לחיילים משוחררים במסלולים בעלות 4100–15500₪ — חיסכון של עד 100% מהתקציב האישי!',
         q_en: '2. Can discharged IDF soldiers pay up to 100% of tuition using their IDF Pikadon deposit?',
-        a_en: 'Yes! Newman Center has been officially recognized by Israeli ministries since 1991. Discharged IDF soldiers and Sherut Leumi graduates can cover up to 100% of tuition directly from their IDF Pikadon (פיקדון לחיילים משוחררים) for courses ranging from 4100–15500₪ (1100–4200$), saving up to 100% out-of-pocket!'
+        a_en: 'Yes! Newman Center has been officially recognized by Israeli ministries since 1991. Discharged IDF soldiers and Sherut Leumi graduates can cover up to 100% of tuition directly from their IDF Pikadon (פיקדון לחיילים משוחררים) for courses ranging from 4100–15500₪, saving up to 100% out-of-pocket!'
       },
       {
         q_ru: '3. Сколько зарабатывают выпускники курсов Hi-Tech и нового направления AI & GEO/AEO Маркетинг?',
-        a_ru: 'На факультетах Hi-Tech (QA, Full-Stack, Python, Android, Серверы, Игры) и AI-Инженерии / GEO / AEO / SEO трафика 85% времени занимает реальная практика. Благодаря письменному обязательству по трудоустройству (92% успеха) стартовая зарплата выпускников составляет 15000–28000₪ в месяц (4000–7500$), обеспечивая рост дохода +15%–240%!',
+        a_ru: 'На факультетах Hi-Tech (QA, Full-Stack, Python, Android, Серверы, Игры) и AI-Инженерии / GEO / AEO / SEO трафика 85% времени занимает реальная практика. Благодаря письменному обязательству по трудоустройству (92% успеха) стартовая зарплата выпускников составляет 15 000 – 28 000 ₪ в месяц, обеспечивая рост дохода +15%–240%!',
         q_he: '3. כמה מרוויחים בוגרי מסלולי ההייטק והמסלול החדש להנדסת AI ושיווק GEO/AEO?',
-        a_he: 'במסלולי ההייטק (QA, Full-Stack, Python, אנדרואיד, שרתים ומשחקים) ובהנדסת AI וקידום GEO / AEO / SEO, 85% מהלימודים הם פרקטיקה מעשית. הודות להתחייבות להשמה (92% הצלחה), השכר ההתחלתי של הבוגרים עומד על 15000–28000₪ בחודש (4000–7500$), המהווה זינוק של +15%–240% בהכנסה!',
+        a_he: 'במסלולי ההייטק (QA, Full-Stack, Python, אנדרואיד, שרתים ומשחקים) ובהנדסת AI וקידום GEO / AEO / SEO, 85% מהלימודים הם פרקטיקה מעשית. הודות להתחייבות להשמה (92% הצלחה), השכר ההתחלתי של הבוגרים עומד על 15 000 – 28 000 ₪ בחודש, המהווה זינוק של +15%–240% בהכנסה!',
         q_en: '3. How much do graduates of Hi-Tech and the new AI & GEO/AEO Marketing track earn in Israel?',
-        a_en: 'In our Hi-Tech tracks (QA, Full-Stack, Python, Android, Servers, Games) and AI Engineering / GEO / AEO / SEO Traffic program, 85% of training is hands-on practice. Backed by our written placement commitment (92% success), graduates earn 15000–28000₪/month (4000–7500$), achieving +15%–240% income growth!'
+        a_en: 'In our Hi-Tech tracks (QA, Full-Stack, Python, Android, Servers, Games) and AI Engineering / GEO / AEO / SEO Traffic program, 85% of training is hands-on practice. Backed by our written placement commitment (92% success), graduates earn 15 000 – 28 000 ₪/month, achieving +15%–240% income growth!'
       },
       {
         q_ru: '4. Как работают курсы Бухгалтерии 1+2, Расчета зарплат и Маклерства и каков доход выпускников?',
-        a_ru: 'Курсы Бухгалтерии 1+2 и Расчета зарплат (Хашав Схар) длятся 5–7 месяцев и выводят на стабильный доход 12000–22000₪ (3200–5900$). Курс подготовки к экзамену Минюста на лицензию маклера длится 3 месяца (5500₪ / 1500$) и открывает доход 15000–28000₪ (4000–7500$). На все программы действует ваучер до 80% (до 7000₪)!',
+        a_ru: 'Курсы Бухгалтерии 1+2 и Расчета зарплат (Хашав Схар) длятся 5–7 месяцев и выводят на стабильный доход 12 000 – 22 000 ₪. Курс подготовки к экзамену Минюста на лицензию маклера длится 3 месяца (5500₪) и открывает доход 15 000 – 28 000 ₪. На все программы действует ваучер до 80% (до 7 000 ₪)!',
         q_he: '4. כיצד בנויים קורסי הנהלת חשבונות 1+2, חשבי שכר ותיווך נדל"ן ומהו השכר הצפוי?',
-        a_he: 'קורסי הנהלת חשבונות 1+2 וחשבי שכר נמשכים 5–7 חודשים ומובילים לשכר של 12000–22000₪ (3200–5900$). קורס ההכנה למבחן רשם המתווכים של משרד המשפטים נמשך 3 חודשים (5500₪ / 1500$) ומאפשר הכנסה של 15000–28000₪ (4000–7500$). כל המסלולים מוכרים לשובר עד 80% (7000₪)!',
+        a_he: 'קורסי הנהלת חשבונות 1+2 וחשבי שכר נמשכים 5–7 חודשים ומובילים לשכר של 12 000 – 22 000 ₪. קורס ההכנה למבחן רשם המתווכים של משרד המשפטים נמשך 3 חודשים (5500₪) ומאפשר הכנסה של 15 000 – 28 000 ₪. כל המסלולים מוכרים לשובר עד 80% (7 000 ₪)!',
         q_en: '4. How do the Accounting 1+2, Payroll, and Real Estate Brokerage courses work and what is the expected income?',
-        a_en: 'Accounting 1+2 and Payroll (Hashav Sachar) take 5–7 months and lead to salaries of 12000–22000₪ (3200–5900$). The 3-month Ministry of Justice Real Estate Broker course (5500₪ / 1500$) unlocks commission income of 15000–28000₪ (4000–7500$). All tracks qualify for the 80% voucher (up to 7000₪)!'
+        a_en: 'Accounting 1+2 and Payroll (Hashav Sachar) take 5–7 months and lead to salaries of 12 000 – 22 000 ₪. The 3-month Ministry of Justice Real Estate Broker course (5500₪) unlocks commission income of 15 000 – 28 000 ₪. All tracks qualify for the 80% voucher (up to 7 000 ₪)!'
       },
       {
         q_ru: '5. Нужен ли свободный иврит для поступления и получения государственного ваучера до 7000₪?',
@@ -3096,7 +3111,7 @@
           phone,
           course,
           statusInCountry: status,
-          subsidyInfo: status.includes('100%') ? 'До 100% Пикадон (до 15500₪)' : 'Ваучер до 80% (до 7000₪ / 1900$)'
+          subsidyInfo: status.includes('100%') ? 'До 100% Пикадон (до 15500₪)' : 'Ваучер до 80% (до 7 000 ₪)'
         });
         closeBottomSheet();
         btnText.textContent = i18nDict[currentLang].sheet_submit_btn;
@@ -3115,7 +3130,7 @@
         phone,
         course: tObj(dirOpt, 'label'),
         statusInCountry: tObj(statusOpt, 'label'),
-        subsidyInfo: `До ${statusOpt.pct}% (до ${statusOpt.ils}₪ / ${statusOpt.usd}$)`
+        subsidyInfo: `До ${statusOpt.pct}% (до ${statusOpt.ils}₪)`
       });
     }
 
@@ -3125,11 +3140,11 @@
     const socialProofEvents = [
       {
         ru_t: 'Давид (Хайфа) оформил ваучер до 80%',
-        ru_s: 'AI & GEO/AEO Трафик • Субсидия 7000₪ (1900$)',
+        ru_s: 'AI & GEO/AEO Трафик • Субсидия 7 000 ₪',
         he_t: 'דוד (חיפה) מימש שובר משרד הקליטה עד 80%',
-        he_s: 'הנדסת AI וטראפיק GEO/AEO • מענק 7000₪ (1900$)',
+        he_s: 'הנדסת AI וטראפיק GEO/AEO • מענק 7 000 ₪',
         en_t: 'David (Haifa) claimed an 80% Voucher',
-        en_s: 'AI & GEO/AEO Traffic • 7000₪ (1900$) Subsidy'
+        en_s: 'AI & GEO/AEO Traffic • 7 000 ₪ Subsidy'
       },
       {
         ru_t: 'Анна (Тель-Авив) получила оффер 19500₪',

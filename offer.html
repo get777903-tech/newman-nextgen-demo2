@@ -118,6 +118,17 @@
       font-variant-numeric: tabular-nums;
       display: inline-block;
     }
+    html, body {
+      overflow-x: hidden !important;
+      width: 100%;
+      max-width: 100vw;
+    }
+    @media (max-width: 639px) {
+      .num-nowrap {
+        white-space: normal !important;
+        display: inline !important;
+      }
+    }
     .custom-scrollbar::-webkit-scrollbar {
       width: 6px;
       height: 6px;
@@ -196,14 +207,16 @@
       <!-- Brand Identity: Official Newman Center 35-Year Anniversary Logo from newman.co.il -->
       <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="Newman Center Home">
         <div class="h-11 sm:h-12 px-2.5 py-1 rounded-2xl bg-white flex items-center justify-center shadow-lg border border-violet-400/30 group-hover:scale-105 transition-transform">
-          <img src="assets/newman_donor_logo.png" alt="Newman Center מרכז ניומן" class="h-8 sm:h-9 w-auto max-w-[140px] sm:max-w-[180px] object-contain" />
+          <img src="assets/newman_donor_logo.png" alt="Newman Center מרכז ניומן" class="h-8 sm:h-9 w-auto max-w-[130px] sm:max-w-[180px] object-contain" />
         </div>
-        <div class="hidden sm:block">
-          <div class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-white dark:text-white light:text-slate-900 flex items-center gap-2">
+        <div class="flex flex-col justify-center">
+          <div class="font-display font-extrabold text-sm sm:text-lg tracking-tight text-white dark:text-white light:text-slate-900 flex items-center gap-1.5">
             <span>Newman Center</span>
-            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-500/20 text-violet-200 border border-violet-400/30">Est. 1991</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-500/20 text-violet-200 border border-violet-400/30">Est. 1991</span>
           </div>
-          <p class="text-xs text-sky-200/90 dark:text-sky-200/90" data-i18n="nav_subtitle">מרכז ניומן • Академия IT, AI, GEO/AEO/SEO и Карьеры</p>
+          <a href="tel:1800220607" class="text-xs sm:text-sm font-black text-sky-300 hover:text-white transition-colors flex items-center gap-1" data-i18n="nav_subtitle">
+            <span>📞</span> <span>1-800-22-06-07</span>
+          </a>
         </div>
       </a>
 
@@ -248,9 +261,6 @@
           <a href="tel:1800220607" class="font-display font-extrabold text-xs sm:text-sm text-sky-400 hover:text-sky-300">1-800-22-06-07</a>
           <a href="tel:+97235603046" class="text-[11px] font-bold text-sky-200 hover:underline">+972-3-560-30-46</a>
         </div>
-        <a href="tel:1800220607" class="sm:hidden px-3 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-sky-500 text-white font-extrabold text-xs shadow-md">
-          📞 1-800
-        </a>
       </div>
     </div>
 
@@ -286,7 +296,7 @@
 
           <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight text-white">
             <span data-i18n="hero_title_1">Заберите до 80%–100% оплаты обучения от государства и выйдите на доход</span>
-            <span class="gradient-text block mt-2 num-nowrap" data-i18n="hero_title_salary">15000–28000₪ (4000–7500$)</span>
+            <span class="gradient-text block mt-2" data-i18n="hero_title_salary">15 000 – 28 000 ₪</span>
           </h1>
 
           <p class="text-base sm:text-lg text-sky-100/95 leading-relaxed max-w-2xl" data-i18n="hero_desc">
@@ -387,7 +397,7 @@
                     <span class="font-extrabold text-sm sm:text-base" data-i18n="status_olim_title">Олим Хадашим (до 10 лет)</span>
                     <span class="px-2 py-0.5 rounded bg-sky-400/25 text-sky-200 text-xs font-extrabold num-nowrap" data-i18n="status_olim_badge">до 80%</span>
                   </div>
-                  <p class="text-xs text-sky-100/90 mt-1" data-i18n="status_olim_desc">Гос. ваучер до 7000₪ (1900$) после ульпана Алеф</p>
+                  <p class="text-xs text-sky-100/90 mt-1" data-i18n="status_olim_desc">Гос. ваучер до 7000₪ после ульпана Алеф</p>
                 </button>
 
                 <button type="button" onclick="selectStatus('pikadon')" id="status-pikadon" class="status-btn text-left p-4 rounded-xl border border-violet-400/30 bg-slate-900/60 text-sky-100 hover:border-sky-400 transition-all">
@@ -403,7 +413,7 @@
                     <span class="font-extrabold text-sm sm:text-base" data-i18n="status_toshav_title">Тошав Хозер (до 2 лет)</span>
                     <span class="px-2 py-0.5 rounded bg-sky-400/25 text-sky-200 text-xs font-extrabold num-nowrap" data-i18n="status_toshav_badge">до 80%</span>
                   </div>
-                  <p class="text-xs text-sky-100/90 mt-1" data-i18n="status_toshav_desc">Ваучер Министерства алии до 7000₪ (1900$)</p>
+                  <p class="text-xs text-sky-100/90 mt-1" data-i18n="status_toshav_desc">Ваучер Министерства алии до 7000₪</p>
                 </button>
 
                 <button type="button" onclick="selectStatus('citizen')" id="status-citizen" class="status-btn text-left p-4 rounded-xl border border-violet-400/30 bg-slate-900/60 text-sky-100 hover:border-sky-400 transition-all">
@@ -468,7 +478,7 @@
                 <p class="text-xs text-sky-200/90 font-medium" data-i18n="res_cov_label">Покрытие стоимости обучения от государства / фонда:</p>
                 <div class="flex items-baseline gap-3 mt-1">
                   <span id="res-coverage-pct" class="font-display font-extrabold text-3xl sm:text-4xl text-sky-300 num-nowrap">до 80%</span>
-                  <span id="res-coverage-sum" class="font-display font-bold text-lg sm:text-xl text-white num-nowrap">(до 7000₪ / 1900$)</span>
+                  <span id="res-coverage-sum" class="font-display font-bold text-lg sm:text-xl text-white num-nowrap">(до 7000₪)</span>
                 </div>
                 <p id="res-legal-note" class="text-xs text-violet-200 mt-1.5 leading-relaxed">
                   Официальный ваучер משרד העלייה והקליטה (до 80% от стоимости курса, максимум до 7000₪). Newman Center выдаёт официальное обязательство трудоустройства (התחייבות להשמה בעבודה).
@@ -479,7 +489,6 @@
               <div class="p-4 rounded-2xl bg-slate-900/90 border border-violet-400/35">
                 <p class="text-xs text-sky-200 font-medium" data-i18n="res_sal_label">Прогнозируемая зарплата после выпуска (Junior / Middle):</p>
                 <div id="res-salary-nis" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1 num-nowrap">15000–28000₪</div>
-                <div id="res-salary-usd" class="text-sm font-bold text-sky-300 mt-0.5 num-nowrap">экв. 4000–7500$ в месяц</div>
               </div>
 
               <!-- Percentage Advantage Metrics -->
@@ -691,7 +700,7 @@
             Почему ваучер для Олим Хадашим действительно дают и как получить до 80%–100% оплаты без отказов
           </h2>
           <p class="text-sky-100/90 text-sm sm:text-base mt-2" data-i18n="comp_subtitle">
-            По правилам Министерства алии и интеграции (משרד העלייה והקליטה), программа ваучеров (שובר להכשרה מקצועית) покрывает до 80% стоимости курса (максимум до <span class="num-nowrap font-bold text-white">7000₪</span> / <span class="num-nowrap font-bold text-white">1900$</span>) в течение 10 лет с момента репатриации при соблюдении простых условий, которые мы помогаем оформить под ключ.
+            По правилам Министерства алии и интеграции (משרד העלייה והקליטה), программа ваучеров (שובר להכשרה מקצועית) покрывает до 80% стоимости курса (максимум до <span class="num-nowrap font-bold text-white">7000₪</span>) в течение 10 лет с момента репатриации при соблюдении простых условий, которые мы помогаем оформить под ключ.
           </p>
         </div>
 
@@ -707,7 +716,7 @@
             <tbody class="divide-y divide-violet-500/20 text-sm">
               <tr>
                 <td class="py-4 px-4 font-bold text-white" data-i18n="tbl_r1_c1">Размер государственного ваучера для Олим</td>
-                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-sky-300" data-i18n="tbl_r1_c2">До 80% стоимости курса (до 7000₪ / 1900$) + до 100% из Пикадона ЦАХАЛ</td>
+                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-sky-300" data-i18n="tbl_r1_c2">До 80% стоимости курса (до 7000₪) + до 100% из Пикадона ЦАХАЛ</td>
                 <td class="py-4 px-4 text-sky-100/75" data-i18n="tbl_r1_c3">Частые отказы из-за неправильно заполненных бланков (0% субсидии)</td>
               </tr>
               <tr>
@@ -727,7 +736,7 @@
               </tr>
               <tr>
                 <td class="py-4 px-4 font-bold text-white" data-i18n="tbl_r5_c1">Выход на зарплату в индустрии</td>
-                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-sky-300 rounded-b-xl" data-i18n="tbl_r5_c2">92% трудоустройство на доход 14000–28000₪ (3800–7500$)</td>
+                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-sky-300 rounded-b-xl" data-i18n="tbl_r5_c2">92% трудоустройство на доход 14000–28000₪</td>
                 <td class="py-4 px-4 text-sky-100/75" data-i18n="tbl_r5_c3">Выпускники остаются один на один с рынком труда</td>
               </tr>
             </tbody>
@@ -899,12 +908,12 @@
     const statusRules = {
       olim: {
         pct: { ru: 'до 80%', he: 'עד 80%', en: 'up to 80%' },
-        sum: { ru: '(до 7000₪ / 1900$)', he: '(עד 7000₪ / 1900$)', en: '(up to 7000₪ / 1900$)' },
+        sum: { ru: '(до 7 000 ₪)', he: '(עד 7,000 ₪)', en: '(up to 7,000 ₪)' },
         badge: { ru: 'Субсидия до 80%', he: 'מימון עד 80%', en: 'Up to 80% Subsidy' },
         note: {
-          ru: 'Официальный ваучер משרד העלייה והקליטה (до 80% от стоимости курса, максимум до 7000₪ / 1900$ для Олим до 10 лет в стране после ульпана Алеф). Newman Center выдаёт официальное письменное обязательство трудоустройства (התחייבות להשמה בעבודה).',
-          he: 'שובר רשמי של משרד העלייה והקליטה (עד 80% מעלות הקורס, עד תקרה של 7000₪ / 1900$ לעולים עד 10 שנים בארץ בוגרי אולפן א׳). Newman Center מספק התחייבות כתובה להשמה בעבודה לאישור השובר.',
-          en: 'Official Ministry of Aliyah voucher (up to 80% of tuition, capped at 7000₪ / 1900$ for Olim up to 10 years in Israel after Ulpan Alef). Newman Center provides the official written job placement commitment (התחייבות להשמה בעבודה).'
+          ru: 'Официальный ваучер משרד העלייה והקליטה (до 80% от стоимости курса, максимум до 7000₪ для Олим до 10 лет в стране после ульпана Алеф). Newman Center выдаёт официальное письменное обязательство трудоустройства (התחייבות להשמה בעבודה).',
+          he: 'שובר רשמי של משרד העלייה והקליטה (עד 80% מעלות הקורס, עד תקרה של 7000₪ לעולים עד 10 שנים בארץ בוגרי אולפן א׳). Newman Center מספק התחייבות כתובה להשמה בעבודה לאישור השובר.',
+          en: 'Official Ministry of Aliyah voucher (up to 80% of tuition, capped at 7000₪ for Olim up to 10 years in Israel after Ulpan Alef). Newman Center provides the official written job placement commitment (התחייבות להשמה בעבודה).'
         }
       },
       pikadon: {
@@ -919,12 +928,12 @@
       },
       toshav: {
         pct: { ru: 'до 80%', he: 'עד 80%', en: 'up to 80%' },
-        sum: { ru: '(до 7000₪ / 1900$)', he: '(עד 7000₪ / 1900$)', en: '(up to 7000₪ / 1900$)' },
+        sum: { ru: '(до 7 000 ₪)', he: '(עד 7,000 ₪)', en: '(up to 7,000 ₪)' },
         badge: { ru: 'Ваучер до 80%', he: 'שובר עד 80%', en: 'Up to 80% Voucher' },
         note: {
-          ru: 'Тошавим Хозрим (до 2 лет с момента возвращения) имеют право на государственный ваучер Министерства алии до 80% стоимости курса (максимум до 7000₪ / 1900$).',
-          he: 'תושבים חוזרים (עד שנתיים ממועד החזרה) זכאים לשובר הכשרה מקצועית של משרד העלייה והקליטה בגובה עד 80% (עד 7000₪ / 1900$).',
-          en: 'Returning Israelis (Toshavim Chozerim up to 2 years) qualify for the Ministry voucher covering up to 80% of course cost (up to 7000₪ / 1900$).'
+          ru: 'Тошавим Хозрим (до 2 лет с момента возвращения) имеют право на государственный ваучер Министерства алии до 80% стоимости курса (максимум до 7000₪).',
+          he: 'תושבים חוזרים (עד שנתיים ממועד החזרה) זכאים לשובר הכשרה מקצועית של משרד העלייה והקליטה בגובה עד 80% (עד 7000₪).',
+          en: 'Returning Israelis (Toshavim Chozerim up to 2 years) qualify for the Ministry voucher covering up to 80% of course cost (up to 7000₪).'
         }
       },
       citizen: {
@@ -941,7 +950,7 @@
 
     const i18n = {
       ru: {
-        nav_subtitle: 'מרכז ניומן • Академия IT, AI, GEO/AEO/SEO и Карьеры',
+        nav_subtitle: '1-800-22-06-07',
         nav_home: 'Главная',
         nav_courses: 'Все 40 курсов',
         nav_courses_short: '40 курсов',
@@ -951,7 +960,7 @@
         nav_audit: 'Аудит & Стратегия Роста',
         hero_badge: 'Официальная проверка льгот gov.il • Ваучер до 80% (7000₪) и Пикадон до 100%',
         hero_title_1: 'Заберите до 80%–100% оплаты обучения от государства и выйдите на доход',
-        hero_title_salary: '15000–28000₪ (4000–7500$)',
+        hero_title_salary: '15 000 – 28 000 ₪',
         hero_desc: 'Не откладывайте яркую карьеру в Израиле! В Newman Center вас ждёт современная программа обучения (85% живой практики), опытные преподаватели-практики и реальная помощь с трудоустройством (92% выпускников в штате). Пройдите 30-секундный расчёт ниже и узнайте, какую долю курса за вас оплатит Министерство алии или армейский фонд.',
         stat_1_val: 'до 80%',
         stat_1_lbl: 'Ваучер Олим (до 7000₪)',
@@ -974,13 +983,13 @@
         calc_step1_label: '1. Ваш статус в Израиле (проверка права на субсидию):',
         calc_step1_tag: 'Шаг 1 из 3',
         status_olim_title: 'Олим Хадашим (до 10 лет)',
-        status_olim_desc: 'Гос. ваучер до 7000₪ (1900$) после ульпана Алеф',
+        status_olim_desc: 'Гос. ваучер до 7000₪ после ульпана Алеф',
         status_olim_badge: 'до 80%',
         status_pikadon_title: 'Солдат после армии (Пикадон)',
         status_pikadon_desc: 'Оплата до 100% за счёт личного армейского Пикадона',
         status_pikadon_badge: 'до 100%',
         status_toshav_title: 'Тошав Хозер (до 2 лет)',
-        status_toshav_desc: 'Ваучер Министерства алии до 7000₪ (1900$)',
+        status_toshav_desc: 'Ваучер Министерства алии до 7000₪',
         status_toshav_badge: 'до 80%',
         status_citizen_title: 'Гражданин Израиля / Апгрейд',
         status_citizen_desc: 'Грант от Newman Center до 25% + рассрочка до 24 платежей',
@@ -1041,12 +1050,12 @@
         hook_cta_link: 'Выбрать →',
         comp_kicker: 'Проверено по официальным источникам gov.il и kolzchut.org.il',
         comp_title: 'Почему ваучер для Олим Хадашим действительно дают и как получить до 80%–100% оплаты без отказов',
-        comp_subtitle: 'По правилам Министерства алии и интеграции (משרד העלייה והקליטה), программа ваучеров (שובר להכשרה מקצועית) покрывает до 80% стоимости курса (максимум до 7000₪ / 1900$) в течение 10 лет с момента репатриации при соблюдении простых условий, которые мы помогаем оформить под ключ.',
+        comp_subtitle: 'По правилам Министерства алии и интеграции (משרד העלייה והקליטה), программа ваучеров (שובר להכשרה מקצועית) покрывает до 80% стоимости курса (максимум до 7000₪) в течение 10 лет с момента репатриации при соблюдении простых условий, которые мы помогаем оформить под ключ.',
         tbl_col_1: 'Критерий / Параметр',
         tbl_col_2: 'Newman Center (С нашей поддержкой)',
         tbl_col_3: 'Обычные курсы без сопровождения',
         tbl_r1_c1: 'Размер государственного ваучера для Олим',
-        tbl_r1_c2: 'До 80% стоимости курса (до 7000₪ / 1900$) + до 100% из Пикадона ЦАХАЛ',
+        tbl_r1_c2: 'До 80% стоимости курса (до 7000₪) + до 100% из Пикадона ЦАХАЛ',
         tbl_r1_c3: 'Частые отказы из-за неправильно заполненных бланков (0% субсидии)',
         tbl_r2_c1: 'Обязательство трудоустройства (התחייבות להשמה בעבודה)',
         tbl_r2_c2: 'Выдаём официальный письменный бланк от работодателя/центра для 100% одобрения',
@@ -1058,7 +1067,7 @@
         tbl_r4_c2: 'Обучение на понятном языке (RU / HE / EN) + 100% технический иврит и английский',
         tbl_r4_c3: 'Сложный академический барьер и потеря до 60% материала',
         tbl_r5_c1: 'Выход на зарплату в индустрии',
-        tbl_r5_c2: '92% трудоустройство на доход 14000–28000₪ (3800–7500$)',
+        tbl_r5_c2: '92% трудоустройство на доход 14000–28000₪',
         tbl_r5_c3: 'Выпускники остаются один на один с рынком труда',
         succ_kicker: 'Прозрачный расчёт субсидии и окупаемости',
         succ_title: 'Субсидия государства до 80% (до 7000₪). Начальная зарплата от 9500–11000₪, средняя в отрасли — 19500₪',
@@ -1073,7 +1082,7 @@
         modal_btn: 'Отправить запрос напрямую в WhatsApp'
       },
       he: {
-        nav_subtitle: 'מרכז ניומן • האקדמיה להייטק, AI, שיווק GEO/AEO/SEO וקריירה',
+        nav_subtitle: '1-800-22-06-07',
         nav_home: 'ראשי',
         nav_courses: 'כל 40 הקורסים',
         nav_courses_short: '40 קורסים',
@@ -1083,7 +1092,7 @@
         nav_audit: 'אודיט ואסטרטגיית צמיחה',
         hero_badge: 'בדיקת זכאות רשמית gov.il • שובר עד 80% (7000₪) ופיקדון צבאי עד 100%',
         hero_title_1: 'קבלו עד 80%–100% מימון ממשלתי ללימודים וצאו להכנסה של',
-        hero_title_salary: '15000–28000₪ (4000–7500$)',
+        hero_title_salary: '15 000 – 28 000 ₪',
         hero_desc: 'אל תדחו את הקריירה שלכם בישראל! ב-Newman Center מחכה לכם תוכנית לימודים מודרנית (85% פרקטיקה חיה), מרצים מנוסים מהתעשייה וסיוע אמיתי בהשמה לעבודה (92% מהבוגרים משתלבים בתעשייה). חשבו תוך 30 שניות כמה אחוזים מהקורס ימומנו עבורכם.',
         stat_1_val: 'עד 80%',
         stat_1_lbl: 'שובר עולים (עד 7000₪)',
@@ -1106,13 +1115,13 @@
         calc_step1_label: '1. הסטטוס שלכם בישראל (בדיקת זכאות למימון):',
         calc_step1_tag: 'שלב 1 מתוך 3',
         status_olim_title: 'עולים חדשים (עד 10 שנים)',
-        status_olim_desc: 'שובר ממשלתי עד 7000₪ (1900$) לבוגרי אולפן א׳',
+        status_olim_desc: 'שובר ממשלתי עד 7000₪ לבוגרי אולפן א׳',
         status_olim_badge: 'עד 80%',
         status_pikadon_title: 'חיילים משוחררים (פיקדון)',
         status_pikadon_desc: 'כיסוי עד 100% ישירות מכספי הפיקדון הצבאי',
         status_pikadon_badge: 'עד 100%',
         status_toshav_title: 'תושב חוזר (עד שנתיים)',
-        status_toshav_desc: 'שובר משרד העלייה והקליטה עד 7000₪ (1900$)',
+        status_toshav_desc: 'שובר משרד העלייה והקליטה עד 7000₪',
         status_toshav_badge: 'עד 80%',
         status_citizen_title: 'אזרח ישראל / שדרוג קריירה',
         status_citizen_desc: 'מלגת Newman Center עד 25% + עד 24 תשלומים נוחים',
@@ -1173,12 +1182,12 @@
         hook_cta_link: 'בחרו מסלול ←',
         comp_kicker: 'מאומת מול מקורות רשמיים gov.il ו-kolzchut.org.il',
         comp_title: 'מדוע עולים חדשים באמת מקבלים שובר וכיצד לקבל עד 80%–100% מימון ללא סירובים',
-        comp_subtitle: 'לפי נהלי משרד העלייה והקליטה, תוכנית השוברים (שובר להכשרה מקצועית) מכסה עד 80% מעלות הקורס (עד תקרה של 7000₪ / 1900$) למשך עד 10 שנים מיום העלייה, בכפוף לתנאים שאנו מסדירים עבורכם מא׳ ועד ת׳.',
+        comp_subtitle: 'לפי נהלי משרד העלייה והקליטה, תוכנית השוברים (שובר להכשרה מקצועית) מכסה עד 80% מעלות הקורס (עד תקרה של 7000₪) למשך עד 10 שנים מיום העלייה, בכפוף לתנאים שאנו מסדירים עבורכם מא׳ ועד ת׳.',
         tbl_col_1: 'קריטריון / פרמטר',
         tbl_col_2: 'Newman Center (עם הליווי המלא שלנו)',
         tbl_col_3: 'קורסים רגילים ללא ליווי מובנה',
         tbl_r1_c1: 'גובה השובר הממשלתי לעולים חדשים',
-        tbl_r1_c2: 'עד 80% מעלות הקורס (עד 7000₪ / 1900$) + עד 100% מכספי הפיקדון הצבאי',
+        tbl_r1_c2: 'עד 80% מעלות הקורס (עד 7000₪) + עד 100% מכספי הפיקדון הצבאי',
         tbl_r1_c3: 'דחיות תכופות עקב מילוי שגוי של טפסים (0% סבסוד)',
         tbl_r2_c1: 'התחייבות להשמה בעבודה',
         tbl_r2_c2: 'אנו מנפיקים טופס התחייבות רשמי בכתב לאישור של 100% מול משרד הקליטה',
@@ -1190,7 +1199,7 @@
         tbl_r4_c2: 'לימוד בשפה נוחה (RU / HE / EN) + 100% עברית ואנגלית טכנית לראיונות',
         tbl_r4_c3: 'מחסום שפה אקדמי ואובדן של עד 60% מחומר הלימוד',
         tbl_r5_c1: 'השתלבות בשכר גבוה בתעשייה',
-        tbl_r5_c2: '92% השמה לעבודה בשכר של 14000–28000₪ (3800–7500$)',
+        tbl_r5_c2: '92% השמה לעבודה בשכר של 14000–28000₪',
         tbl_r5_c3: 'הבוגרים נשארים לבד מול שוק העבודה',
         succ_kicker: 'חישוב שקוף של סובסידיה והחזר השקעה',
         succ_title: 'סובסידיה עד 80% (עד 7000₪). שכר התחלתי 9,500–11,000₪, שכר ממוצע בענף — 19,500₪',
@@ -1205,7 +1214,7 @@
         modal_btn: 'שלחו בקשה ישירות ל-WhatsApp'
       },
       en: {
-        nav_subtitle: 'מרכז ניומן • High-Tech, AI, GEO/AEO/SEO & Career Academy',
+        nav_subtitle: '1-800-22-06-07',
         nav_home: 'Home',
         nav_courses: 'All 40 Courses',
         nav_courses_short: '40 Courses',
@@ -1215,7 +1224,7 @@
         nav_audit: 'Audit & Growth Strategy',
         hero_badge: 'Official gov.il Eligibility Check • Up to 80% Voucher (7000₪) & 100% IDF Pikadon',
         hero_title_1: 'Claim up to 80%–100% state tuition funding and launch a career earning',
-        hero_title_salary: '15000–28000₪ (4000–7500$)',
+        hero_title_salary: '15 000 – 28 000 ₪',
         hero_desc: 'Do not postpone your High-Tech career in Israel! At Newman Center you get a modern training program (85% live hands-on practice), experienced instructors from top tech companies, and dedicated job placement support (92% graduate employment rate). Run the 30-second calculator below to see how much of your tuition is covered.',
         stat_1_val: 'up to 80%',
         stat_1_lbl: 'Olim Voucher (up to 7000₪)',
@@ -1238,13 +1247,13 @@
         calc_step1_label: '1. Your status in Israel (subsidy eligibility check):',
         calc_step1_tag: 'Step 1 of 3',
         status_olim_title: 'Olim Chadashim (up to 10 yrs)',
-        status_olim_desc: 'State voucher up to 7000₪ (1900$) after Ulpan Alef',
+        status_olim_desc: 'State voucher up to 7000₪ after Ulpan Alef',
         status_olim_badge: 'up to 80%',
         status_pikadon_title: 'Discharged Soldier (Pikadon)',
         status_pikadon_desc: 'Up to 100% tuition paid from personal IDF Pikadon',
         status_pikadon_badge: 'up to 100%',
         status_toshav_title: 'Toshav Chozer (up to 2 yrs)',
-        status_toshav_desc: 'Ministry of Aliyah voucher up to 7000₪ (1900$)',
+        status_toshav_desc: 'Ministry of Aliyah voucher up to 7000₪',
         status_toshav_badge: 'up to 80%',
         status_citizen_title: 'Israeli Citizen / Career Upgrade',
         status_citizen_desc: 'Newman Center grant up to 25% + up to 24 installments',
@@ -1305,12 +1314,12 @@
         hook_cta_link: 'Select Track →',
         comp_kicker: 'Verified against official gov.il & kolzchut.org.il rules',
         comp_title: 'Why Olim Chadashim genuinely receive the voucher—and how to secure up to 80%–100% funding',
-        comp_subtitle: 'Under Ministry of Aliyah and Integration rules (משרד העלייה והקליטה), the vocational training voucher (שובר להכשרה מקצועית) covers up to 80% of tuition (capped at 7000₪ / 1900$) for up to 10 years after Aliyah when simple requirements are met—which we handle for you end-to-end.',
+        comp_subtitle: 'Under Ministry of Aliyah and Integration rules (משרד העלייה והקליטה), the vocational training voucher (שובר להכשרה מקצועית) covers up to 80% of tuition (capped at 7000₪) for up to 10 years after Aliyah when simple requirements are met—which we handle for you end-to-end.',
         tbl_col_1: 'Criterion / Parameter',
         tbl_col_2: 'Newman Center (With Our Full Support)',
         tbl_col_3: 'Standard Unassisted Courses',
         tbl_r1_c1: 'State Voucher Amount for Olim',
-        tbl_r1_c2: 'Up to 80% of course cost (up to 7000₪ / 1900$) + up to 100% from IDF Pikadon',
+        tbl_r1_c2: 'Up to 80% of course cost (up to 7000₪) + up to 100% from IDF Pikadon',
         tbl_r1_c3: 'Frequent rejections due to incomplete paperwork (0% subsidy)',
         tbl_r2_c1: 'Written Employment Commitment (התחייבות להשמה בעבודה)',
         tbl_r2_c2: 'We provide the official written placement commitment form for 100% approval certainty',
@@ -1322,7 +1331,7 @@
         tbl_r4_c2: 'Clear instruction (RU / HE / EN) + 100% Hebrew & English tech terminology',
         tbl_r4_c3: 'Steep academic language barrier causing up to 60% material loss',
         tbl_r5_c1: 'Industry Salary Outcome',
-        tbl_r5_c2: '92% placement into roles paying 14000–28000₪ (3800–7500$)',
+        tbl_r5_c2: '92% placement into roles paying 14000–28000₪',
         tbl_r5_c3: 'Graduates left on their own in the job market',
         succ_kicker: 'Transparent Voucher Subsidy & Career ROI Benchmark',
         succ_title: 'State Subsidy Up to 80% (7000₪). Entry Salary 9,500–11,000₪, Industry Average 19,500₪',
@@ -1382,14 +1391,12 @@
       const resBadge = document.getElementById('res-badge');
       const legalNote = document.getElementById('res-legal-note');
       const salNis = document.getElementById('res-salary-nis');
-      const salUsd = document.getElementById('res-salary-usd');
 
       if (covPct) covPct.textContent = sInfo.pct[currentLang] || sInfo.pct.ru;
       if (covSum) covSum.textContent = sInfo.sum[currentLang] || sInfo.sum.ru;
       if (resBadge) resBadge.textContent = sInfo.badge[currentLang] || sInfo.badge.ru;
       if (legalNote) legalNote.textContent = sInfo.note[currentLang] || sInfo.note.ru;
       if (salNis) salNis.textContent = tInfo.salaryNis;
-      if (salUsd) salUsd.textContent = tInfo.salaryUsd[currentLang] || tInfo.salaryUsd.ru;
     }
 
     function setLanguage(lang) {
