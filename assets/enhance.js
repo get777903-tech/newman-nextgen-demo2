@@ -69,7 +69,7 @@
     function build() {
       var links = [
         ['index.html', '🏛️', T({ ru: 'Главная', he: 'ראשי', en: 'Home' })],
-        ['courses.html', '📚', T({ ru: 'Все курсы', he: 'כל הקורסים', en: 'All Courses' })],
+        ['courses.html', '📚', T({ ru: 'Все 40 курсов', he: 'כל 40 הקורסים', en: 'All 40 Courses' })],
         ['offer.html', '🎫', T({ ru: 'Калькулятор Ваучера 80%', he: 'מחשבון שובר 80%', en: '80% Voucher Calculator' })],
         ['audit.html', '📊', T({ ru: 'Аудит & Стратегия Роста', he: 'אודיט ואסטרטגיית צמיחה', en: 'Audit & Growth Strategy' })]
       ];
