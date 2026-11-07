@@ -1,0 +1,126 @@
+/* ============================================================
+   Newman Center Next-Gen v2 — enhance.css
+   Typography, ambient glow, frosted glass, chips, FAB, drawer,
+   gauge, salary tracker, trilingual helpers. Anti-AI-slop rules.
+   ============================================================ */
+
+/* ---- Trilingual helper: <span data-l="ru|he|en"> ---- */
+[data-l] { display: none; }
+html[lang="ru"] [data-l="ru"], html[lang="he"] [data-l="he"], html[lang="en"] [data-l="en"] { display: revert; }
+
+/* ---- Typography ---- */
+body { font-family: 'Manrope', 'Heebo', 'Rubik', system-ui, sans-serif; }
+.font-display, h1, h2, h3 { font-family: 'Plus Jakarta Sans', 'Space Grotesk', 'Rubik', sans-serif; }
+html[lang="he"] body { font-family: 'Heebo', 'Rubik', sans-serif; }
+html[lang="he"] .font-display, html[lang="he"] h1, html[lang="he"] h2, html[lang="he"] h3 { font-family: 'Rubik', 'Heebo', sans-serif; }
+html[lang="he"] h1 { font-weight: 900; }
+.num-nowrap, .nm-num { font-family: 'JetBrains Mono', 'Space Grotesk', monospace; font-feature-settings: "tnum" 1, "zero" 0; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+h1 { line-height: 1.15; }
+@media (min-width: 640px) { h1 { font-size: clamp(2.5rem, 4.4vw, 4rem) !important; } }
+@media (max-width: 639px) { h1 { font-size: clamp(1.85rem, 8vw, 2.4rem) !important; } }
+body { line-height: 1.6; }
+
+/* Metallic shine on key phrases */
+.nm-metal {
+  background: linear-gradient(110deg, #c4b5fd 0%, #ffffff 22%, #7dd3fc 45%, #e9d5ff 62%, #a78bfa 80%, #ffffff 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  animation: nmShine 5.5s linear infinite;
+}
+html:not(.dark) .nm-metal { background-image: linear-gradient(110deg, #5b21b6 0%, #7c3aed 25%, #0369a1 50%, #6d28d9 75%, #5b21b6 100%); }
+@keyframes nmShine { to { background-position: -220% 0; } }
+/* apply shine to existing hero highlight gradient text */
+h1 .bg-clip-text { background-size: 220% 100%; animation: nmShine 6s linear infinite; }
+
+/* ---- Ambient mesh glow (follows cursor, pulses on touch) ---- */
+#nm-glow { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+#nm-glow::before, #nm-glow::after { content: ""; position: absolute; border-radius: 50%; filter: blur(90px); will-change: transform; }
+#nm-glow::before { width: 46vmax; height: 46vmax; left: calc(var(--mx, 30%) - 23vmax); top: calc(var(--my, 25%) - 23vmax); background: radial-gradient(circle, rgba(124,58,237,.34), transparent 65%); transition: left .6s ease-out, top .6s ease-out; }
+#nm-glow::after { width: 40vmax; height: 40vmax; left: calc(var(--mx2, 70%) - 20vmax); top: calc(var(--my2, 60%) - 20vmax); background: radial-gradient(circle, rgba(2,132,199,.30), transparent 65%); transition: left 1.1s ease-out, top 1.1s ease-out; }
+html:not(.dark) #nm-glow::before, html:not(.dark) #nm-glow::after { opacity: .55; }
+@media (hover: none) {
+  #nm-glow::before { animation: nmPulse 7s ease-in-out infinite; }
+  #nm-glow::after { animation: nmPulse 9s ease-in-out infinite reverse; }
+}
+@keyframes nmPulse { 0%,100% { transform: scale(1); opacity: .7; } 50% { transform: scale(1.25); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { #nm-glow::before, #nm-glow::after, .nm-chip, .nm-metal, h1 .bg-clip-text { animation: none !important; } }
+
+/* ---- Frosted glass cards ---- */
+.glass-card { -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.15); }
+#bentoGridContainer .glass-card { transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
+#bentoGridContainer .glass-card:hover { transform: scale(1.02); box-shadow: 0 24px 60px -18px rgba(124,58,237,.55); border-color: rgba(125,211,252,.5); }
+
+/* ---- Floating social proof chips ---- */
+.nm-chip { position: absolute; z-index: 20; display: none; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 18px; font-weight: 800; font-size: 12.5px; line-height: 1.25; max-width: 250px;
+  background: rgba(15,23,42,.82); color: #f8fafc; border: 1px solid rgba(255,255,255,.18); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  box-shadow: 0 14px 40px -12px rgba(124,58,237,.6); animation: nmFloat 5.5s ease-in-out infinite; }
+.nm-chip b { font-family: 'JetBrains Mono', monospace; color: #7dd3fc; font-size: 16px; }
+.nm-chip.nm-chip-b { animation-delay: -2.6s; }
+html:not(.dark) .nm-chip { background: #fff; color: #0f172a; border-color: rgba(124,58,237,.3); }
+html:not(.dark) .nm-chip b { color: #6d28d9; }
+@keyframes nmFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@media (min-width: 1280px) { .nm-chip { display: flex; } }
+
+/* ---- WhatsApp floating action button ---- */
+#nm-fab { position: fixed; right: 18px; bottom: 22px; z-index: 60; display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; }
+html[dir="rtl"] #nm-fab { right: auto; left: 18px; flex-direction: row; }
+#nm-fab .nm-fab-btn { position: relative; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, #7c3aed, #0284c7); box-shadow: 0 10px 30px -6px rgba(124,58,237,.8); animation: nmRing 2.6s infinite; text-decoration: none; }
+#nm-fab .nm-fab-btn svg { width: 30px; height: 30px; }
+#nm-fab .nm-online { position: absolute; top: 3px; right: 3px; width: 14px; height: 14px; border-radius: 50%; background: #22c55e; border: 2px solid #fff; }
+#nm-fab .nm-bubble { max-width: 230px; padding: 10px 14px; border-radius: 16px 16px 4px 16px; font-size: 12.5px; font-weight: 800; line-height: 1.35; background: #fff; color: #0f172a; box-shadow: 0 12px 32px -10px rgba(15,23,42,.5); border: 1px solid rgba(124,58,237,.3); position: relative; }
+#nm-fab .nm-bubble button { position: absolute; top: -10px; right: -8px; width: 24px; height: 24px; border-radius: 50%; background: #0f172a; color: #fff; font-size: 12px; line-height: 1; }
+@keyframes nmRing { 0% { box-shadow: 0 0 0 0 rgba(124,58,237,.55), 0 10px 30px -6px rgba(124,58,237,.8); } 70% { box-shadow: 0 0 0 18px rgba(124,58,237,0), 0 10px 30px -6px rgba(124,58,237,.8); } 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0), 0 10px 30px -6px rgba(124,58,237,.8); } }
+@media (max-width: 1023px) { #nm-fab { bottom: 92px; } #nm-fab .nm-bubble { display: none; } }
+
+/* ---- Mobile drawer ---- */
+.nm-burger { display: none; min-width: 48px; min-height: 48px; border-radius: 14px; place-items: center; font-size: 22px; font-weight: 900; color: #fff; background: linear-gradient(135deg, #7c3aed, #0284c7); border: 2px solid #7dd3fc; }
+@media (max-width: 1023px) { .nm-burger { display: grid; } }
+#nm-drawer { position: fixed; inset: 0; z-index: 100; display: none; flex-direction: column; gap: 14px; padding: 18px; overflow-y: auto; background: radial-gradient(circle at 20% 10%, rgba(124,58,237,.45), transparent 55%), #090d16; color: #fff; }
+#nm-drawer.open { display: flex; }
+#nm-drawer .nm-d-top { display: flex; justify-content: space-between; align-items: center; }
+#nm-drawer .nm-d-close { min-width: 48px; min-height: 48px; border-radius: 14px; font-size: 22px; background: rgba(255,255,255,.1); color: #fff; }
+#nm-drawer a.nm-d-link { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 14px 20px; border-radius: 20px; font-size: 20px; font-weight: 900; color: #fff; text-decoration: none; background: linear-gradient(90deg, #7c3aed, #9333ea, #0ea5e9); border: 3px solid #7dd3fc; box-shadow: 0 0 0 4px rgba(56,189,248,.35); }
+#nm-drawer .nm-d-row { display: flex; gap: 10px; }
+#nm-drawer .nm-d-row button, #nm-drawer .nm-d-row a { flex: 1; min-height: 52px; border-radius: 16px; font-weight: 900; font-size: 16px; color: #fff; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); display: grid; place-items: center; text-decoration: none; }
+#nm-drawer .nm-d-row .act { background: linear-gradient(90deg, #7c3aed, #0ea5e9); }
+
+/* ---- Circular gauge ---- */
+.nm-gauge-wrap { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.nm-gauge { position: relative; width: 150px; height: 150px; flex: none; }
+.nm-gauge svg { width: 150px; height: 150px; transform: rotate(-90deg); }
+.nm-gauge .trk { stroke: rgba(148,163,184,.25); }
+.nm-gauge .bar { stroke: url(#nmGrad); stroke-linecap: round; transition: stroke-dashoffset 1.1s cubic-bezier(.16,1,.3,1); filter: drop-shadow(0 0 8px rgba(56,189,248,.7)); }
+.nm-gauge .lbl { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; font-weight: 900; font-size: 30px; color: #fff; line-height: 1; }
+.nm-gauge .lbl small { display: block; font-size: 11px; font-weight: 700; color: #7dd3fc; margin-top: 4px; letter-spacing: .04em; }
+html:not(.dark) .nm-gauge .lbl { color: #0f172a; }
+
+/* ---- Salary tracker ---- */
+.nm-sal { margin-bottom: 14px; padding: 12px; border-radius: 16px; background: rgba(2,6,23,.75); border: 1px solid rgba(139,92,246,.4); }
+.nm-sal-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.nm-sal-tabs button { flex: 1; min-height: 48px; padding: 6px 8px; border-radius: 12px; font-size: 11.5px; font-weight: 800; color: #cbd5e1; background: rgba(30,41,59,.9); border: 1px solid rgba(148,163,184,.25); transition: all .2s; }
+.nm-sal-tabs button.on { color: #fff; background: linear-gradient(90deg, #7c3aed, #0ea5e9); border-color: #7dd3fc; box-shadow: 0 6px 18px -6px rgba(124,58,237,.8); }
+.nm-sal-val { margin-top: 10px; font-size: 20px; font-weight: 800; color: #7dd3fc; }
+.nm-sal-val small { display: block; font-size: 11px; font-weight: 600; color: #cbd5e1; font-family: 'Manrope','Heebo',sans-serif; }
+
+/* ---- Quick filter bar ---- */
+.nm-quick { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.nm-quick input { flex: 1 1 260px; min-height: 48px; padding: 0 16px; border-radius: 14px; font-weight: 700; color: #f8fafc; background: #0f172a; border: 2px solid rgba(139,92,246,.5); outline: none; }
+.nm-quick input:focus { border-color: #38bdf8; }
+html:not(.dark) .nm-quick input { color: #0f172a; background: #fff; }
+.nm-quick button { min-height: 48px; padding: 0 16px; border-radius: 14px; font-size: 13px; font-weight: 800; color: #fff; background: #1e293b; border: 1px solid rgba(139,92,246,.4); transition: all .2s; }
+.nm-quick button:hover, .nm-quick button.on { background: linear-gradient(90deg, #7c3aed, #0ea5e9); border-color: #7dd3fc; }
+
+/* ---- AI teaching banner ---- */
+.nm-ai { border-radius: 28px; padding: 28px; background: linear-gradient(135deg, rgba(124,58,237,.35), rgba(2,132,199,.28)), #0f172a; color: #f8fafc; border: 1px solid rgba(255,255,255,.18); box-shadow: 0 30px 70px -30px rgba(124,58,237,.7); }
+.nm-ai h2 { font-size: clamp(1.6rem, 3.2vw, 2.6rem); font-weight: 800; line-height: 1.15; }
+.nm-ai p { margin-top: 12px; line-height: 1.7; color: #e2e8f0; font-size: 1.02rem; }
+.nm-ai .nm-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 20px; }
+.nm-ai .nm-tile { padding: 16px; border-radius: 18px; background: rgba(2,6,23,.6); border: 1px solid rgba(125,211,252,.35); }
+.nm-ai .nm-tile b { display: block; font-size: 2rem; color: #7dd3fc; font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; }
+.nm-ai .nm-tile span { font-size: 13px; font-weight: 700; color: #e2e8f0; }
+
+/* ---- Touch targets ---- */
+header a, header button { min-height: 44px; }
+#nm-drawer, #nm-fab { font-family: 'Manrope','Heebo',sans-serif; }
+@media print { #nm-glow, #nm-fab, .nm-chip, #nm-drawer { display: none !important; } }

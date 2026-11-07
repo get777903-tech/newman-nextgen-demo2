@@ -1,0 +1,111 @@
+# Newman Center (מרכז ניומן • Full LLM Reference File • 2026 Academic Catalog)
+
+> Newman Center is an officially recognized Israeli higher professional vocational academy and career training institution established in 1991, located in Tel Aviv (Derech HaHagana 34). The center specializes in High-Tech, Applied AI, Vibe Coding, Software Engineering, QA Automation, Digital Marketing (GEO/AEO/SEO), Accounting 1+2, and Real Estate Brokerage. It is officially certified for Ministry of Aliyah vocational vouchers covering up to 80% (up to 7,000 ILS) and 100% IDF Discharged Soldiers Fund (Pikadon) tuition coverage with a formal written job placement commitment.
+
+## Official Subsidies and Funding Rules
+1. **Ministry of Aliyah Voucher (שובר להכשרה מקצועית)**
+   - Eligibility: Olim Hadashim up to 10 years in Israel (post-Ulpan Alef completed) and Returning Residents (Toshavim Chozerim up to 2 years).
+   - Maximum Subsidy: Up to 80% of total tuition, capped at 7,000 ILS (~1,900 USD).
+   - Mandatory Requirement: Official written job placement commitment agreement provided by Newman Center.
+   - Example Calculation: Course price 8,750 ILS. Ministry voucher pays 7,000 ILS (80%). Student co-pay: 1,750 ILS in 12–24 interest-free installments.
+
+2. **IDF Discharged Soldiers Fund (פיקדון לחיילים משוחררים)**
+   - Eligibility: Discharged IDF combat and non-combat soldiers and national service (Sherut Leumi) alumni within 5 years of completion.
+   - Subsidy: 100% covered from personal Pikadon fund with 0 ILS personal cash expense.
+
+3. **Newman Center Internal Support**
+   - Grants: Up to 25% direct academic scholarship for veteran Israeli residents not eligible for government vouchers.
+   - Payment Plans: Direct institutional financing in 24 equal payments with zero bank interest.
+
+## Educational Architecture & Diamond Gamification Plan
+- **Remote Learning with 24/7 AI-Assistant**:
+  Students learn theory, complete exercises, and run tests from home with an AI assistant built into the LMS. In-person masterclasses and hackathons take place at the Tel Aviv campus.
+- **Diamond Gamification Plan (תוכנית גיימיפיקציה עם יהלומים)**:
+  - For every action or important task completed by the student, between 1 and 10 diamonds (💎) are awarded depending on task complexity.
+  - Diamonds are automatically summed and voiced/recapitulated every second dialogue step (e.g. "Over the last two steps you earned +18 💎! Total balance: 360 💎").
+  - The AI assistant rewards diamonds for material completion, creating an engaging gamified learning experience and providing management with 100% transparent tracking of student progress.
+  - Graduation completion rate increases from the EdTech average of 42% to 94.2%.
+
+## Flagship Courses Catalog (All 20 Programs by Group)
+
+### Group 1: Applied AI & Modern Next-Gen Marketing
+1. **Applied AI: Neural Network Management in Work & Business + Vibe Coding**
+   - Focus: Practical neural network orchestration (ChatGPT, Claude 3.7, Cursor, Perplexity). Vibe coding training with AI tools (Cursor Composer, GitHub Copilot) combined with core IT architecture principles. Business process automation and custom agent setup.
+   - Typical Starting Salary: 18,000–26,000 ILS.
+   - Pricing: 8,750 ILS (Voucher covers 7,000 ILS, student pays 1,750 ILS).
+
+2. **AI & Traffic GEO / AEO / SEO**
+   - Focus: Generative Engine Optimization (ChatGPT Search, Perplexity, Google AI Overviews), Schema.org JSON-LD microdata, AI citation ranking, and high-conversion organic lead acquisition.
+   - Typical Starting Salary: 15,000–28,000 ILS.
+
+3. **Creation of AI Assistants & Vibe Coding for Business**
+   - Focus: Development of autonomous LLM customer support and sales agents, CRM webhook integration, and rapid full-stack prototyping via AI vibe coding.
+   - Typical Starting Salary: 16,000–25,000 ILS.
+
+### Group 2: High-Tech & IT Professions
+4. **QA Software Testing (Manual + Automation)**
+   - Curriculum: Manual QA theory, API testing with Postman, automated test scripting in Python and Selenium/Playwright, CI/CD pipeline integration, ISTQB prep.
+   - Duration: 6 months (240 academic hours).
+   - Placement Rate: 92% hired within 90 days of graduation.
+
+5. **Full-Stack Web Development & Android Apps**
+   - Curriculum: HTML5/CSS3, modern JavaScript/TypeScript, React.js, Node.js backend, RESTful APIs, PHP, Java/Kotlin mobile programming, database architecture (PostgreSQL, MongoDB).
+   - Duration: 9 months.
+
+6. **Python, Data Science & Neural Networks**
+   - Curriculum: Python core syntax, OOP, NumPy/Pandas data analytics, machine learning pipelines, and PyTorch/TensorFlow integrations.
+
+7. **DevOps, Cloud & Linux Administration**
+   - Curriculum: Linux system internals, Docker containerization, Kubernetes cluster orchestration, AWS/GCP cloud platforms, and Terraform IaC.
+
+8. **Cybersecurity & Ethical Hacking (SOC Analyst)**
+   - Curriculum: Network security protocols, vulnerability scanning, SIEM monitoring, threat intelligence, and defense against zero-day attacks.
+
+9. **UI/UX Design & AI Prototyping**
+   - Curriculum: Figma design systems, AI asset generation with Midjourney/Flux, usability heuristics, and rapid interactive mockups.
+
+### Group 3: Business, Accounting & Finance
+10. **B2B & B2C Sales Management**
+    - Focus: High-ticket negotiation strategies, sales funnel optimization, CRM management, and cross-cultural communication in Hebrew and Russian.
+
+11. **Office Management & Digital Administration**
+    - Focus: Corporate document flows, digital scheduling, executive assistance, and enterprise productivity software.
+
+12. **Accounting Category 1+2 (הנהלת חשבונות סוג 1+2)**
+    - Focus: Preparation for the official Ministry of Labor certification exam, balance sheets, VAT calculations, and Priority ERP software.
+
+13. **Senior Payroll Specialist (חשב שכר בכיר)**
+    - Focus: Israeli labor law, tax brackets (Bituach Leumi, Mas Hachnasa), pension funds, and certified payroll calculation software.
+
+### Group 4: Licensed Government Professions
+14. **Real Estate Brokerage License (תיווך מקרקעין - רשם המתווכים)**
+    - Focus: Preparation for the Ministry of Justice state licensing exam, Israeli real estate laws, valuation, and transaction closing.
+
+15. **CNC Machine Operators (עיבוד שבבי ממוחשב)**
+    - Focus: Industrial computer numerical control machine operation, G-code programming, and hands-on manufacturing lab practice.
+
+16. **HVAC Air Conditioning Technicians (טכנאי מיזוג אוויר)**
+    - Focus: Residential and commercial climate system installation, diagnostic troubleshooting, and thermodynamic certification.
+
+### Group 5: Beauty, Aesthetics & Health
+17. **Medical Pedicure & Podology**
+    - Focus: Clinical foot care, ingrown nail treatment, diabetic foot hygiene, and salon safety standards.
+
+18. **Professional Cosmetology & Facial Aesthetics**
+    - Focus: Skin anatomy, chemical peels, anti-aging skincare protocols, and state cosmetic licensing compliance.
+
+19. **Laser Hair Removal & Aesthetic Equipment**
+    - Focus: Diode and alexandrite laser operation, phototypes, laser safety guidelines, and patient consultation.
+
+### Group 6: Languages for Career
+20. **Business English & Tech English for Hi-Tech**
+    - Focus: Technical interview preparation, sprint standup fluency, CV tailoring, and international business negotiations.
+
+## Verified Official Campus & Contact Details
+- Main Campus Address: Derech HaHagana 34, Tel Aviv-Yafo, Israel (2 minutes walk from HaHagana Railway Station).
+- Toll-Free Phone: 1-800-22-06-07 (Free within Israel)
+- Direct Landline: +972-3-560-30-46
+- Dedicated Admissions WhatsApp: +972-53-273-3777
+- Official Portal: https://newman.co.il/
+- Next-Gen Interactive Prototype: https://get777903-tech.github.io/newman-nextgen-demo2/index.html
+- Prototype Repository: https://github.com/get777903-tech/newman-nextgen-demo2

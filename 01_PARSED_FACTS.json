@@ -1,0 +1,347 @@
+{
+  "brand": {
+    "name_en": "Newman Center",
+    "name_ru": "Учебный центр Ньюмен",
+    "name_he": "מרכז ניומן",
+    "founded_year": 1991,
+    "years_on_market": 35,
+    "domain": "https://newman.co.il/",
+    "country": "Israel",
+    "status": "Государственно признанный учебный центр профессионального образования и переквалификации в Израиле (с 1991 года)"
+  },
+  "localization": {
+    "default_language": "ru",
+    "supported_languages": [
+      {
+        "code": "ru",
+        "name": "Русский",
+        "dir": "ltr"
+      },
+      {
+        "code": "he",
+        "name": "עברית",
+        "dir": "rtl"
+      }
+    ]
+  },
+  "contacts": {
+    "short_phone": "*3331",
+    "toll_free_phone": "1-800-22-06-07",
+    "landline_phone": "+972-3-560-30-46",
+    "fax": "03-5662592",
+    "email": "info@newman.co.il",
+    "working_hours": {
+      "ru": "Вс–Чт: 09:00–20:00, Пт: 09:00–13:00",
+      "he": "א'–ה': 09:00–20:00, ו': 09:00–13:00"
+    }
+  },
+  "locations": {
+    "main_campus": {
+      "city_ru": "Тель-Авив",
+      "city_he": "תל אביב",
+      "address_ru": "Дерех ха-Агана 34, Тель-Авив (рядом с ж/д станцией Ха-Агана)",
+      "address_he": "דרך ההגנה 34, תל אביב (סמוך לתחנת רכבת ההגנה)",
+      "coordinates": {
+        "lat": 32.0542,
+        "lng": 34.7849
+      }
+    },
+    "regional_coverage_and_formats": {
+      "formats_ru": [
+        "Очное обучение в кампусе в Тель-Авиве",
+        "Живой интерактивный онлайн-формат (Live Online)",
+        "Гибридный формат (совмещение практики в классе и онлайн-лекций)"
+      ],
+      "formats_he": [
+        "לימודים פרונטליים בקמפוס תל אביב",
+        "לימודים מקוונים בלייב (Live Online)",
+        "מתכונת היברידית (שילוב כיתה ולימוד מרחוק)"
+      ],
+      "covered_cities_ru": [
+        "Тель-Авив",
+        "Рамат-Ган",
+        "Хайфа",
+        "Нетания",
+        "Ашдод",
+        "Беэр-Шева"
+      ],
+      "covered_cities_he": [
+        "תל אביב",
+        "רמת גן",
+        "חיפה",
+        "נתניה",
+        "אשדוד",
+        "באר שבע"
+      ]
+    }
+  },
+  "government_subsidies_and_benefits": [
+    {
+      "id": "voucher_aliya",
+      "title_ru": "Ваучеры Министерства алии и интеграции",
+      "title_he": "וואוצ'רים של משרד העלייה והקליטה",
+      "coverage_percent": "80-100%",
+      "eligibility_ru": "Новые репатрианты (Олим хадашим) и вернувшиеся израильтяне (Тошавим хозрим) — до 10 лет в стране",
+      "eligibility_he": "עולים חדשים ותושבים חוזרים — עד 10 שנים בארץ",
+      "description_ru": "Государственное субсидирование профессионального обучения до 80–100% от стоимости курса по программе ваучеров.",
+      "description_he": "מימון ממשלתי להכשרה מקצועית של עד 80%–100% מעלות הקורס באמצעות תוכנית השוברים."
+    },
+    {
+      "id": "pikadon_idf",
+      "title_ru": "Армейский пикадон (Пикадон ле-хаялим мешухрарим)",
+      "title_he": "פיקדון לחיילים משוחררים",
+      "coverage_percent": "100%",
+      "eligibility_ru": "Демобилизованные солдаты ЦАХАЛ и завершившие альтернативную службу (Шерут Леуми)",
+      "eligibility_he": "חיילים משוחררים ומסיימי שירות לאומי",
+      "description_ru": "Возможность полной оплаты обучения за счет средств армейского депозита (Пикадон) в соответствии с признанием министерств.",
+      "description_he": "אפשרות לתשלום מלא של שכר הלימוד מכספי הפיקדון הצבאי."
+    }
+  ],
+  "highest_margin_direction": {
+    "category_id": "hitech_it",
+    "name_ru": "Компьютеры, Программирование и Hi-Tech (QA, Full-Stack, Python, UX/UI, Системное администрирование)",
+    "name_he": "מחשבים, תכנות והייטק (בדיקות תוכנה QA, פיתוח Full-Stack, Python, עיצוב UX/UI, ניהול רשתות)",
+    "average_course_price_usd": {
+      "min": 2200,
+      "max": 4500
+    },
+    "average_course_price_ils": {
+      "min": 8000,
+      "max": 16500
+    },
+    "graduate_monthly_salary_usd": {
+      "min": 3800,
+      "max": 7500
+    },
+    "graduate_monthly_salary_ils": {
+      "min": 14000,
+      "max": 27500
+    },
+    "course_duration_months": {
+      "min": 4,
+      "max": 10
+    },
+    "roi_rationale_ru": "Самое высокомаржинальное направление центра с максимальным LTV и быстрой окупаемостью для студента (1–2 зарплаты Junior-специалиста в израильском Hi-Tech полностью окупают стоимость курса, особенно с учетом 80–100% покрытия ваучером Министерства алии).",
+    "roi_rationale_he": "התחום הרווחי והמבוקש ביותר במרכז, עם החזר השקעה מהיר במיוחד לבוגרים (משכורת אחת או שתיים בהייטק הישראלי מחזירה את כל עלות ההכשרה, במיוחד בשילוב מימון וואוצ'ר ממשלתי)."
+  },
+  "course_categories": [
+    {
+      "id": "hitech_it",
+      "is_flagship_high_margin": true,
+      "title_ru": "Компьютеры, Программирование и Hi-Tech",
+      "title_he": "מחשבים, תכנות והייטק",
+      "avg_check_usd": "2 200 – 4 500 USD",
+      "avg_check_ils": "8 000 – 16 500 ₪",
+      "graduate_salary_usd": "3 800 – 7 500 USD/мес",
+      "courses": [
+        {
+          "name_ru": "QA Тестирование программного обеспечения (Manual + Automation)",
+          "name_he": "בדיקות תוכנה QA (ידני ואוטומציה)",
+          "duration_months": 6,
+          "price_usd": 3200,
+          "price_ils": 11800,
+          "expected_salary_usd": 4500
+        },
+        {
+          "name_ru": "Full-Stack WEB / PHP / JavaScript разработка",
+          "name_he": "פיתוח Full-Stack WEB / PHP / JavaScript",
+          "duration_months": 9,
+          "price_usd": 4200,
+          "price_ils": 15500,
+          "expected_salary_usd": 5800
+        },
+        {
+          "name_ru": "Программирование на Python и анализ данных",
+          "name_he": "תכנות בשפת Python וניתוח נתונים",
+          "duration_months": 7,
+          "price_usd": 3600,
+          "price_ils": 13300,
+          "expected_salary_usd": 5200
+        },
+        {
+          "name_ru": "Веб-дизайн, UX/UI и графический дизайн",
+          "name_he": "עיצוב אתרים, UX/UI ועיצוב גרפי",
+          "duration_months": 6,
+          "price_usd": 2900,
+          "price_ils": 10700,
+          "expected_salary_usd": 4100
+        },
+        {
+          "name_ru": "Системное администрирование, сети и ремонт ПК/смартфонов",
+          "name_he": "ניהול רשתות, טכנאי מחשבים וסמארטפונים",
+          "duration_months": 5,
+          "price_usd": 2400,
+          "price_ils": 8800,
+          "expected_salary_usd": 3800
+        }
+      ]
+    },
+    {
+      "id": "accounting_finance_business",
+      "is_flagship_high_margin": false,
+      "title_ru": "Бухгалтерия, Финансы и Бизнес",
+      "title_he": "הנהלת חשבונות, פיננסים ועסקים",
+      "avg_check_usd": "1 600 – 2 800 USD",
+      "avg_check_ils": "5 900 – 10 300 ₪",
+      "graduate_salary_usd": "2 800 – 4 600 USD/мес",
+      "courses": [
+        {
+          "name_ru": "Бухгалтерский учет 1+2 категория (подготовка к гос. экзаменам)",
+          "name_he": "הנהלת חשבונות סוג 1+2 (הכנה למבחני ממשלה)",
+          "duration_months": 7,
+          "price_usd": 2400,
+          "price_ils": 8900,
+          "expected_salary_usd": 3400
+        },
+        {
+          "name_ru": "Расчет заработной платы (Хашав שכר)",
+          "name_he": "חשבי שכר",
+          "duration_months": 5,
+          "price_usd": 2100,
+          "price_ils": 7800,
+          "expected_salary_usd": 3600
+        },
+        {
+          "name_ru": "Управление бизнесом и предпринимательство в Израиле",
+          "name_he": "ניהול עסקים ויזמות בישראל",
+          "duration_months": 4,
+          "price_usd": 1800,
+          "price_ils": 6600,
+          "expected_salary_usd": 4000
+        },
+        {
+          "name_ru": "Международная торговля, импорт и экспорт",
+          "name_he": "סחר בינלאומי, יבוא ויצוא",
+          "duration_months": 5,
+          "price_usd": 2000,
+          "price_ils": 7400,
+          "expected_salary_usd": 3800
+        },
+        {
+          "name_ru": "Биржа, рынок капитала и инвестиции",
+          "name_he": "שוק ההון, בורסה והשקעות",
+          "duration_months": 4,
+          "price_usd": 1900,
+          "price_ils": 7000,
+          "expected_salary_usd": 4200
+        }
+      ]
+    },
+    {
+      "id": "real_estate_brokerage",
+      "is_flagship_high_margin": false,
+      "title_ru": "Недвижимость и Маклерство",
+      "title_he": "נדל\"ן ותיווך מקרקעין",
+      "avg_check_usd": "1 200 – 1 900 USD",
+      "avg_check_ils": "4 400 – 7 000 ₪",
+      "graduate_salary_usd": "4 000 – 9 000 USD/мес (комиссионные)",
+      "courses": [
+        {
+          "name_ru": "Подготовка к государственному экзамену на лицензию риелтора Министерства юстиции Израиля (Рашам ха-Метавхим)",
+          "name_he": "הכנה למבחן רשם המתווכים של משרד המשפטים ולימודי נדל\"ן מעשיים",
+          "duration_months": 3,
+          "price_usd": 1500,
+          "price_ils": 5500,
+          "expected_salary_usd": 5500
+        }
+      ]
+    },
+    {
+      "id": "technical_trades",
+      "is_flagship_high_margin": false,
+      "title_ru": "Технические специальности",
+      "title_he": "מקצועות טכניים",
+      "avg_check_usd": "2 000 – 3 200 USD",
+      "avg_check_ils": "7 400 – 11 800 ₪",
+      "graduate_salary_usd": "3 500 – 6 000 USD/мес",
+      "courses": [
+        {
+          "name_ru": "Техник по установке и ремонту кондиционеров и холодильного оборудования",
+          "name_he": "טכנאי מיזוג אוויר וקירור",
+          "duration_months": 6,
+          "price_usd": 2600,
+          "price_ils": 9600,
+          "expected_salary_usd": 4800
+        }
+      ]
+    },
+    {
+      "id": "beauty_and_health",
+      "is_flagship_high_margin": false,
+      "title_ru": "Индустрия красоты и здоровья",
+      "title_he": "יופי, אסתטיקה ובריאות",
+      "avg_check_usd": "1 400 – 2 900 USD",
+      "avg_check_ils": "5 200 – 10 700 ₪",
+      "graduate_salary_usd": "2 800 – 5 000 USD/мес",
+      "courses": [
+        {
+          "name_ru": "Медицинский и классический массаж",
+          "name_he": "עיסוי רפואי וקלאסי",
+          "duration_months": 6,
+          "price_usd": 2300,
+          "price_ils": 8500,
+          "expected_salary_usd": 3700
+        },
+        {
+          "name_ru": "Прикладная косметология и эстетика лица",
+          "name_he": "קוסמטיקה פרא-רפואית ואסתטיקה",
+          "duration_months": 7,
+          "price_usd": 2800,
+          "price_ils": 10300,
+          "expected_salary_usd": 4200
+        },
+        {
+          "name_ru": "Профессиональный маникюр, педикюр и моделирование ногтей",
+          "name_he": "מניקור, פדיקור רפואי ובניית ציפורניים",
+          "duration_months": 3,
+          "price_usd": 1500,
+          "price_ils": 5500,
+          "expected_salary_usd": 3100
+        }
+      ]
+    },
+    {
+      "id": "tourism_and_languages",
+      "is_flagship_high_margin": false,
+      "title_ru": "Туризм и языки",
+      "title_he": "תיירות ושפות",
+      "avg_check_usd": "900 – 2 200 USD",
+      "avg_check_ils": "3 300 – 8 100 ₪",
+      "graduate_salary_usd": "2 600 – 4 200 USD/мес",
+      "courses": [
+        {
+          "name_ru": "Курс туристических агентов и консультантов по международному туризму",
+          "name_he": "קורס סוכני נסיעות ויועצי תיירות",
+          "duration_months": 5,
+          "price_usd": 2100,
+          "price_ils": 7700,
+          "expected_salary_usd": 3300
+        },
+        {
+          "name_ru": "Профессиональный Ульпан иврита (разговорный и деловой иврит для работы)",
+          "name_he": "אולפן עברית תעסוקתית ומדוברת",
+          "duration_months": 4,
+          "price_usd": 1100,
+          "price_ils": 4100,
+          "expected_salary_usd": 3500
+        },
+        {
+          "name_ru": "Деловой и технический английский язык (Business & Hi-Tech English)",
+          "name_he": "אנגלית עסקית וטכנית להייטק",
+          "duration_months": 4,
+          "price_usd": 1200,
+          "price_ils": 4400,
+          "expected_salary_usd": 4000
+        },
+        {
+          "name_ru": "Китайский язык для бизнеса и ВЭД",
+          "name_he": "סינית לעסקים ולסחר בינלאומי",
+          "duration_months": 5,
+          "price_usd": 1400,
+          "price_ils": 5200,
+          "expected_salary_usd": 3900
+        }
+      ]
+    }
+  ]
+}

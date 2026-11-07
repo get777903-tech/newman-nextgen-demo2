@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Newman Center — Ваучер до 80% (7000₪) и Пикадон до 100% | IT, AI, GEO/AEO/SEO и Android</title>
+  <meta name="description" content="Newman Center (מרכז ניומן): проверьте право на государственный ваучер до 80% (до 7000₪) от Министерства алии и до 100% Пикадон ЦАХАЛ. Курсы AI и GEO/AEO/SEO трафика, Мобильные приложения для Android, Веб-приложения, Серверы и Игры. 85% практики и 92% трудоустройство." />
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, Heebo, Rubik -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Rubik:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'Heebo', 'Rubik', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Rubik', 'Heebo', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#090D16',
+            midnight: '#0F172A',
+          },
+          animation: {
+            'aurora': 'aurora 14s ease-in-out infinite alternate',
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2.8s linear infinite',
+          },
+          keyframes: {
+            aurora: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '50%': { transform: 'translate(30px, -25px) scale(1.08)' },
+              '100%': { transform: 'translate(-20px, 20px) scale(0.96)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #090D16;
+      --bg-secondary: #0F172A;
+      --text-primary: #FFFFFF;
+      --text-secondary: #E0F2FE;
+      --card-bg: rgba(15, 23, 42, 0.78);
+      --card-border: rgba(168, 85, 247, 0.28);
+    }
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #F1F5F9;
+      --text-primary: #0F172A;
+      --text-secondary: #334155;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-border: rgba(139, 92, 246, 0.28);
+    }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+    }
+    html.light .glass-card {
+      box-shadow: 0 12px 32px -8px rgba(99, 102, 241, 0.12);
+    }
+    .shimmer-btn {
+      background: linear-gradient(90deg, #9333EA 0%, #38BDF8 50%, #9333EA 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite linear;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #E9D5FF 0%, #C084FC 45%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    html.light .gradient-text {
+      background: linear-gradient(135deg, #7E22CE 0%, #9333EA 45%, #0284C7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .num-nowrap {
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      display: inline-block;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.4);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(168, 85, 247, 0.5);
+      border-radius: 9999px;
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data for GEO / AEO / AI Overviews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://newman.co.il/#organization",
+        "name": "Newman Center",
+        "alternateName": ["מרכז ניומן", "Центр Ньюман"],
+        "url": "https://newman.co.il/",
+        "telephone": "1-800-22-06-07 / +972-3-560-30-46",
+        "foundingDate": "1991",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IL",
+          "addressLocality": "Tel Aviv, Haifa, Jerusalem, Beer Sheva, Netanya, Ashdod"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Какой размер ваучера от Министерства алии и интеграции можно получить в Newman Center?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Новые репатрианты (Олим Хадашим до 10 лет в стране, закончившие ульпан Алеф) и вернувшиеся израильтяне (Тошавим Хозрим до 2 лет) могут получить государственный ваучер (שובר להכשרה מקצועית), покрывающий до 80% стоимости курса (максимум до 7000₪ / 1900$) при наличии надзора профильного ведомства или официального письменного обязательства трудоустройства от Newman Center. Солдаты после армии получают до 100% оплаты за счёт армейского Пикадона."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какие практические приложения и проекты создают студенты Newman Center?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Программа на 85% состоит из практики под руководством опытных преподавателей и включает 6 ключевых направлений: AI и интернет-маркетинг (GEO/AEO/SEO и генерация трафика), мобильные приложения (особенно приложения для Android), настольные приложения, веб-приложения, веб-серверы и серверы приложений, а также игры."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+   {"@type":["EducationalOrganization","LocalBusiness"],"@id":"https://newman.co.il/#organization-rating","name":"Newman Center","url":"https://newman.co.il/","address":{"@type":"PostalAddress","streetAddress":"Derech HaHagana 34","addressLocality":"Tel Aviv-Yafo","addressCountry":"IL"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"212","bestRating":"5","worstRating":"1"}},
+   {"@type":"Course","name":"Applied AI and GEO/AEO/SEO Marketing","provider":{"@id":"https://newman.co.il/#organization-rating"},"description":"AI-assisted blended learning: theory with a 24/7 AI assistant, practice on campus. Frees up to 60% of instructor time.","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"212"}}
+  ]}
+  </script>  <link rel="stylesheet" href="assets/enhance.css">
+</head>
+<body class="antialiased selection:bg-violet-600 selection:text-white pb-24 lg:pb-12">
+
+  <!-- Background Aurora Borealis Mesh -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-violet-600/20 blur-[130px] animate-aurora"></div>
+    <div class="absolute top-1/3 -right-32 w-[460px] h-[460px] rounded-full bg-sky-500/20 blur-[130px] animate-aurora" style="animation-delay: -5s;"></div>
+    <div class="absolute -bottom-32 left-1/4 w-[420px] h-[420px] rounded-full bg-fuchsia-600/15 blur-[140px] animate-aurora" style="animation-delay: -9s;"></div>
+  </div>
+
+  <!-- Top Sticky Navigation Header (Brand ALWAYS in English: Newman Center) -->
+  <header class="sticky top-0 z-50 glass-card border-b border-violet-500/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+      <!-- Brand Identity -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-violet-600 via-purple-600 to-sky-500 flex items-center justify-center shadow-lg shadow-violet-600/30 group-hover:scale-105 transition-transform">
+          <span class="font-display font-extrabold text-white text-xl tracking-tight">N</span>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-white dark:text-white light:text-slate-900 flex items-center gap-2">
+            <span>Newman Center</span>
+            <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-500/20 text-violet-200 border border-violet-400/30">Est. 1991</span>
+          </div>
+          <p class="text-xs text-sky-200/90 dark:text-sky-200/90" data-i18n="nav_subtitle">מרכז ניומן • Академия IT, AI, GEO/AEO/SEO и Карьеры</p>
+        </div>
+      </a>
+
+      <!-- 4 DISTINCT ENLARGED EXTRA-BOLD HIGHLIGHTED NAVIGATION BUTTONS (Requirement: Ultra-Large Bold Font & Radiant High-Contrast Highlight for ALL Buttons) -->
+      <nav class="hidden lg:flex items-center gap-3 bg-slate-950/95 border-[3px] border-violet-400/60 rounded-3xl p-3 shadow-2xl" aria-label="Main Navigation">
+        <a href="index.html" class="px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
+          <span class="text-xl">🏛️</span> <span data-i18n="nav_home">Главная</span>
+        </a>
+        <a href="courses.html" class="px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
+          <span class="text-xl">📚</span> <span data-i18n="nav_courses">Все 20 курсов</span>
+        </a>
+        <a href="offer.html" class="px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 scale-105 transition-all flex items-center gap-2.5">
+          <span class="text-xl">🎫</span> <span data-i18n="nav_offer">Калькулятор Ваучера 80%</span>
+        </a>
+        <a href="audit.html" class="px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
+          <span class="text-xl">📊</span> <span data-i18n="nav_audit">Аудит &amp; Стратегия Роста</span>
+        </a>
+      </nav>
+
+      <!-- Right Controls: Language Switcher RU | עב | EN + Theme Toggle + Real Phone Numbers -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- 3-Language Switcher -->
+        <div class="flex items-center bg-slate-900/90 border border-violet-400/30 rounded-xl p-1" role="group" aria-label="Language Switcher">
+          <button type="button" onclick="setLanguage('ru')" id="lang-btn-ru" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-gradient-to-r from-violet-600 to-sky-500 text-white shadow">RU</button>
+          <button type="button" onclick="setLanguage('he')" id="lang-btn-he" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all text-sky-200 hover:text-white">עב</button>
+          <button type="button" onclick="setLanguage('en')" id="lang-btn-en" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all text-sky-200 hover:text-white">EN</button>
+        </div>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" onclick="toggleTheme()" id="theme-toggle-btn" class="w-10 h-10 rounded-xl bg-slate-900/80 border border-violet-400/30 flex items-center justify-center text-sky-200 hover:text-white hover:border-sky-400 transition-all" aria-label="Toggle Theme">
+          <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg id="theme-icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- Real Phone Numbers -->
+        <div class="hidden sm:flex flex-col items-end text-right">
+          <a href="tel:1800220607" class="font-display font-extrabold text-xs sm:text-sm text-sky-400 hover:text-sky-300">1-800-22-06-07</a>
+          <a href="tel:+97235603046" class="text-[11px] font-bold text-sky-200 hover:underline">+972-3-560-30-46</a>
+        </div>
+        <a href="tel:1800220607" class="sm:hidden px-3 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-sky-500 text-white font-extrabold text-xs shadow-md">
+          📞 1-800
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Sub-nav (4 Buttons) -->
+    <div class="lg:hidden flex items-center justify-around border-t border-violet-500/20 bg-slate-950/80 px-2 py-2 text-xs font-semibold">
+      <a href="index.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_home">Главная</a>
+      <a href="courses.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_courses_short">20 курсов</a>
+      <a href="offer.html" class="px-2 py-1 rounded-lg bg-violet-600/30 text-white border border-violet-400/40" data-i18n="nav_offer">Ваучер 80%</a>
+      <a href="audit.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_audit">Аудит &amp; Рост</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10">
+
+    <!-- HERO SECTION: High-Impact Money Page & Voucher Verification -->
+    <section class="pt-10 pb-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Column: Emotional Copy + Verified Voucher Rules -->
+        <div class="lg:col-span-7 space-y-6 reveal visible">
+          <div class="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-full bg-violet-500/20 border border-violet-400/40 text-sky-100 text-xs sm:text-sm font-semibold">
+            <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping"></span>
+            <span data-i18n="hero_badge">Официальная проверка льгот gov.il • Ваучер до 80% (7000₪) и Пикадон до 100%</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight text-white">
+            <span data-i18n="hero_title_1">Заберите до 80%–100% оплаты обучения от государства и выйдите на доход</span>
+            <span class="gradient-text block mt-2 num-nowrap" data-i18n="hero_title_salary">15000–28000₪ (4000–7500$)</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-sky-100/95 leading-relaxed max-w-2xl" data-i18n="hero_desc">
+            Не откладывайте яркую карьеру в Израиле! В Newman Center вас ждёт современная программа обучения (85% живой практики), опытные преподаватели-практики и реальная помощь с трудоустройством (92% выпускников в штате). Пройдите 30-секундный расчёт ниже и узнайте, какую долю курса за вас оплатит Министерство алии или армейский фонд.
+          </p>
+
+          <!-- Key Percentage Triggers -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="glass-card rounded-2xl p-4 border border-violet-400/30">
+              <div class="text-2xl sm:text-3xl font-extrabold text-sky-300 num-nowrap" data-i18n="stat_1_val">до 80%</div>
+              <div class="text-xs text-sky-100 mt-1" data-i18n="stat_1_lbl">Ваучер Олим (до <span class="num-nowrap">7000₪</span>)</div>
+            </div>
+            <div class="glass-card rounded-2xl p-4 border border-sky-400/30">
+              <div class="text-2xl sm:text-3xl font-extrabold text-violet-300 num-nowrap" data-i18n="stat_2_val">до 100%</div>
+              <div class="text-xs text-sky-100 mt-1" data-i18n="stat_2_lbl">Оплата из Пикадона ЦАХАЛ</div>
+            </div>
+            <div class="glass-card rounded-2xl p-4 border border-violet-400/30">
+              <div class="text-2xl sm:text-3xl font-extrabold text-sky-300 num-nowrap" data-i18n="stat_3_val">85%</div>
+              <div class="text-xs text-sky-100 mt-1" data-i18n="stat_3_lbl">Реальной практики в коде</div>
+            </div>
+            <div class="glass-card rounded-2xl p-4 border border-sky-400/30">
+              <div class="text-2xl sm:text-3xl font-extrabold text-violet-300 num-nowrap" data-i18n="stat_4_val">92%</div>
+              <div class="text-xs text-sky-100 mt-1" data-i18n="stat_4_lbl">Помощь с трудоустройством</div>
+            </div>
+          </div>
+
+          <!-- Primary CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+            <a href="#calculator-section" class="shimmer-btn px-7 py-4 rounded-2xl font-display font-extrabold text-white text-center text-base shadow-xl shadow-violet-600/35 hover:scale-[1.02] transition-transform" data-i18n="hero_cta_calc">
+              Рассчитать мой ваучер до 80% (7000₪)
+            </a>
+            <button type="button" onclick="openBottomSheet()" class="px-6 py-4 rounded-2xl glass-card border border-sky-400/40 text-sky-100 hover:text-white hover:border-sky-300 font-bold text-base transition-all" data-i18n="hero_cta_modal">
+              Получить список документов за 60 секунд
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Showcase with Floating Verified Badges -->
+        <div class="lg:col-span-5 relative reveal visible">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-violet-400/40 shadow-2xl shadow-violet-600/30 group">
+            <img src="assets/it_lab.jpg" alt="Newman Center High-Tech AI & Android Lab" class="w-full h-[380px] sm:h-[440px] object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+
+            <!-- Floating Top Pill -->
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+              <span class="px-3.5 py-1.5 rounded-full bg-slate-950/85 border border-sky-400/40 text-sky-200 text-xs font-bold backdrop-blur-md" data-i18n="hero_img_badge_1">
+                שובר להכשרה מקצועית • до 80% (7000₪)
+              </span>
+              <span class="px-3.5 py-1.5 rounded-full bg-violet-600/90 text-white text-xs font-bold shadow-lg" data-i18n="hero_img_badge_2">
+                6 филиалов + Live Online
+              </span>
+            </div>
+
+            <!-- Bottom Overlay Card -->
+            <div class="absolute bottom-4 left-4 right-4 glass-card rounded-2xl p-4 border border-violet-400/40">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-wider text-sky-300" data-i18n="hero_card_kicker">Официальное письменное обязательство</p>
+                  <p class="text-sm sm:text-base font-extrabold text-white mt-0.5" data-i18n="hero_card_title">Бланк התחייבות להשמה בעבודה для одобрения ваучера</p>
+                </div>
+                <span class="px-3 py-1.5 rounded-xl bg-sky-500/25 border border-sky-300/40 text-sky-200 font-extrabold text-sm num-nowrap">100% Законно</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 3-SLIDER VOUCHER & SALARY ROI CALCULATOR -->
+    <section id="calculator-section" class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-violet-500/35 shadow-2xl shadow-violet-900/25">
+        <div class="max-w-3xl mb-8">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-200 text-xs font-bold uppercase tracking-wider mb-3" data-i18n="calc_kicker">
+            Интерактивный калькулятор финансирования и зарплаты
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white" data-i18n="calc_title">
+            Узнайте точную сумму вашей субсидии в процентах и стартовую зарплату после выпуска
+          </h2>
+          <p class="text-sky-100/90 text-sm sm:text-base mt-2" data-i18n="calc_subtitle">
+            Выберите ваш статус в Израиле, желаемую программу обучения и удобный кампус. Расчёт выполняется мгновенно по актуальным критериям Министерства алии и интеграции (до 80% / до 7000₪) и фонда Пикадон (до 100%).
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left 7 Cols: 3 Interactive Controls -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Step 1: Status Selector -->
+            <div class="p-5 rounded-2xl bg-slate-900/75 border border-violet-500/30 space-y-3">
+              <div class="flex items-center justify-between">
+                <label class="font-display font-bold text-base sm:text-lg text-white" data-i18n="calc_step1_label">
+                  1. Ваш статус в Израиле (проверка права на субсидию):
+                </label>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-violet-500/25 text-violet-200" data-i18n="calc_step1_tag">Шаг 1 из 3</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="status-buttons">
+                <button type="button" onclick="selectStatus('olim')" id="status-olim" class="status-btn text-left p-4 rounded-xl border-2 border-sky-400 bg-violet-600/25 text-white transition-all">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-sm sm:text-base" data-i18n="status_olim_title">Олим Хадашим (до 10 лет)</span>
+                    <span class="px-2 py-0.5 rounded bg-sky-400/25 text-sky-200 text-xs font-extrabold num-nowrap">до 80%</span>
+                  </div>
+                  <p class="text-xs text-sky-100/90 mt-1" data-i18n="status_olim_desc">Гос. ваучер до 7000₪ (1900$) после ульпана Алеф</p>
+                </button>
+
+                <button type="button" onclick="selectStatus('pikadon')" id="status-pikadon" class="status-btn text-left p-4 rounded-xl border border-violet-400/30 bg-slate-900/60 text-sky-100 hover:border-sky-400 transition-all">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-sm sm:text-base" data-i18n="status_pikadon_title">Солдат после армии (Пикадон)</span>
+                    <span class="px-2 py-0.5 rounded bg-violet-500/30 text-violet-200 text-xs font-extrabold num-nowrap">до 100%</span>
+                  </div>
+                  <p class="text-xs text-sky-100/90 mt-1" data-i18n="status_pikadon_desc">Оплата до 100% за счёт личного армейского Пикадона</p>
+                </button>
+
+                <button type="button" onclick="selectStatus('toshav')" id="status-toshav" class="status-btn text-left p-4 rounded-xl border border-violet-400/30 bg-slate-900/60 text-sky-100 hover:border-sky-400 transition-all">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-sm sm:text-base" data-i18n="status_toshav_title">Тошав Хозер (до 2 лет)</span>
+                    <span class="px-2 py-0.5 rounded bg-sky-400/25 text-sky-200 text-xs font-extrabold num-nowrap">до 80%</span>
+                  </div>
+                  <p class="text-xs text-sky-100/90 mt-1" data-i18n="status_toshav_desc">Ваучер Министерства алии до 7000₪ (1900$)</p>
+                </button>
+
+                <button type="button" onclick="selectStatus('citizen')" id="status-citizen" class="status-btn text-left p-4 rounded-xl border border-violet-400/30 bg-slate-900/60 text-sky-100 hover:border-sky-400 transition-all">
+                  <div class="flex items-center justify-between">
+                    <span class="font-extrabold text-sm sm:text-base" data-i18n="status_citizen_title">Гражданин Израиля / Апгрейд</span>
+                    <span class="px-2 py-0.5 rounded bg-violet-500/30 text-violet-200 text-xs font-extrabold num-nowrap">0% переплат</span>
+                  </div>
+                  <p class="text-xs text-sky-100/90 mt-1" data-i18n="status_citizen_desc">Грант от Newman Center до 25% + рассрочка до 24 платежей</p>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Flagship Track Selector (Includes AI & GEO/AEO/SEO + Android/Web/Server/Games) -->
+            <div class="p-5 rounded-2xl bg-slate-900/75 border border-violet-500/30 space-y-3">
+              <div class="flex items-center justify-between">
+                <label for="track-select" class="font-display font-bold text-base sm:text-lg text-white" data-i18n="calc_step2_label">
+                  2. Выберите современную программу обучения (85% практики):
+                </label>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-sky-500/25 text-sky-200" data-i18n="calc_step2_tag">Шаг 2 из 3</span>
+              </div>
+              <select id="track-select" onchange="updateCalculator()" class="w-full rounded-xl bg-slate-950 border-2 border-violet-400/40 px-4 py-3.5 text-white font-bold text-sm sm:text-base focus:outline-none focus:border-sky-400">
+                <option value="ai_geo" data-i18n="track_opt_ai">AI-Инжиниринг, Интернет-Маркетинг и Трафик (GEO / AEO / SEO)</option>
+                <option value="android_java" data-i18n="track_opt_android">Мобильные приложения (Android), Настольные, Веб-приложения, Серверы и Игры</option>
+                <option value="qa_auto" data-i18n="track_opt_qa">QA Automation, Кибер-тестирование &amp; AI-Тестирование</option>
+                <option value="python_data" data-i18n="track_opt_python">Python, Data Science, Серверы приложений &amp; Нейросети</option>
+                <option value="accounting" data-i18n="track_opt_acc">Бухгалтерский учёт 1+2, Расчёт зарплат и Финансовый AI</option>
+              </select>
+              <p id="track-hook-preview" class="text-xs sm:text-sm text-sky-200 font-medium pt-1">
+                Вы научитесь выводить сайты в топ ответов ChatGPT, Perplexity и Google AI Overviews, запускать окупаемый трафик и создавать автономных AI-агентов продаж.
+              </p>
+            </div>
+
+            <!-- Step 3: Weekly Hours & Study Format Slider -->
+            <div class="p-5 rounded-2xl bg-slate-900/75 border border-violet-500/30 space-y-3">
+              <div class="flex items-center justify-between">
+                <label for="hours-range" class="font-display font-bold text-base sm:text-lg text-white" data-i18n="calc_step3_label">
+                  3. Интенсивность занятий в неделю (Вечер / Утро / Online):
+                </label>
+                <span id="hours-display" class="text-sm font-extrabold px-3 py-1 rounded-lg bg-gradient-to-r from-violet-600 to-sky-500 text-white num-nowrap">12 ч/нед • 6 мес.</span>
+              </div>
+              <input id="hours-range" type="range" min="8" max="20" step="4" value="12" oninput="updateCalculator()" class="w-full accent-sky-400 cursor-pointer h-2.5 bg-slate-800 rounded-lg" />
+              <div class="flex justify-between text-xs text-sky-200/80 font-medium">
+                <span data-i18n="hours_min">8 ч/нед (Спокойный вечерний темп)</span>
+                <span data-i18n="hours_mid">12 ч/нед (Оптимальный гибрид)</span>
+                <span data-i18n="hours_max">20 ч/нед (Ускоренный буткемп)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right 5 Cols: Dynamic Financial & Career Output Card -->
+          <div class="lg:col-span-5 glass-card rounded-3xl p-6 sm:p-7 border-2 border-sky-400/50 bg-gradient-to-b from-violet-950/70 via-slate-900/90 to-slate-950 relative overflow-hidden">
+            <div class="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-sky-400/20 blur-2xl pointer-events-none"></div>
+
+            <div class="flex items-center justify-between gap-2 pb-4 border-b border-violet-400/30">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-sky-300" data-i18n="res_header">Ваш персональный расчёт выгоды</span>
+              <span id="res-badge" class="px-3 py-1 rounded-full bg-sky-500/25 border border-sky-300/40 text-sky-100 text-xs font-extrabold num-nowrap">Субсидия до 80%</span>
+            </div>
+
+            <div class="py-5 space-y-5">
+              <!-- Subsidy Coverage Row -->
+              <div>
+                <p class="text-xs text-sky-200/90 font-medium" data-i18n="res_cov_label">Покрытие стоимости обучения от государства / фонда:</p>
+                <div class="flex items-baseline gap-3 mt-1">
+                  <span id="res-coverage-pct" class="font-display font-extrabold text-3xl sm:text-4xl text-sky-300 num-nowrap">до 80%</span>
+                  <span id="res-coverage-sum" class="font-display font-bold text-lg sm:text-xl text-white num-nowrap">(до 7000₪ / 1900$)</span>
+                </div>
+                <p id="res-legal-note" class="text-xs text-violet-200 mt-1.5 leading-relaxed">
+                  Официальный ваучер משרד העלייה והקליטה (до 80% от стоимости курса, максимум до 7000₪). Newman Center выдаёт официальное обязательство трудоустройства (התחייבות להשמה בעבודה).
+                </p>
+              </div>
+
+              <!-- Starting Salary Row (Unspaced numbers!) -->
+              <div class="p-4 rounded-2xl bg-slate-900/90 border border-violet-400/35">
+                <p class="text-xs text-sky-200 font-medium" data-i18n="res_sal_label">Прогнозируемая зарплата после выпуска (Junior / Middle):</p>
+                <div id="res-salary-nis" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1 num-nowrap">15000–28000₪</div>
+                <div id="res-salary-usd" class="text-sm font-bold text-sky-300 mt-0.5 num-nowrap">экв. 4000–7500$ в месяц</div>
+              </div>
+
+              <!-- Percentage Advantage Metrics -->
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-3.5 rounded-xl bg-violet-600/20 border border-violet-400/30">
+                  <div class="text-xs text-sky-100" data-i18n="res_metric_1_lbl">Практика в проектах</div>
+                  <div class="text-xl font-extrabold text-white mt-0.5 num-nowrap">85% времени</div>
+                </div>
+                <div class="p-3.5 rounded-xl bg-sky-500/20 border border-sky-400/30">
+                  <div class="text-xs text-sky-100" data-i18n="res_metric_2_lbl">Окупаемость вложений</div>
+                  <div class="text-xl font-extrabold text-sky-200 mt-0.5 num-nowrap">+12% за 2 мес.</div>
+                </div>
+              </div>
+
+              <!-- Direct WhatsApp Action (NO CRM!) -->
+              <div class="space-y-2.5 pt-2">
+                <input id="calc-user-name" type="text" placeholder="Ваше имя (например, Давид)" class="w-full rounded-xl bg-slate-950/90 border border-violet-400/40 px-4 py-3 text-sm text-white placeholder-sky-200/50 focus:outline-none focus:border-sky-400" />
+                <input id="calc-user-phone" type="tel" placeholder="Ваш телефон в Израиле (05X-XXX-XXXX)" class="w-full rounded-xl bg-slate-950/90 border border-violet-400/40 px-4 py-3 text-sm text-white placeholder-sky-200/50 focus:outline-none focus:border-sky-400" />
+
+                <button type="button" onclick="sendCalculatorToWhatsApp()" class="w-full shimmer-btn py-4 px-5 rounded-2xl font-display font-extrabold text-white text-sm sm:text-base shadow-xl shadow-violet-600/30 hover:scale-[1.01] transition-transform flex items-center justify-center gap-2">
+                  <span data-i18n="res_btn_wa">Забронировать ваучер и получить бланк в WhatsApp</span>
+                </button>
+                <p class="text-[11px] text-center text-sky-200/80" data-i18n="res_privacy">
+                  Прямая связь с координатором Newman Center в WhatsApp или по номеру 1-800-22-06-07 / +972-3-560-30-46 без посредников и ожидания.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMOTIONAL HOOKS & PRACTICAL DEVELOPMENT PORTFOLIO (FROM NEWMAN.CO.IL + AI/GEO/AEO/SEO) -->
+    <section class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-violet-500/20 border border-violet-400/40 text-violet-200 text-xs font-extrabold uppercase tracking-wider mb-3" data-i18n="hooks_kicker">
+          Фундамент вашего успеха в Newman Center
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white" data-i18n="hooks_title">
+          Современная программа обучения, опытные преподаватели и 6 боевых направлений разработки
+        </h2>
+        <p class="text-sky-100/90 text-sm sm:text-base mt-3" data-i18n="hooks_subtitle">
+          Мы взяли проверенную годами инженерную базу Newman Center и усилили её технологиями искусственного интеллекта, маркетинга и генерации трафика GEO / AEO / SEO. Вы создаёте реальные работающие продукты с первого месяца!
+        </p>
+      </div>
+
+      <!-- Top 3 Core Pillars from Original Site -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <!-- Pillar 1: Современная программа обучения -->
+        <div class="glass-card rounded-3xl p-6 sm:p-7 border border-violet-400/35 hover:border-sky-400/60 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-600 to-sky-500 flex items-center justify-center text-white font-extrabold text-lg mb-4 shadow-lg shadow-violet-600/30">85%</div>
+          <h3 class="font-display font-extrabold text-xl text-white" data-i18n="pillar_1_title">Современная программа обучения</h3>
+          <p class="text-sky-100/90 text-sm mt-2 leading-relaxed" data-i18n="pillar_1_desc">
+            Никакой устаревшей теории! 85% учебного времени — это написание живого кода, сборка релизов и работа со стеком 2026 года (Cursor, Claude, Antigravity, Copilot, Android Studio, Cloud-серверы и автоворонки).
+          </p>
+        </div>
+
+        <!-- Pillar 2: Опытные преподаватели -->
+        <div class="glass-card rounded-3xl p-6 sm:p-7 border border-sky-400/35 hover:border-violet-400/60 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-violet-600 flex items-center justify-center text-white font-extrabold text-lg mb-4 shadow-lg shadow-sky-500/30">100%</div>
+          <h3 class="font-display font-extrabold text-xl text-white" data-i18n="pillar_2_title">Опытные преподаватели</h3>
+          <p class="text-sky-100/90 text-sm mt-2 leading-relaxed" data-i18n="pillar_2_desc">
+            Вас обучают действующие Senior-разработчики, Team Lead и AI-архитекторы израильских продуктовых компаний. Личное код-ревью каждого вашего проекта на русском, иврите и английском языках!
+          </p>
+        </div>
+
+        <!-- Pillar 3: Помощь с трудоустройством -->
+        <div class="glass-card rounded-3xl p-6 sm:p-7 border border-violet-400/35 hover:border-sky-400/60 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-600 to-sky-500 flex items-center justify-center text-white font-extrabold text-lg mb-4 shadow-lg shadow-fuchsia-600/30">92%</div>
+          <h3 class="font-display font-extrabold text-xl text-white" data-i18n="pillar_3_title">Помощь с трудоустройством</h3>
+          <p class="text-sky-100/90 text-sm mt-2 leading-relaxed" data-i18n="pillar_3_desc">
+            92% выпускников выходят на работу! Мы упаковываем ваше портфолио на GitHub, оптимизируем LinkedIn, проводим симуляции тех-интервью и выдаём официальное обязательство трудоустройства.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6 High-Impact Practical Creation Cards (The 5 Original Newman Hooks + New AI & GEO/AEO/SEO Course) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Hook Card 1: Мобильные приложения (особенно приложения для Android) -->
+        <div class="glass-card rounded-3xl p-6 border border-violet-400/35 flex flex-col justify-between hover:-translate-y-1 transition-transform">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-violet-500/25 text-violet-200 text-xs font-extrabold" data-i18n="hook_1_tag">Хит мобильной разработки</span>
+              <span class="text-sky-300 font-extrabold text-xs num-nowrap">15000–28000₪</span>
+            </div>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-white" data-i18n="hook_1_title">
+              Мобильные приложения (особенно приложения для Android)
+            </h3>
+            <p class="text-sky-100/90 text-sm mt-2.5 leading-relaxed" data-i18n="hook_1_desc">
+              Создавайте быстрые нативные и кроссплатформенные приложения для смартфонов на базе Android (Java / Kotlin / Android Studio), подключайте платежи, геолокацию, push-уведомления и публикуйте собственные продукты в Google Play!
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-violet-500/20 flex items-center justify-between text-xs text-sky-200">
+            <span data-i18n="hook_1_foot">В портфолио: +3 готовых Android-приложения</span>
+            <a href="#calculator-section" class="font-extrabold text-sky-300 hover:text-white" data-i18n="hook_cta_link">Выбрать →</a>
+          </div>
+        </div>
+
+        <!-- Hook Card 2: Курсы AI, Маркетинга и Трафика GEO / AEO / SEO (NEW!) -->
+        <div class="glass-card rounded-3xl p-6 border-2 border-sky-400/50 flex flex-col justify-between hover:-translate-y-1 transition-transform relative">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-sky-500/30 text-sky-100 text-xs font-extrabold" data-i18n="hook_2_tag">Новинка 2026 • GEO / AEO / SEO</span>
+              <span class="text-sky-300 font-extrabold text-xs num-nowrap">14000–26000₪</span>
+            </div>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-white" data-i18n="hook_2_title">
+              Обучение AI, Интернет-Маркетингу и Трафику (GEO / AEO / SEO)
+            </h3>
+            <p class="text-sky-100/90 text-sm mt-2.5 leading-relaxed" data-i18n="hook_2_desc">
+              Освойте профессию будущего! Выводите компании на первые строчки в ответах нейросетей ChatGPT, Perplexity, Claude и Google AI Overviews, управляйте платным трафиком и создавайте AI-конвейеры лидогенерации с ростом конверсии до +25-35%!
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-sky-500/25 flex items-center justify-between text-xs text-sky-200">
+            <span data-i18n="hook_2_foot">В портфолио: AI-воронка + GEO/AEO/SEO аудит</span>
+            <a href="#calculator-section" class="font-extrabold text-sky-300 hover:text-white" data-i18n="hook_cta_link">Выбрать →</a>
+          </div>
+        </div>
+
+        <!-- Hook Card 3: Настольные приложения -->
+        <div class="glass-card rounded-3xl p-6 border border-violet-400/35 flex flex-col justify-between hover:-translate-y-1 transition-transform">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-violet-500/25 text-violet-200 text-xs font-extrabold" data-i18n="hook_3_tag">Enterprise &amp; Desktop</span>
+              <span class="text-sky-300 font-extrabold text-xs num-nowrap">15000–27000₪</span>
+            </div>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-white" data-i18n="hook_3_title">
+              Настольные приложения
+            </h3>
+            <p class="text-sky-100/90 text-sm mt-2.5 leading-relaxed" data-i18n="hook_3_desc">
+              Проектируйте надёжные корпоративные настольные системы для Windows, macOS и Linux с удобным графическим интерфейсом, многопоточной обработкой данных и защищённой локальной базой для банков, медицины и логистики.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-violet-500/20 flex items-center justify-between text-xs text-sky-200">
+            <span data-i18n="hook_3_foot">В портфолио: Полноценная Desktop-система</span>
+            <a href="#calculator-section" class="font-extrabold text-sky-300 hover:text-white" data-i18n="hook_cta_link">Выбрать →</a>
+          </div>
+        </div>
+
+        <!-- Hook Card 4: Веб-приложения -->
+        <div class="glass-card rounded-3xl p-6 border border-violet-400/35 flex flex-col justify-between hover:-translate-y-1 transition-transform">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-sky-500/25 text-sky-200 text-xs font-extrabold" data-i18n="hook_4_tag">Full-Stack &amp; Cloud SaaS</span>
+              <span class="text-sky-300 font-extrabold text-xs num-nowrap">15000–28000₪</span>
+            </div>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-white" data-i18n="hook_4_title">
+              Веб-приложения
+            </h3>
+            <p class="text-sky-100/90 text-sm mt-2.5 leading-relaxed" data-i18n="hook_4_desc">
+              Разрабатывайте современные интерактивные веб-приложения, клиентские порталы и SaaS-платформы с мгновенным откликом, адаптивной мобильной версткой и интеграцией искусственного интеллекта по API.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-violet-500/20 flex items-center justify-between text-xs text-sky-200">
+            <span data-i18n="hook_4_foot">В портфолио: Запущенное облачное веб-приложение</span>
+            <a href="#calculator-section" class="font-extrabold text-sky-300 hover:text-white" data-i18n="hook_cta_link">Выбрать →</a>
+          </div>
+        </div>
+
+        <!-- Hook Card 5: Веб-серверы и серверы приложений -->
+        <div class="glass-card rounded-3xl p-6 border border-violet-400/35 flex flex-col justify-between hover:-translate-y-1 transition-transform">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-violet-500/25 text-violet-200 text-xs font-extrabold" data-i18n="hook_5_tag">High-Load Backend</span>
+              <span class="text-sky-300 font-extrabold text-xs num-nowrap">16000–28000₪</span>
+            </div>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-white" data-i18n="hook_5_title">
+              Веб-серверы и серверы приложений
+            </h3>
+            <p class="text-sky-100/90 text-sm mt-2.5 leading-relaxed" data-i18n="hook_5_desc">
+              Стройте мощную серверную архитектуру (Spring Boot, REST API, микросервисы, SQL/NoSQL, Docker), способную выдерживать тысячи одновременных запросов с защитой данных на уровне мировых стандартов.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-violet-500/20 flex items-center justify-between text-xs text-sky-200">
+            <span data-i18n="hook_5_foot">В портфолио: Масштабируемый сервер и REST API</span>
+            <a href="#calculator-section" class="font-extrabold text-sky-300 hover:text-white" data-i18n="hook_cta_link">Выбрать →</a>
+          </div>
+        </div>
+
+        <!-- Hook Card 6: Игры -->
+        <div class="glass-card rounded-3xl p-6 border border-violet-400/35 flex flex-col justify-between hover:-translate-y-1 transition-transform">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-fuchsia-500/25 text-fuchsia-200 text-xs font-extrabold" data-i18n="hook_6_tag">GameDev &amp; Interactive</span>
+              <span class="text-sky-300 font-extrabold text-xs num-nowrap">14000–26000₪</span>
+            </div>
+            <h3 class="font-display font-extrabold text-lg sm:text-xl text-white" data-i18n="hook_6_title">
+              Игры
+            </h3>
+            <p class="text-sky-100/90 text-sm mt-2.5 leading-relaxed" data-i18n="hook_6_desc">
+              Превратите страсть к играм в высокооплачиваемую профессию! Программируйте игровую логику, физику, динамическую графику и увлекательные мобильные и компьютерные игры для многомиллионной индустрии GameDev Израиля.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-violet-500/20 flex items-center justify-between text-xs text-sky-200">
+            <span data-i18n="hook_6_foot">В портфолио: Собственный игровой релиз</span>
+            <a href="#calculator-section" class="font-extrabold text-sky-300 hover:text-white" data-i18n="hook_cta_link">Выбрать →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VERIFIED VOUCHER & COMPARISON MATRIX -->
+    <section class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-violet-400/35">
+        <div class="max-w-3xl mb-8">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-violet-500/25 text-violet-200 text-xs font-extrabold uppercase tracking-wider mb-2" data-i18n="comp_kicker">
+            Проверено по официальным источникам gov.il и kolzchut.org.il
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white" data-i18n="comp_title">
+            Почему ваучер для Олим Хадашим действительно дают и как получить до 80%–100% оплаты без отказов
+          </h2>
+          <p class="text-sky-100/90 text-sm sm:text-base mt-2" data-i18n="comp_subtitle">
+            По правилам Министерства алии и интеграции (משרד העלייה והקליטה), программа ваучеров (שובר להכשרה מקצועית) покрывает до 80% стоимости курса (максимум до <span class="num-nowrap font-bold text-white">7000₪</span> / <span class="num-nowrap font-bold text-white">1900$</span>) в течение 10 лет с момента репатриации при соблюдении простых условий, которые мы помогаем оформить под ключ.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto custom-scrollbar">
+          <table class="w-full text-left border-collapse min-w-[680px]">
+            <thead>
+              <tr class="border-b border-violet-400/30 text-xs uppercase tracking-wider text-sky-200">
+                <th class="py-4 px-4 font-extrabold" data-i18n="tbl_col_1">Критерий / Параметр</th>
+                <th class="py-4 px-4 font-extrabold bg-violet-600/25 text-white rounded-t-xl" data-i18n="tbl_col_2">Newman Center (С нашей поддержкой)</th>
+                <th class="py-4 px-4 font-extrabold text-sky-200/75" data-i18n="tbl_col_3">Обычные курсы без сопровождения</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-violet-500/20 text-sm">
+              <tr>
+                <td class="py-4 px-4 font-bold text-white" data-i18n="tbl_r1_c1">Размер государственного ваучера для Олим</td>
+                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-sky-300" data-i18n="tbl_r1_c2">До 80% стоимости курса (до 7000₪ / 1900$) + до 100% из Пикадона ЦАХАЛ</td>
+                <td class="py-4 px-4 text-sky-100/75" data-i18n="tbl_r1_c3">Частые отказы из-за неправильно заполненных бланков (0% субсидии)</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-bold text-white" data-i18n="tbl_r2_c1">Обязательство трудоустройства (התחייבות להשמה בעבודה)</td>
+                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-white" data-i18n="tbl_r2_c2">Выдаём официальный письменный бланк от работодателя/центра для 100% одобрения</td>
+                <td class="py-4 px-4 text-sky-100/75" data-i18n="tbl_r2_c3">Предлагают искать гарантийное письмо самостоятельно</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-bold text-white" data-i18n="tbl_r3_c1">Доля реальной практики в обучении</td>
+                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-sky-300" data-i18n="tbl_r3_c2">85% практики: Android-приложения, Веб, Серверы, Игры и AI / GEO / AEO / SEO</td>
+                <td class="py-4 px-4 text-sky-100/75" data-i18n="tbl_r3_c3">До 70% сухих лекций без живых коммерческих проектов</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-bold text-white" data-i18n="tbl_r4_c1">Языковая адаптация и терминология</td>
+                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-white" data-i18n="tbl_r4_c2">Обучение на понятном языке (RU / HE / EN) + 100% технический иврит и английский</td>
+                <td class="py-4 px-4 text-sky-100/75" data-i18n="tbl_r4_c3">Сложный академический барьер и потеря до 60% материала</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-bold text-white" data-i18n="tbl_r5_c1">Выход на зарплату в индустрии</td>
+                <td class="py-4 px-4 bg-violet-600/15 font-extrabold text-sky-300 rounded-b-xl" data-i18n="tbl_r5_c2">92% трудоустройство на доход 14000–28000₪ (3800–7500$)</td>
+                <td class="py-4 px-4 text-sky-100/75" data-i18n="tbl_r5_c3">Выпускники остаются один на один с рынком труда</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALUMNI SUCCESS SHOWCASE WITH CAREER_SUCCESS.JPG -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto reveal">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center glass-card rounded-3xl p-6 sm:p-10 border border-sky-400/35">
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden border border-violet-400/40 shadow-xl">
+            <img src="assets/career_success.jpg" alt="Newman Center Graduates in Israeli High-Tech" class="w-full h-72 sm:h-80 object-cover" />
+          </div>
+        </div>
+        <div class="lg:col-span-7 space-y-4">
+          <span class="px-3.5 py-1 rounded-full bg-sky-500/25 text-sky-200 text-xs font-extrabold uppercase tracking-wider" data-i18n="succ_kicker">
+            Более 15,000 выпускников в Израиле с 1991 года
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white" data-i18n="succ_title">
+            Субсидия государства до 80% (до 7000₪). Начальная зарплата от 9500–11000₪, средняя в отрасли — 19500₪
+          </h2>
+          <p class="text-sky-100/90 text-sm sm:text-base leading-relaxed" data-i18n="succ_desc">
+            Честный расчет окупаемости: государство через ваучер Министерства алии (до 7000₪) и армейский пикадон (до 100%) компенсирует основную стоимость курса. Минимальная зарплата новичка составляет от 9500–11000₪, а средний заработок специалиста с опытом достигает 19500₪. Личные вложения окупаются уже в первые 1–2 месяца работы!
+          </p>
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="https://wa.me/972532733777?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C%20%D0%B2%D0%B0%D1%83%D1%87%D0%B5%D1%80%2080%25%20(7000%E2%82%AA)%20%D0%B2%20Newman%20Center" target="_blank" rel="noopener" class="shimmer-btn px-6 py-3.5 rounded-2xl font-display font-extrabold text-white text-sm shadow-lg">
+              <span data-i18n="succ_cta_wa">Проверить моё право на ваучер в WhatsApp</span>
+            </a>
+            <a href="audit.html" class="px-5 py-3.5 rounded-2xl border border-violet-400/40 text-sky-100 hover:text-white font-bold text-sm transition-all" data-i18n="succ_cta_audit">
+              Смотреть B2B-аудит и стратегию роста (+25-35%) →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-violet-500/25 bg-slate-950/90 py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-sky-500 flex items-center justify-center font-display font-extrabold text-white">N</div>
+        <div>
+          <div class="font-display font-extrabold text-white text-base">Newman Center</div>
+          <p class="text-xs text-sky-200/80" data-i18n="footer_copy">© 1991–2026 מרכז ניומן • Тель-Авив, Хайфа, Иерусалим, Беэр-Шева, Нетания, Ашдод • 1-800-22-06-07 • +972-3-560-30-46</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-xs font-bold text-sky-200">
+        <a href="index.html" class="hover:text-white" data-i18n="nav_home">Главная</a>
+        <a href="courses.html" class="hover:text-white text-violet-300" data-i18n="nav_courses">Все 20 курсов</a>
+        <a href="offer.html" class="text-white underline decoration-sky-400" data-i18n="nav_offer">Калькулятор Ваучера 80%</a>
+        <a href="audit.html" class="hover:text-white" data-i18n="nav_audit">Аудит &amp; Стратегия Роста</a>
+        <a href="tel:1800220607" class="px-3 py-1.5 rounded-lg bg-violet-600/30 border border-violet-400/40 text-white">1-800-22-06-07</a>
+        <a href="tel:+97235603046" class="px-3 py-1.5 rounded-lg bg-slate-800 border border-sky-400/40 text-sky-200 hover:text-white">+972-3-560-30-46</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY THUMB-ZONE BAR -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden glass-card border-t border-violet-400/40 px-3 py-2.5 flex items-center justify-between gap-2">
+    <a href="tel:1800220607" class="flex-1 py-3 rounded-xl bg-slate-900 border border-violet-400/40 text-center font-extrabold text-xs text-white">
+      📞 1-800-22-06-07
+    </a>
+    <button type="button" onclick="openBottomSheet()" class="flex-[2] py-3 rounded-xl shimmer-btn text-center font-extrabold text-xs text-white shadow-lg" data-i18n="mob_bar_cta">
+      Забрать ваучер до 80% (7000₪)
+    </button>
+  </div>
+
+  <!-- BOTTOM SHEET MODAL FOR INSTANT WHATSAPP VOUCHER CHECK (NO CRM!) -->
+  <div id="bottom-sheet-backdrop" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="w-full max-w-lg glass-card rounded-t-3xl sm:rounded-3xl p-6 sm:p-8 border-t-2 sm:border-2 border-violet-400/50 shadow-2xl relative animate-float" style="animation: none;">
+      <button type="button" onclick="closeBottomSheet()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800 text-sky-200 hover:text-white flex items-center justify-center font-bold">✕</button>
+      <span class="inline-block px-3 py-1 rounded-full bg-violet-500/25 text-violet-200 text-xs font-extrabold mb-2" data-i18n="modal_kicker">Проверка за 60 секунд</span>
+      <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white" data-i18n="modal_title">Получите список документов на ваучер до 80% (7000₪) в WhatsApp</h3>
+      <p class="text-xs sm:text-sm text-sky-100/90 mt-1.5 mb-5" data-i18n="modal_desc">
+        Координатор Newman Center пришлёт вам точный перечень бумаг для Министерства алии или Пикадона и бланк обязательства трудоустройства.
+      </p>
+      <div class="space-y-3">
+        <input id="modal-name" type="text" placeholder="Ваше имя" class="w-full rounded-xl bg-slate-950 border border-violet-400/40 px-4 py-3 text-sm text-white placeholder-sky-200/50" />
+        <input id="modal-phone" type="tel" placeholder="Телефон (05X-XXX-XXXX)" class="w-full rounded-xl bg-slate-950 border border-violet-400/40 px-4 py-3 text-sm text-white placeholder-sky-200/50" />
+        <button type="button" onclick="sendModalToWhatsApp()" class="w-full shimmer-btn py-3.5 rounded-xl font-display font-extrabold text-white text-sm shadow-lg" data-i18n="modal_btn">
+          Отправить запрос напрямую в WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Interactive Logic & 3-Language Dictionary (RU / HE / EN) -->
+  <script>
+    let currentStatus = 'olim';
+    let currentLang = localStorage.getItem('newman_lang') || 'ru';
+
+    const trackData = {
+      ai_geo: {
+        salaryNis: '14000–26000₪',
+        salaryUsd: {
+          ru: 'экв. 3800–7000$ в месяц',
+          he: 'שווה ערך ל-3800–7000$ בחודש',
+          en: 'equiv. 3800–7000$ / month'
+        },
+        hook: {
+          ru: 'Вы научитесь выводить сайты в топ ответов ChatGPT, Perplexity и Google AI Overviews, запускать окупаемый трафик и создавать автономных AI-агентов продаж (+25-35% к конверсии).',
+          he: 'תלמדו להוביל אתרים לראש התשובות של ChatGPT, Perplexity ו-Google AI Overviews, להזרים טראפיק רווחי ולבנות סוכני AI אוטונומיים למכירות (+25-35% להמרה).',
+          en: 'Master ranking brands in ChatGPT, Perplexity & Google AI Overviews, driving high-ROI traffic, and building autonomous AI sales pipelines (+25-35% conversion boost).'
+        }
+      },
+      android_java: {
+        salaryNis: '15000–28000₪',
+        salaryUsd: {
+          ru: 'экв. 4000–7500$ в месяц',
+          he: 'שווה ערך ל-4000–7500$ בחודש',
+          en: 'equiv. 4000–7500$ / month'
+        },
+        hook: {
+          ru: 'Флагманский курс: мобильные приложения (особенно приложения для Android), настольные приложения, веб-приложения, веб-серверы и серверы приложений, а также игры (85% живой практики).',
+          he: 'מסלול הדגל: אפליקציות מובייל (במיוחד אפליקציות לאנדרואיד), אפליקציות שולחן עבודה, אפליקציות ווב, שרתי ווב ושרתי אפליקציות, ומשחקים (85% פרקטיקה חיה).',
+          en: 'Flagship engineering track: mobile apps (especially Android apps), desktop apps, web apps, web & application servers, and games (85% hands-on coding).'
+        }
+      },
+      qa_auto: {
+        salaryNis: '13000–23000₪',
+        salaryUsd: {
+          ru: 'экв. 3500–6200$ в месяц',
+          he: 'שווה ערך ל-3500–6200$ בחודש',
+          en: 'equiv. 3500–6200$ / month'
+        },
+        hook: {
+          ru: 'Быстрый старт в израильском хайтеке: автоматизация тестирования веб- и Android-приложений (Selenium, Playwright, Python/Java) и подготовка к сертификации ISTQB.',
+          he: 'כניסה מהירה להייטק הישראלי: אוטומציית בדיקות לאפליקציות ווב ואנדרואיד (Selenium, Playwright, Python/Java) והכנה להסמכת ISTQB.',
+          en: 'Fast-track entry into Israeli High-Tech: automated QA for web & Android apps (Selenium, Playwright, Python/Java) plus full ISTQB certification prep.'
+        }
+      },
+      python_data: {
+        salaryNis: '15000–27000₪',
+        salaryUsd: {
+          ru: 'экв. 4000–7300$ в месяц',
+          he: 'שווה ערך ל-4000–7300$ בחודש',
+          en: 'equiv. 4000–7300$ / month'
+        },
+        hook: {
+          ru: 'Разработка высоконагруженных серверов приложений на Python, парсинг данных, машинное обучение и интеграция LLM-моделей в бизнес-продукты.',
+          he: 'פיתוח שרתי אפליקציות ב-Python, ניתוח נתונים, למידת מכונה והטמעת מודלי שפה מתקדמים במערכות עסקיות.',
+          en: 'Build scalable Python application servers, data pipelines, machine learning models, and production LLM integrations.'
+        }
+      },
+      accounting: {
+        salaryNis: '10000–17000₪',
+        salaryUsd: {
+          ru: 'экв. 2700–4600$ в месяц',
+          he: 'שווה ערך ל-2700–4600$ בחודש',
+          en: 'equiv. 2700–4600$ / month'
+        },
+        hook: {
+          ru: 'Востребованная финансовая карьера в Израиле: бухгалтерский учёт 1+2, расчёт зарплат (חשבות שכר), налоговая отчётность и современные AI-инструменты финансиста.',
+          he: 'קריירה פיננסית מבוקשת בישראל: הנהלת חשבונות 1+2, חשבות שכר, דיווחי מס וכלי AI מתקדמים לפיננסים.',
+          en: 'High-demand financial career in Israel: Bookkeeping 1+2, Payroll Accounting, tax reporting, and modern AI finance automation.'
+        }
+      }
+    };
+
+    const statusRules = {
+      olim: {
+        pct: { ru: 'до 80%', he: 'עד 80%', en: 'up to 80%' },
+        sum: { ru: '(до 7000₪ / 1900$)', he: '(עד 7000₪ / 1900$)', en: '(up to 7000₪ / 1900$)' },
+        badge: { ru: 'Субсидия до 80%', he: 'מימון עד 80%', en: 'Up to 80% Subsidy' },
+        note: {
+          ru: 'Официальный ваучер משרד העלייה והקליטה (до 80% от стоимости курса, максимум до 7000₪ / 1900$ для Олим до 10 лет в стране после ульпана Алеф). Newman Center выдаёт официальное письменное обязательство трудоустройства (התחייבות להשמה בעבודה).',
+          he: 'שובר רשמי של משרד העלייה והקליטה (עד 80% מעלות הקורס, עד תקרה של 7000₪ / 1900$ לעולים עד 10 שנים בארץ בוגרי אולפן א׳). Newman Center מספק התחייבות כתובה להשמה בעבודה לאישור השובר.',
+          en: 'Official Ministry of Aliyah voucher (up to 80% of tuition, capped at 7000₪ / 1900$ for Olim up to 10 years in Israel after Ulpan Alef). Newman Center provides the official written job placement commitment (התחייבות להשמה בעבודה).'
+        }
+      },
+      pikadon: {
+        pct: { ru: 'до 100%', he: 'עד 100%', en: 'up to 100%' },
+        sum: { ru: '(Пикадон ЦАХАЛ)', he: '(פיקדון צבאי מלא)', en: '(Full IDF Pikadon)' },
+        badge: { ru: 'Оплата до 100%', he: 'כיסוי עד 100%', en: 'Up to 100% Covered' },
+        note: {
+          ru: 'Оплата до 100% стоимости обучения напрямую со счёта вашего армейского Пикадона (פיקדון לחיילים משוחררים) без собственных вложений.',
+          he: 'כיסוי של עד 100% משכר הלימוד ישירות מכספי הפיקדון הצבאי לחיילים משוחררים ולבוגרי שירות לאומי.',
+          en: 'Up to 100% of your tuition paid directly from your discharged soldier IDF Pikadon deposit with zero out-of-pocket cost.'
+        }
+      },
+      toshav: {
+        pct: { ru: 'до 80%', he: 'עד 80%', en: 'up to 80%' },
+        sum: { ru: '(до 7000₪ / 1900$)', he: '(עד 7000₪ / 1900$)', en: '(up to 7000₪ / 1900$)' },
+        badge: { ru: 'Ваучер до 80%', he: 'שובר עד 80%', en: 'Up to 80% Voucher' },
+        note: {
+          ru: 'Тошавим Хозрим (до 2 лет с момента возвращения) имеют право на государственный ваучер Министерства алии до 80% стоимости курса (максимум до 7000₪ / 1900$).',
+          he: 'תושבים חוזרים (עד שנתיים ממועד החזרה) זכאים לשובר הכשרה מקצועית של משרד העלייה והקליטה בגובה עד 80% (עד 7000₪ / 1900$).',
+          en: 'Returning Israelis (Toshavim Chozerim up to 2 years) qualify for the Ministry voucher covering up to 80% of course cost (up to 7000₪ / 1900$).'
+        }
+      },
+      citizen: {
+        pct: { ru: 'до 25%', he: 'עד 25%', en: 'up to 25%' },
+        sum: { ru: '(Грант + 24 платежа)', he: '(מלגת מרכז + 24 תשלומים)', en: '(Grant + 24 Payments)' },
+        badge: { ru: 'Грант до 25%', he: 'מלגה עד 25%', en: 'Up to 25% Grant' },
+        note: {
+          ru: 'Внутренний грант Newman Center до 25% стоимости + удобная рассрочка до 24 платежей без переплат и полное сопровождение трудоустройства (92% успеха).',
+          he: 'מלגת לימודים פנימית של Newman Center עד 25% + פריסה נוחה עד 24 תשלומים וליווי מלא להשמה בהייטק (92% הצלחה).',
+          en: 'Internal Newman Center scholarship covering up to 25% plus flexible 24-month installment plan and full career placement support (92% placement rate).'
+        }
+      }
+    };
+
+    const i18n = {
+      ru: {
+        nav_subtitle: 'מרכז ניומן • Академия IT, AI, GEO/AEO/SEO и Карьеры',
+        nav_home: 'Главная',
+        nav_courses: 'Все 20 курсов',
+        nav_offer: 'Калькулятор Ваучера 80%',
+        nav_audit: 'Аудит & Стратегия Роста',
+        hero_badge: 'Официальная проверка льгот gov.il • Ваучер до 80% (7000₪) и Пикадон до 100%',
+        hero_title_1: 'Заберите до 80%–100% оплаты обучения от государства и выйдите на доход',
+        hero_title_salary: '15000–28000₪ (4000–7500$)',
+        hero_desc: 'Не откладывайте яркую карьеру в Израиле! В Newman Center вас ждёт современная программа обучения (85% живой практики), опытные преподаватели-практики и реальная помощь с трудоустройством (92% выпускников в штате). Пройдите 30-секундный расчёт ниже и узнайте, какую долю курса за вас оплатит Министерство алии или армейский фонд.',
+        stat_1_val: 'до 80%',
+        stat_1_lbl: 'Ваучер Олим (до 7000₪)',
+        stat_2_val: 'до 100%',
+        stat_2_lbl: 'Оплата из Пикадона ЦАХАЛ',
+        stat_3_val: '85%',
+        stat_3_lbl: 'Реальной практики в коде',
+        stat_4_val: '92%',
+        stat_4_lbl: 'Помощь с трудоустройством',
+        hero_cta_calc: 'Рассчитать мой ваучер до 80% (7000₪)',
+        hero_cta_modal: 'Получить список документов за 60 секунд',
+        hero_img_badge_1: 'שובר להכשרה מקצועית • до 80% (7000₪)',
+        hero_img_badge_2: '6 филиалов + Live Online',
+        hero_card_kicker: 'Официальное письменное обязательство',
+        hero_card_title: 'Бланк התחייבות להשמה בעבודה для одобрения ваучера',
+        calc_kicker: 'Интерактивный калькулятор финансирования и зарплаты',
+        calc_title: 'Узнайте точную сумму вашей субсидии в процентах и стартовую зарплату после выпуска',
+        calc_subtitle: 'Выберите ваш статус в Израиле, желаемую программу обучения и удобный темп. Расчёт выполняется мгновенно по актуальным критериям Министерства алии и интеграции (до 80% / до 7000₪) и фонда Пикадон (до 100%).',
+        calc_step1_label: '1. Ваш статус в Израиле (проверка права на субсидию):',
+        calc_step1_tag: 'Шаг 1 из 3',
+        status_olim_title: 'Олим Хадашим (до 10 лет)',
+        status_olim_desc: 'Гос. ваучер до 7000₪ (1900$) после ульпана Алеф',
+        status_pikadon_title: 'Солдат после армии (Пикадон)',
+        status_pikadon_desc: 'Оплата до 100% за счёт личного армейского Пикадона',
+        status_toshav_title: 'Тошав Хозер (до 2 лет)',
+        status_toshav_desc: 'Ваучер Министерства алии до 7000₪ (1900$)',
+        status_citizen_title: 'Гражданин Израиля / Апгрейд',
+        status_citizen_desc: 'Грант от Newman Center до 25% + рассрочка до 24 платежей',
+        calc_step2_label: '2. Выберите современную программу обучения (85% практики):',
+        calc_step2_tag: 'Шаг 2 из 3',
+        track_opt_ai: 'AI-Инжиниринг, Интернет-Маркетинг и Трафик (GEO / AEO / SEO)',
+        track_opt_android: 'Мобильные приложения (Android), Настольные, Веб-приложения, Серверы и Игры',
+        track_opt_qa: 'QA Automation, Кибер-тестирование & AI-Тестирование',
+        track_opt_python: 'Python, Data Science, Серверы приложений & Нейросети',
+        track_opt_acc: 'Бухгалтерский учёт 1+2, Расчёт зарплат и Финансовый AI',
+        calc_step3_label: '3. Интенсивность занятий в неделю (Вечер / Утро / Online):',
+        hours_min: '8 ч/нед (Спокойный вечерний темп)',
+        hours_mid: '12 ч/нед (Оптимальный гибрид)',
+        hours_max: '20 ч/нед (Ускоренный буткемп)',
+        res_header: 'Ваш персональный расчёт выгоды',
+        res_cov_label: 'Покрытие стоимости обучения от государства / фонда:',
+        res_sal_label: 'Прогнозируемая зарплата после выпуска (Junior / Middle):',
+        res_metric_1_lbl: 'Практика в проектах',
+        res_metric_2_lbl: 'Окупаемость вложений',
+        res_btn_wa: 'Забронировать ваучер и получить бланк в WhatsApp',
+        res_privacy: 'Прямая связь с координатором Newman Center в WhatsApp или по номеру 1-800-22-06-07 / +972-3-560-30-46 без посредников и ожидания.',
+        hooks_kicker: 'Фундамент вашего успеха в Newman Center',
+        hooks_title: 'Современная программа обучения, опытные преподаватели и 6 боевых направлений разработки',
+        hooks_subtitle: 'Мы взяли проверенную годами инженерную базу Newman Center и усилили её технологиями искусственного интеллекта, маркетинга и генерации трафика GEO / AEO / SEO. Вы создаёте реальные работающие продукты с первого месяца!',
+        pillar_1_title: 'Современная программа обучения',
+        pillar_1_desc: 'Никакой устаревшей теории! 85% учебного времени — это написание живого кода, сборка релизов и работа со стеком 2026 года (Cursor, Claude, Antigravity, Copilot, Android Studio, Cloud-серверы и автоворонки).',
+        pillar_2_title: 'Опытные преподаватели',
+        pillar_2_desc: 'Вас обучают действующие Senior-разработчики, Team Lead и AI-архитекторы израильских продуктовых компаний. Личное код-ревью каждого вашего проекта на русском, иврите и английском языках!',
+        pillar_3_title: 'Помощь с трудоустройством',
+        pillar_3_desc: '92% выпускников выходят на работу! Мы упаковываем ваше портфолио на GitHub, оптимизируем LinkedIn, проводим симуляции тех-интервью и выдаём официальное обязательство трудоустройства.',
+        hook_1_tag: 'Хит мобильной разработки',
+        hook_1_title: 'Мобильные приложения (особенно приложения для Android)',
+        hook_1_desc: 'Создавайте быстрые нативные и кроссплатформенные приложения для смартфонов на базе Android (Java / Kotlin / Android Studio), подключайте платежи, геолокацию, push-уведомления и публикуйте собственные продукты в Google Play!',
+        hook_1_foot: 'В портфолио: +3 готовых Android-приложения',
+        hook_2_tag: 'Новинка 2026 • GEO / AEO / SEO',
+        hook_2_title: 'Обучение AI, Интернет-Маркетингу и Трафику (GEO / AEO / SEO)',
+        hook_2_desc: 'Освойте профессию будущего! Выводите компании на первые строчки в ответах нейросетей ChatGPT, Perplexity, Claude и Google AI Overviews, управляйте платным трафиком и создавайте AI-конвейеры лидогенерации с ростом конверсии до +25-35%!',
+        hook_2_foot: 'В портфолио: AI-воронка + GEO/AEO/SEO аудит',
+        hook_3_tag: 'Enterprise & Desktop',
+        hook_3_title: 'Настольные приложения',
+        hook_3_desc: 'Проектируйте надёжные корпоративные настольные системы для Windows, macOS и Linux с удобным графическим интерфейсом, многопоточной обработкой данных и защищённой локальной базой для банков, медицины и логистики.',
+        hook_3_foot: 'В портфолио: Полноценная Desktop-система',
+        hook_4_tag: 'Full-Stack & Cloud SaaS',
+        hook_4_title: 'Веб-приложения',
+        hook_4_desc: 'Разрабатывайте современные интерактивные веб-приложения, клиентские порталы и SaaS-платформы с мгновенным откликом, адаптивной мобильной версткой и интеграцией искусственного интеллекта по API.',
+        hook_4_foot: 'В портфолио: Запущенное облачное веб-приложение',
+        hook_5_tag: 'High-Load Backend',
+        hook_5_title: 'Веб-серверы и серверы приложений',
+        hook_5_desc: 'Стройте мощную серверную архитектуру (Spring Boot, REST API, микросервисы, SQL/NoSQL, Docker), способную выдерживать тысячи одновременных запросов с защитой данных на уровне мировых стандартов.',
+        hook_5_foot: 'В портфолио: Масштабируемый сервер и REST API',
+        hook_6_tag: 'GameDev & Interactive',
+        hook_6_title: 'Игры',
+        hook_6_desc: 'Превратите страсть к играм в высокооплачиваемую профессию! Программируйте игровую логику, физику, динамическую графику и увлекательные мобильные и компьютерные игры для многомиллионной индустрии GameDev Израиля.',
+        hook_6_foot: 'В портфолио: Собственный игровой релиз',
+        hook_cta_link: 'Выбрать →',
+        comp_kicker: 'Проверено по официальным источникам gov.il и kolzchut.org.il',
+        comp_title: 'Почему ваучер для Олим Хадашим действительно дают и как получить до 80%–100% оплаты без отказов',
+        comp_subtitle: 'По правилам Министерства алии и интеграции (משרד העלייה והקליטה), программа ваучеров (שובר להכשרה מקצועית) покрывает до 80% стоимости курса (максимум до 7000₪ / 1900$) в течение 10 лет с момента репатриации при соблюдении простых условий, которые мы помогаем оформить под ключ.',
+        tbl_col_1: 'Критерий / Параметр',
+        tbl_col_2: 'Newman Center (С нашей поддержкой)',
+        tbl_col_3: 'Обычные курсы без сопровождения',
+        tbl_r1_c1: 'Размер государственного ваучера для Олим',
+        tbl_r1_c2: 'До 80% стоимости курса (до 7000₪ / 1900$) + до 100% из Пикадона ЦАХАЛ',
+        tbl_r1_c3: 'Частые отказы из-за неправильно заполненных бланков (0% субсидии)',
+        tbl_r2_c1: 'Обязательство трудоустройства (התחייבות להשמה בעבודה)',
+        tbl_r2_c2: 'Выдаём официальный письменный бланк от работодателя/центра для 100% одобрения',
+        tbl_r2_c3: 'Предлагают искать гарантийное письмо самостоятельно',
+        tbl_r3_c1: 'Доля реальной практики в обучении',
+        tbl_r3_c2: '85% практики: Android-приложения, Веб, Серверы, Игры и AI / GEO / AEO / SEO',
+        tbl_r3_c3: 'До 70% сухих лекций без живых коммерческих проектов',
+        tbl_r4_c1: 'Языковая адаптация и терминология',
+        tbl_r4_c2: 'Обучение на понятном языке (RU / HE / EN) + 100% технический иврит и английский',
+        tbl_r4_c3: 'Сложный академический барьер и потеря до 60% материала',
+        tbl_r5_c1: 'Выход на зарплату в индустрии',
+        tbl_r5_c2: '92% трудоустройство на доход 14000–28000₪ (3800–7500$)',
+        tbl_r5_c3: 'Выпускники остаются один на один с рынком труда',
+        succ_kicker: 'Прозрачный расчёт субсидии и окупаемости',
+        succ_title: 'Субсидия государства до 80% (до 7000₪). Начальная зарплата от 9500–11000₪, средняя в отрасли — 19500₪',
+        succ_desc: 'Честный расчет окупаемости: государство через ваучер Министерства алии (до 7000₪) и армейский пикадон (до 100%) компенсирует основную стоимость курса. Минимальная зарплата новичка составляет от 9500–11000₪, а средний заработок специалиста с опытом достигает 19500₪. Личные вложения окупаются уже в первые 1–2 месяца работы!',
+        succ_cta_wa: 'Проверить моё право на ваучер в WhatsApp',
+        succ_cta_audit: 'Смотреть B2B-аудит и стратегию роста (+25-35%) →',
+        footer_copy: '© 1991–2026 מרכז ניומן • Тель-Авив, Хайфа, Иерусалим, Беэр-Шева, Нетания, Ашдод • 1-800-22-06-07 / +972-3-560-30-46',
+        mob_bar_cta: 'Забрать ваучер до 80% (7000₪)',
+        modal_kicker: 'Проверка за 60 секунд',
+        modal_title: 'Получите список документов на ваучер до 80% (7000₪) в WhatsApp',
+        modal_desc: 'Координатор Newman Center пришлёт вам точный перечень бумаг для Министерства алии или Пикадона и бланк обязательства трудоустройства.',
+        modal_btn: 'Отправить запрос напрямую в WhatsApp'
+      },
+      he: {
+        nav_subtitle: 'מרכז ניומן • האקדמיה להייטק, AI, שיווק GEO/AEO/SEO וקריירה',
+        nav_home: 'ראשי',
+        nav_offer: 'מחשבון שובר 80%',
+        nav_audit: 'אודיט ואסטרטגיית צמיחה',
+        hero_badge: 'בדיקת זכאות רשמית gov.il • שובר עד 80% (7000₪) ופיקדון צבאי עד 100%',
+        hero_title_1: 'קבלו עד 80%–100% מימון ממשלתי ללימודים וצאו להכנסה של',
+        hero_title_salary: '15000–28000₪ (4000–7500$)',
+        hero_desc: 'אל תדחו את הקריירה שלכם בישראל! ב-Newman Center מחכה לכם תוכנית לימודים מודרנית (85% פרקטיקה חיה), מרצים מנוסים מהתעשייה וסיוע אמיתי בהשמה לעבודה (92% מהבוגרים משתלבים בתעשייה). חשבו תוך 30 שניות כמה אחוזים מהקורס ימומנו עבורכם.',
+        stat_1_val: 'עד 80%',
+        stat_1_lbl: 'שובר עולים (עד 7000₪)',
+        stat_2_val: 'עד 100%',
+        stat_2_lbl: 'מימון מכספי הפיקדון הצבאי',
+        stat_3_val: '85%',
+        stat_3_lbl: 'פרקטיקה מעשית בכתיבת קוד',
+        stat_4_val: '92%',
+        stat_4_lbl: 'סיוע בהשמה והתחייבות כתובה',
+        hero_cta_calc: 'חשבו את השובר שלי עד 80% (7000₪)',
+        hero_cta_modal: 'קבלו רשימת מסמכים תוך 60 שניות',
+        hero_img_badge_1: 'שובר להכשרה מקצועית • עד 80% (7000₪)',
+        hero_img_badge_2: '6 סניפים + לימודי אונליין',
+        hero_card_kicker: 'התחייבות רשמית בכתב',
+        hero_card_title: 'טופס התחייבות להשמה בעבודה לאישור מהיר של השובר',
+        calc_kicker: 'מחשבון אינטראקטיבי למימון ממשלתי ושכר התחלתי',
+        calc_title: 'גלו את אחוז המימון המדויק שלכם ואת השכר הצפוי לאחר סיום הלימודים',
+        calc_subtitle: 'בחרו את הסטטוס שלכם בישראל, מסלול הלימודים המבוקש וקצב הלמידה. החישוב מתבצע מיידית לפי נהלי משרד העלייה והקליטה (עד 80% / עד 7000₪) והפיקדון הצבאי (עד 100%).',
+        calc_step1_label: '1. הסטטוס שלכם בישראל (בדיקת זכאות למימון):',
+        calc_step1_tag: 'שלב 1 מתוך 3',
+        status_olim_title: 'עולים חדשים (עד 10 שנים)',
+        status_olim_desc: 'שובר ממשלתי עד 7000₪ (1900$) לבוגרי אולפן א׳',
+        status_pikadon_title: 'חיילים משוחררים (פיקדון)',
+        status_pikadon_desc: 'כיסוי עד 100% ישירות מכספי הפיקדון הצבאי',
+        status_toshav_title: 'תושב חוזר (עד שנתיים)',
+        status_toshav_desc: 'שובר משרד העלייה והקליטה עד 7000₪ (1900$)',
+        status_citizen_title: 'אזרח ישראל / שדרוג קריירה',
+        status_citizen_desc: 'מלגת Newman Center עד 25% + עד 24 תשלומים נוחים',
+        calc_step2_label: '2. בחרו תוכנית לימודים מודרנית (85% פרקטיקה):',
+        calc_step2_tag: 'שלב 2 מתוך 3',
+        track_opt_ai: 'הנדסת AI, שיווק דיגיטלי והזרמת טראפיק (GEO / AEO / SEO)',
+        track_opt_android: 'אפליקציות מובייל (אנדרואיד), שולחן עבודה, ווב, שרתים ומשחקים',
+        track_opt_qa: 'בדיקות תוכנה QA Automation, סייבר ובדיקות מבוססות AI',
+        track_opt_python: 'Python, מדעי הנתונים, שרתי אפליקציות ורשתות נוירונים',
+        track_opt_acc: 'הנהלת חשבונות 1+2, חשבות שכר ופיננסים חכמים ב-AI',
+        calc_step3_label: '3. היקף שעות לימוד בשבוע (ערב / בוקר / אונליין):',
+        hours_min: '8 ש״ש (מסלול ערב נוח)',
+        hours_mid: '12 ש״ש (היברידי מומלץ)',
+        hours_max: '20 ש״ש (בוטקאמפ מואץ)',
+        res_header: 'תחשיב הזכאות והשכר האישי שלכם',
+        res_cov_label: 'כיסוי שכר לימוד על ידי המדינה / הפיקדון:',
+        res_sal_label: 'שכר צפוי לאחר סיום הלימודים (Junior / Middle):',
+        res_metric_1_lbl: 'פרקטיקה בפרויקטים',
+        res_metric_2_lbl: 'החזר השקעה (ROI)',
+        res_btn_wa: 'שריינו שובר וקבלו טופס התחייבות ב-WhatsApp',
+        res_privacy: 'קשר ישיר עם רכז הלימודים של Newman Center ב-WhatsApp או ב-1-800-22-06-07 / +972-3-560-30-46 ללא המתנה.',
+        hooks_kicker: 'הבסיס להצלחה שלכם ב-Newman Center',
+        hooks_title: 'תוכנית לימודים מודרנית, מרצים מנוסים ו-6 תחומי פיתוח מבוקשים',
+        hooks_subtitle: 'שילבנו את הבסיס ההנדסי המוכח של Newman Center עם טכנולוגיות בינה מלאכותית, שיווק דיגיטלי והזרמת טראפיק GEO / AEO / SEO. אתם בונים מוצרים עובדים כבר מהחודש הראשון!',
+        pillar_1_title: 'תוכנית לימודים מודרנית',
+        pillar_1_desc: 'בלי תיאוריה מיושנת! 85% מזמן הלימודים מוקדש לכתיבת קוד חי, בניית מערכות ועבודה עם כלי 2026 (Cursor, Claude, Antigravity, Copilot, Android Studio, שרתי ענן ומשפכי שיווק).',
+        pillar_2_title: 'מרצים מנוסים',
+        pillar_2_desc: 'הלימודים מועברים על ידי מפתחי Senior, ראשי צוותים וארכיטקטי AI מחברות הייטק מובילות בישראל, עם בדיקת קוד אישית בעברית, רוסית ואנגלית!',
+        pillar_3_title: 'סיוע בהשמה לעבודה',
+        pillar_3_desc: '92% מהבוגרים משתלבים בעבודה! אנו בונים עבורכם תיק עבודות ב-GitHub, משדרגים את ה-LinkedIn, מתרגלים ראיונות עבודה ומעניקים התחייבות כתובה להשמה.',
+        hook_1_tag: 'להיט פיתוח המובייל',
+        hook_1_title: 'אפליקציות מובייל (במיוחד אפליקציות לאנדרואיד)',
+        hook_1_desc: 'פתחו אפליקציות מהירות ומתקדמות לסמארטפונים מבוססי Android (Java / Kotlin / Android Studio), שלבו מערכות תשלום, מיקום והתראות חכמות והעלו מוצרים משלכם ל-Google Play!',
+        hook_1_foot: 'בתיק העבודות: +3 אפליקציות Android מוכנות',
+        hook_2_tag: 'חדש ב-2026 • GEO / AEO / SEO',
+        hook_2_title: 'לימודי AI, שיווק באינטרנט וטראפיק (GEO / AEO / SEO)',
+        hook_2_desc: 'רכשו את מקצוע העתיד! הביאו עסקים למקומות הראשונים בתשובות של ChatGPT, Perplexity, Claude ו-Google AI Overviews, נהלו קמפיינים ממומנים ובנו מערכות לידים אוטומטיות עם צמיחה של עד +25-35% בהמרה!',
+        hook_2_foot: 'בתיק העבודות: מערכת AI + אודיט GEO/AEO/SEO',
+        hook_3_tag: 'Enterprise & Desktop',
+        hook_3_title: 'אפליקציות שולחן עבודה (Desktop)',
+        hook_3_desc: 'תכננו מערכות שולחן עבודה ארגוניות חזקות עבור Windows, macOS ו-Linux עם ממשק גרפי מתקדם, עיבוד נתונים מקבילי ואבטחת מידע לבנקים, רפואה ולוגיסטיקה.',
+        hook_3_foot: 'בתיק העבודות: מערכת Desktop ארגונית מלאה',
+        hook_4_tag: 'Full-Stack & Cloud SaaS',
+        hook_4_title: 'אפליקציות ווב (Web Applications)',
+        hook_4_desc: 'פתחו אפליקציות ווב אינטראקטיביות, פורטלים עסקיים ופלטפורמות SaaS מהירות עם התאמה מלאה למובייל ואינטגרציה ישירה למודלי AI דרך API.',
+        hook_4_foot: 'בתיק העבודות: אפליקציית ענן פעילה באוויר',
+        hook_5_tag: 'High-Load Backend',
+        hook_5_title: 'שרתי ווב ושרתי אפליקציות',
+        hook_5_desc: 'בנו ארכיטקטורת שרתים עוצמתית (Spring Boot, REST API, Microservices, SQL/NoSQL, Docker) המסוגלת לטפל באלפי פניות במקביל תוך עמידה בתקני אבטחה בינלאומיים.',
+        hook_5_foot: 'בתיק העבודות: שרת אפליקציות ו-REST API מאובטח',
+        hook_6_tag: 'GameDev & Interactive',
+        hook_6_title: 'משחקים (Games)',
+        hook_6_desc: 'הפכו את התשוקה למשחקים למקצוע מתגמל במיוחד! תכנתו לוגיקת משחק, פיזיקה, גרפיקה דינמית ומשחקי מובייל ומחשב מרתקים לתעשיית ה-GameDev המשגשגת בישראל.',
+        hook_6_foot: 'בתיק העבודות: משחק מקורי מוכן להפצה',
+        hook_cta_link: 'בחרו מסלול ←',
+        comp_kicker: 'מאומת מול מקורות רשמיים gov.il ו-kolzchut.org.il',
+        comp_title: 'מדוע עולים חדשים באמת מקבלים שובר וכיצד לקבל עד 80%–100% מימון ללא סירובים',
+        comp_subtitle: 'לפי נהלי משרד העלייה והקליטה, תוכנית השוברים (שובר להכשרה מקצועית) מכסה עד 80% מעלות הקורס (עד תקרה של 7000₪ / 1900$) למשך עד 10 שנים מיום העלייה, בכפוף לתנאים שאנו מסדירים עבורכם מא׳ ועד ת׳.',
+        tbl_col_1: 'קריטריון / פרמטר',
+        tbl_col_2: 'Newman Center (עם הליווי המלא שלנו)',
+        tbl_col_3: 'קורסים רגילים ללא ליווי מובנה',
+        tbl_r1_c1: 'גובה השובר הממשלתי לעולים חדשים',
+        tbl_r1_c2: 'עד 80% מעלות הקורס (עד 7000₪ / 1900$) + עד 100% מכספי הפיקדון הצבאי',
+        tbl_r1_c3: 'דחיות תכופות עקב מילוי שגוי של טפסים (0% סבסוד)',
+        tbl_r2_c1: 'התחייבות להשמה בעבודה',
+        tbl_r2_c2: 'אנו מנפיקים טופס התחייבות רשמי בכתב לאישור של 100% מול משרד הקליטה',
+        tbl_r2_c3: 'דורשים מהתלמיד לחפש מכתב מעסיק בכוחות עצמו',
+        tbl_r3_c1: 'אחוז הפרקטיקה המעשית בלימודים',
+        tbl_r3_c2: '85% פרקטיקה: אפליקציות אנדרואיד, ווב, שרתים, משחקים ו-AI / GEO / AEO / SEO',
+        tbl_r3_c3: 'עד 70% הרצאות תיאורטיות ללא פרויקטים מסחריים חיים',
+        tbl_r4_c1: 'נגישות שפתית וטרמינולוגיה מקצועית',
+        tbl_r4_c2: 'לימוד בשפה נוחה (RU / HE / EN) + 100% עברית ואנגלית טכנית לראיונות',
+        tbl_r4_c3: 'מחסום שפה אקדמי ואובדן של עד 60% מחומר הלימוד',
+        tbl_r5_c1: 'השתלבות בשכר גבוה בתעשייה',
+        tbl_r5_c2: '92% השמה לעבודה בשכר של 14000–28000₪ (3800–7500$)',
+        tbl_r5_c3: 'הבוגרים נשארים לבד מול שוק העבודה',
+        succ_kicker: 'חישוב שקוף של סובסידיה והחזר השקעה',
+        succ_title: 'סובסידיה עד 80% (עד 7000₪). שכר התחלתי 9,500–11,000₪, שכר ממוצע בענף — 19,500₪',
+        succ_desc: 'חישוב החזר השקעה ריאלי: המדינה דרך שובר משרד העלייה והקליטה (עד 7000₪) ופיקדון חיילים משוחררים מכסים את מרבית עלות ההכשרה. שכר התחלתי לבוגר עומד על 9,500–11,000₪, ושכר ממוצע עם ניסיון מגיע ל-19,500₪. ההשקעה העצמית מוחזרת כבר ב-1–2 חודשי העבודה הראשונים!',
+        succ_cta_wa: 'בדקו את הזכאות שלי לשובר ב-WhatsApp',
+        succ_cta_audit: 'לצפייה באודיט B2B ואסטרטגיית צמיחה (+25-35%) ←',
+        footer_copy: '© 1991–2026 מרכז ניומן • תל אביב, חיפה, ירושלים, באר שבע, נתניה, אשדוד • 1-800-22-06-07 / +972-3-560-30-46',
+        mob_bar_cta: 'קבלו שובר עד 80% (7000₪)',
+        modal_kicker: 'בדיקת זכאות תוך 60 שניות',
+        modal_title: 'קבלו את רשימת המסמכים לשובר עד 80% (7000₪) ב-WhatsApp',
+        modal_desc: 'רכז הלימודים של Newman Center ישלח לכם את הרשימה המדויקת למשרד הקליטה או לפיקדון וטופס התחייבות להשמה.',
+        modal_btn: 'שלחו בקשה ישירות ל-WhatsApp'
+      },
+      en: {
+        nav_subtitle: 'מרכז ניומן • High-Tech, AI, GEO/AEO/SEO & Career Academy',
+        nav_home: 'Home',
+        nav_courses: 'All 20 Courses',
+        nav_offer: '80% Voucher Calculator',
+        nav_audit: 'Audit & Growth Strategy',
+        hero_badge: 'Official gov.il Eligibility Check • Up to 80% Voucher (7000₪) & 100% IDF Pikadon',
+        hero_title_1: 'Claim up to 80%–100% state tuition funding and launch a career earning',
+        hero_title_salary: '15000–28000₪ (4000–7500$)',
+        hero_desc: 'Do not postpone your High-Tech career in Israel! At Newman Center you get a modern training program (85% live hands-on practice), experienced instructors from top tech companies, and dedicated job placement support (92% graduate employment rate). Run the 30-second calculator below to see how much of your tuition is covered.',
+        stat_1_val: 'up to 80%',
+        stat_1_lbl: 'Olim Voucher (up to 7000₪)',
+        stat_2_val: 'up to 100%',
+        stat_2_lbl: 'IDF Pikadon Coverage',
+        stat_3_val: '85%',
+        stat_3_lbl: 'Real Hands-On Coding',
+        stat_4_val: '92%',
+        stat_4_lbl: 'Job Placement Support',
+        hero_cta_calc: 'Calculate My 80% Voucher (7000₪)',
+        hero_cta_modal: 'Get Document Checklist in 60s',
+        hero_img_badge_1: 'שובר להכשרה מקצועית • up to 80% (7000₪)',
+        hero_img_badge_2: '6 Campuses + Live Online',
+        hero_card_kicker: 'Official Written Commitment',
+        hero_card_title: 'התחייבות להשמה בעבודה form for fast voucher approval',
+        calc_kicker: 'Interactive Tuition Subsidy & Salary Calculator',
+        calc_title: 'See your exact subsidy percentage and projected starting salary upon graduation',
+        calc_subtitle: 'Select your status in Israel, your target training program, and weekly pace. Instant calculation based on verified Ministry of Aliyah rules (up to 80% / up to 7000₪) and IDF Pikadon (up to 100%).',
+        calc_step1_label: '1. Your status in Israel (subsidy eligibility check):',
+        calc_step1_tag: 'Step 1 of 3',
+        status_olim_title: 'Olim Chadashim (up to 10 yrs)',
+        status_olim_desc: 'State voucher up to 7000₪ (1900$) after Ulpan Alef',
+        status_pikadon_title: 'Discharged Soldier (Pikadon)',
+        status_pikadon_desc: 'Up to 100% tuition paid from personal IDF Pikadon',
+        status_toshav_title: 'Toshav Chozer (up to 2 yrs)',
+        status_toshav_desc: 'Ministry of Aliyah voucher up to 7000₪ (1900$)',
+        status_citizen_title: 'Israeli Citizen / Career Upgrade',
+        status_citizen_desc: 'Newman Center grant up to 25% + up to 24 installments',
+        calc_step2_label: '2. Choose a modern training program (85% practice):',
+        calc_step2_tag: 'Step 2 of 3',
+        track_opt_ai: 'AI Engineering, Digital Marketing & Traffic (GEO / AEO / SEO)',
+        track_opt_android: 'Mobile Apps (Android), Desktop Apps, Web Apps, Servers & Games',
+        track_opt_qa: 'QA Automation, Cyber Testing & AI Software Testing',
+        track_opt_python: 'Python, Data Science, Application Servers & Neural Networks',
+        track_opt_acc: 'Bookkeeping 1+2, Payroll Accounting & Financial AI',
+        calc_step3_label: '3. Weekly study intensity (Evening / Morning / Online):',
+        hours_min: '8 hrs/wk (Flexible evening pace)',
+        hours_mid: '12 hrs/wk (Optimal hybrid)',
+        hours_max: '20 hrs/wk (Accelerated bootcamp)',
+        res_header: 'Your Personalized Benefit Breakdown',
+        res_cov_label: 'State / Fund Tuition Coverage:',
+        res_sal_label: 'Projected Graduate Salary (Junior / Middle):',
+        res_metric_1_lbl: 'Hands-on project work',
+        res_metric_2_lbl: 'Tuition ROI speed',
+        res_btn_wa: 'Reserve Voucher & Get Official Form on WhatsApp',
+        res_privacy: 'Direct chat with a Newman Center coordinator via WhatsApp or 1-800-22-06-07 / +972-3-560-30-46 with zero waiting.',
+        hooks_kicker: 'The Foundation of Your Success at Newman Center',
+        hooks_title: 'Modern training program, experienced instructors, and 6 high-impact development pillars',
+        hooks_subtitle: 'We combined Newman Center’s proven software engineering core with cutting-edge AI, digital marketing, and GEO / AEO / SEO traffic generation. You build live production projects from month one!',
+        pillar_1_title: 'Modern Training Program',
+        pillar_1_desc: 'Zero outdated theory! 85% of your training is writing live code, shipping releases, and working with the 2026 stack (Cursor, Claude, Antigravity, Copilot, Android Studio, Cloud servers, and automated funnels).',
+        pillar_2_title: 'Experienced Instructors',
+        pillar_2_desc: 'Learn directly from practicing Senior Developers, Team Leads, and AI Architects from Israeli product companies—with 1-on-1 code reviews in Russian, Hebrew, and English!',
+        pillar_3_title: 'Job Placement Assistance',
+        pillar_3_desc: '92% of graduates land jobs! We package your GitHub portfolio, optimize your LinkedIn, run technical mock interviews, and issue an official written job placement commitment.',
+        hook_1_tag: 'Mobile Dev Bestseller',
+        hook_1_title: 'Mobile Applications (Especially Android Apps)',
+        hook_1_desc: 'Build fast native and cross-platform smartphone apps for Android (Java / Kotlin / Android Studio), integrate payments, geolocation, push notifications, and publish your own products on Google Play!',
+        hook_1_foot: 'Portfolio output: +3 production Android apps',
+        hook_2_tag: 'New for 2026 • GEO / AEO / SEO',
+        hook_2_title: 'AI Engineering, Digital Marketing & Traffic (GEO / AEO / SEO)',
+        hook_2_desc: 'Master the most sought-after growth skill! Rank brands at the top of ChatGPT, Perplexity, Claude, and Google AI Overviews, manage high-ROI traffic campaigns, and build AI lead pipelines with up to +25-35% conversion lift!',
+        hook_2_foot: 'Portfolio output: AI funnel + GEO/AEO/SEO audit',
+        hook_3_tag: 'Enterprise & Desktop',
+        hook_3_title: 'Desktop Applications',
+        hook_3_desc: 'Engineer reliable enterprise desktop systems for Windows, macOS, and Linux with rich graphical interfaces, multi-threaded processing, and secure local databases for banking, healthcare, and logistics.',
+        hook_3_foot: 'Portfolio output: Full enterprise Desktop system',
+        hook_4_tag: 'Full-Stack & Cloud SaaS',
+        hook_4_title: 'Web Applications',
+        hook_4_desc: 'Develop modern interactive web applications, client portals, and SaaS platforms with instant responsiveness, mobile-first layouts, and seamless AI API integrations.',
+        hook_4_foot: 'Portfolio output: Deployed cloud web application',
+        hook_5_tag: 'High-Load Backend',
+        hook_5_title: 'Web Servers & Application Servers',
+        hook_5_desc: 'Architect powerful backend servers (Spring Boot, REST API, microservices, SQL/NoSQL, Docker) engineered to handle thousands of concurrent requests with enterprise-grade security.',
+        hook_5_foot: 'Portfolio output: Scalable server & REST API',
+        hook_6_tag: 'GameDev & Interactive',
+        hook_6_title: 'Games',
+        hook_6_desc: 'Turn your passion for gaming into a high-paying tech career! Program game logic, physics, dynamic graphics, and engaging mobile and desktop games for Israel’s booming GameDev sector.',
+        hook_6_foot: 'Portfolio output: Playable game release',
+        hook_cta_link: 'Select Track →',
+        comp_kicker: 'Verified against official gov.il & kolzchut.org.il rules',
+        comp_title: 'Why Olim Chadashim genuinely receive the voucher—and how to secure up to 80%–100% funding',
+        comp_subtitle: 'Under Ministry of Aliyah and Integration rules (משרד העלייה והקליטה), the vocational training voucher (שובר להכשרה מקצועית) covers up to 80% of tuition (capped at 7000₪ / 1900$) for up to 10 years after Aliyah when simple requirements are met—which we handle for you end-to-end.',
+        tbl_col_1: 'Criterion / Parameter',
+        tbl_col_2: 'Newman Center (With Our Full Support)',
+        tbl_col_3: 'Standard Unassisted Courses',
+        tbl_r1_c1: 'State Voucher Amount for Olim',
+        tbl_r1_c2: 'Up to 80% of course cost (up to 7000₪ / 1900$) + up to 100% from IDF Pikadon',
+        tbl_r1_c3: 'Frequent rejections due to incomplete paperwork (0% subsidy)',
+        tbl_r2_c1: 'Written Employment Commitment (התחייבות להשמה בעבודה)',
+        tbl_r2_c2: 'We provide the official written placement commitment form for 100% approval certainty',
+        tbl_r2_c3: 'Ask students to find an employer guarantee letter on their own',
+        tbl_r3_c1: 'Share of Real Practical Coding',
+        tbl_r3_c2: '85% practice: Android apps, Web apps, Servers, Games & AI / GEO / AEO / SEO',
+        tbl_r3_c3: 'Up to 70% dry lectures with no live commercial projects',
+        tbl_r4_c1: 'Language Adaptation & Tech Terminology',
+        tbl_r4_c2: 'Clear instruction (RU / HE / EN) + 100% Hebrew & English tech terminology',
+        tbl_r4_c3: 'Steep academic language barrier causing up to 60% material loss',
+        tbl_r5_c1: 'Industry Salary Outcome',
+        tbl_r5_c2: '92% placement into roles paying 14000–28000₪ (3800–7500$)',
+        tbl_r5_c3: 'Graduates left on their own in the job market',
+        succ_kicker: 'Transparent Voucher Subsidy & Career ROI Benchmark',
+        succ_title: 'State Subsidy Up to 80% (7000₪). Entry Salary 9,500–11,000₪, Industry Average 19,500₪',
+        succ_desc: 'Honest career ROI benchmark: Ministry of Aliyah vouchers (up to 7000₪) and IDF Pikadon (up to 100%) cover the vast majority of tuition. Starting salary for a junior graduate ranges from 9,500–11,000₪, and average salary with experience reaches 19,500₪. Personal investment pays off within the first 1–2 months of employment!',
+        succ_cta_wa: 'Verify My Voucher Eligibility on WhatsApp',
+        succ_cta_audit: 'View B2B Audit & Growth Strategy (+25-35%) →',
+        footer_copy: '© 1991–2026 מרכז ניומן • Tel Aviv, Haifa, Jerusalem, Beer Sheva, Netanya, Ashdod • 1-800-22-06-07 / +972-3-560-30-46',
+        mob_bar_cta: 'Claim 80% Voucher (7000₪)',
+        modal_kicker: '60-Second Eligibility Check',
+        modal_title: 'Get the 80% Voucher (7000₪) Document Checklist on WhatsApp',
+        modal_desc: 'A Newman Center coordinator will send you the exact checklist for the Ministry of Aliyah or IDF Pikadon plus the placement commitment form.',
+        modal_btn: 'Send Request Directly to WhatsApp'
+      }
+    };
+
+    function selectStatus(statusKey) {
+      currentStatus = statusKey;
+      const buttons = ['olim', 'pikadon', 'toshav', 'citizen'];
+      buttons.forEach(k => {
+        const btn = document.getElementById('status-' + k);
+        if (!btn) return;
+        if (k === statusKey) {
+          btn.className = 'status-btn text-left p-4 rounded-xl border-2 border-sky-400 bg-violet-600/25 text-white transition-all';
+        } else {
+          btn.className = 'status-btn text-left p-4 rounded-xl border border-violet-400/30 bg-slate-900/60 text-sky-100 hover:border-sky-400 transition-all';
+        }
+      });
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      const trackSelect = document.getElementById('track-select');
+      const hoursRange = document.getElementById('hours-range');
+      const trackKey = trackSelect ? trackSelect.value : 'ai_geo';
+      const hours = hoursRange ? parseInt(hoursRange.value, 10) : 12;
+      const months = hours === 8 ? 8 : (hours === 12 ? 6 : 4);
+
+      const hoursDisplay = document.getElementById('hours-display');
+      if (hoursDisplay) {
+        if (currentLang === 'he') {
+          hoursDisplay.textContent = hours + ' ש״ש • ' + months + ' חודשים';
+        } else if (currentLang === 'en') {
+          hoursDisplay.textContent = hours + ' hrs/wk • ' + months + ' mos.';
+        } else {
+          hoursDisplay.textContent = hours + ' ч/нед • ' + months + ' мес.';
+        }
+      }
+
+      const tInfo = trackData[trackKey] || trackData.ai_geo;
+      const sInfo = statusRules[currentStatus] || statusRules.olim;
+
+      const hookPreview = document.getElementById('track-hook-preview');
+      if (hookPreview) hookPreview.textContent = tInfo.hook[currentLang] || tInfo.hook.ru;
+
+      const covPct = document.getElementById('res-coverage-pct');
+      const covSum = document.getElementById('res-coverage-sum');
+      const resBadge = document.getElementById('res-badge');
+      const legalNote = document.getElementById('res-legal-note');
+      const salNis = document.getElementById('res-salary-nis');
+      const salUsd = document.getElementById('res-salary-usd');
+
+      if (covPct) covPct.textContent = sInfo.pct[currentLang] || sInfo.pct.ru;
+      if (covSum) covSum.textContent = sInfo.sum[currentLang] || sInfo.sum.ru;
+      if (resBadge) resBadge.textContent = sInfo.badge[currentLang] || sInfo.badge.ru;
+      if (legalNote) legalNote.textContent = sInfo.note[currentLang] || sInfo.note.ru;
+      if (salNis) salNis.textContent = tInfo.salaryNis;
+      if (salUsd) salUsd.textContent = tInfo.salaryUsd[currentLang] || tInfo.salaryUsd.ru;
+    }
+
+    function setLanguage(lang) {
+      if (!i18n[lang]) lang = 'ru';
+      currentLang = lang;
+      localStorage.setItem('newman_lang', lang);
+
+      const htmlEl = document.documentElement;
+      htmlEl.lang = lang;
+      htmlEl.dir = lang === 'he' ? 'rtl' : 'ltr';
+
+      ['ru', 'he', 'en'].forEach(code => {
+        const btn = document.getElementById('lang-btn-' + code);
+        if (!btn) return;
+        if (code === lang) {
+          btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-gradient-to-r from-violet-600 to-sky-500 text-white shadow';
+        } else {
+          btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold transition-all text-sky-200 hover:text-white';
+        }
+      });
+
+      const dict = i18n[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      const nameInput = document.getElementById('calc-user-name');
+      const phoneInput = document.getElementById('calc-user-phone');
+      if (nameInput && phoneInput) {
+        if (lang === 'he') {
+          nameInput.placeholder = 'השם שלך (למשל, דוד)';
+          phoneInput.placeholder = 'טלפון נייד (05X-XXX-XXXX)';
+        } else if (lang === 'en') {
+          nameInput.placeholder = 'Your Name (e.g., David)';
+          phoneInput.placeholder = 'Mobile Phone (05X-XXX-XXXX)';
+        } else {
+          nameInput.placeholder = 'Ваше имя (например, Давид)';
+          phoneInput.placeholder = 'Ваш телефон в Израиле (05X-XXX-XXXX)';
+        }
+      }
+
+      updateCalculator();
+    }
+
+    function applyTheme(theme) {
+      const htmlEl = document.documentElement;
+      const sunIcon = document.getElementById('theme-icon-sun');
+      const moonIcon = document.getElementById('theme-icon-moon');
+      if (theme === 'light') {
+        htmlEl.classList.remove('dark');
+        htmlEl.classList.add('light');
+        if (sunIcon) sunIcon.classList.remove('hidden');
+        if (moonIcon) moonIcon.classList.add('hidden');
+      } else {
+        htmlEl.classList.remove('light');
+        htmlEl.classList.add('dark');
+        if (sunIcon) sunIcon.classList.add('hidden');
+        if (moonIcon) moonIcon.classList.remove('hidden');
+      }
+    }
+
+    function toggleTheme() {
+      const current = localStorage.getItem('newman_theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('newman_theme', next);
+      applyTheme(next);
+    }
+
+    function sendCalculatorToWhatsApp() {
+      const name = (document.getElementById('calc-user-name')?.value || '').trim();
+      const phone = (document.getElementById('calc-user-phone')?.value || '').trim();
+      const trackSelect = document.getElementById('track-select');
+      const trackText = trackSelect ? trackSelect.options[trackSelect.selectedIndex].text : 'IT / AI / GEO-AEO-SEO';
+      const sInfo = statusRules[currentStatus] || statusRules.olim;
+      const cov = sInfo.pct[currentLang] + ' ' + sInfo.sum[currentLang];
+
+      const msg = `Newman Center (1-800-22-06-07) — Заявка на ваучер / субсидию:\nИмя: ${name || 'Кандидат'}\nТелефон: ${phone || 'Уточнить в чате'}\nКурс: ${trackText}\nСубсидия: ${cov}`;
+      const url = 'https://wa.me/972532733777?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank', 'noopener');
+    }
+
+    function openBottomSheet() {
+      const el = document.getElementById('bottom-sheet-backdrop');
+      if (el) {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      }
+    }
+
+    function closeBottomSheet() {
+      const el = document.getElementById('bottom-sheet-backdrop');
+      if (el) {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+    }
+
+    function sendModalToWhatsApp() {
+      const name = (document.getElementById('modal-name')?.value || '').trim();
+      const phone = (document.getElementById('modal-phone')?.value || '').trim();
+      const msg = `Newman Center (1-800-22-06-07) — Запрос списка документов на ваучер до 80% (7000₪) / Пикадон 100%:\nИмя: ${name || 'Кандидат'}\nТелефон: ${phone || 'В чате'}`;
+      const url = 'https://wa.me/972532733777?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank', 'noopener');
+      closeBottomSheet();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('newman_theme') || 'dark';
+      applyTheme(savedTheme);
+      setLanguage(currentLang);
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+  <script src="assets/enhance.js" defer></script>
+</body>
+</html>

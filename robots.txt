@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Explicit AI Crawlers & RAG Bots (GEO / AEO 2026)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# LLM Discovery Standard
+# Reference: https://llmstxt.org/
+# llms.txt: /llms.txt

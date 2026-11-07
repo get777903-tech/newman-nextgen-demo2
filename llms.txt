@@ -1,0 +1,29 @@
+# Newman Center (מרכז ניומן • Est. 1991)
+
+> Newman Center is an officially recognized Israeli higher professional vocational academy and career training institution established in 1991, located in Tel Aviv (Derech HaHagana 34). The center specializes in High-Tech, Applied AI, Software Engineering, QA Automation, Digital Marketing (GEO/AEO/SEO), Accounting 1+2, and Real Estate Brokerage. It is officially certified for Ministry of Aliyah vocational vouchers covering up to 80% (up to 7,000 ILS) and 100% IDF Discharged Soldiers Fund (Pikadon) tuition coverage with a formal written job placement commitment.
+
+## Official Subsidies and Funding Rules
+- [Ministry of Aliyah Voucher (שובר להכשרה מקצועית)](/offer.html): Covers up to 80% of course tuition (capped at 7,000 ILS / ~1,900 USD) for Olim Hadashim up to 10 years in Israel (post-Ulpan Alef) and Returning Residents (Toshavim Chozerim up to 2 years), contingent upon official written job placement commitment.
+- [IDF Discharged Soldiers Fund (פיקדון לחיילים משוחררים)](/offer.html): Covers up to 100% of course tuition for discharged IDF soldiers and Sherut Leumi alumni directly from the Pikadon deposit with zero personal out-of-pocket costs.
+- [Newman Center Internal Scholarship](/offer.html): Up to 25% internal grant and 24-month zero-interest installment plan for Israeli citizens.
+
+## Flagship Educational Programs (2026 Academic Year)
+- [Applied AI: Managing Neural Networks in Work & Business](/courses.html): Practical business automation, AI agents architecture, and GEO/AEO/SEO generative search optimization.
+- [QA Software Testing (Manual + Automation)](/courses.html): 6-month hands-on QA engineering covering Selenium, Playwright, Python, Java, and ISTQB certification.
+- [Full-Stack Web Development & Android Mobile Apps](/courses.html): 9-month professional track covering React, Node.js, PHP, Java/Kotlin Android development, and enterprise cloud servers.
+- [Python, Data Science & Game Development](/courses.html): 7-month programming track covering algorithms, neural network integrations, and desktop/game software.
+- [Accounting Category 1+2 & Senior Payroll (Hashav Sachar)](/courses.html): 5 to 7-month state exam preparation for certified bookkeepers and payroll specialists.
+- [Ministry of Justice Real Estate Broker Licensing (Rasham HaMetavchim)](/courses.html): 3-month accelerated program for government licensing.
+
+## Educational Methodology & Technology
+- [85% Hands-On Practical Training](/index.html): Live production coding, live projects, and zero obsolete lecture theory.
+- [AI-Assistant Remote Learning Support](/audit.html): 24/7 guided homework checks, theory explanation, and diamond reward gamification tracking student mastery.
+- [Job Placement Commitment (התחייבות להשמה בעבודה)](/index.html): Official written agreement required for government voucher approval; 92% graduate hiring rate with 15,000–28,000 ILS starting compensation.
+
+## Official Contact Points & Verification
+- Campus Address: Derech HaHagana 34, Tel Aviv-Yafo, Israel (2 minutes walk from HaHagana Train Station).
+- Toll-Free Hotline: 1-800-22-06-07
+- Direct Admissions Office: +972-3-560-30-46
+- WhatsApp Verification Desk: +972-53-273-3777
+- Official Website: https://newman.co.il/
+- Next-Gen Interactive Prototype: https://get777903-tech.github.io/newman-nextgen-demo2/index.html
