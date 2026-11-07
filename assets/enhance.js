@@ -313,7 +313,19 @@
         note: '🔒 Конфиденциально. Отправка напрямую методисту филиалов.',
         succTitle: 'Спасибо! Обращение принято',
         succDesc: 'Методист Newman Center свяжется с вами в течение 15 минут в WhatsApp или по указанному телефону для подробной консультации.',
-        btnDone: 'Понятно, закрыть окно'
+        btnDone: 'Понятно, закрыть окно',
+        opts: {
+          kids: '👶 Детская & подростковая AI Академия (9–16 лет): Вайб-кодинг & Игры',
+          voucher: '🎫 Субсидия / скидка до 80% (Ваучер gov.il / Пикадон)',
+          ai: '🤖 Прикладной AI, нейросети и вайб-кодинг (Cursor, Claude, Copilot)',
+          hitech: '💻 Hi-Tech: Full-Stack разработка, Python, Web & Android',
+          qa: '🧪 QA Manual & Automation Testing',
+          business: '📊 Бухгалтерия 1+2 и расчет зарплат',
+          licensed: '🏢 Лицензированные профессии (ЧПУ, Электрики, Кондиционеры)',
+          beauty: '💄 Красота, здоровье и косметология',
+          hebrew: '🗣️ Профессиональный иврит для карьеры',
+          other: '💡 Другой вопрос или консультация методиста'
+        }
       },
       he: {
         badge: 'מרכז ניומן • Est. 1991',
@@ -327,7 +339,19 @@
         note: '🔒 פרטיות מובטחת. הפנייה מועברת ישירות ליועץ הלימודים.',
         succTitle: 'תודה! הפנייה התקבלה בהצלחה',
         succDesc: 'יועץ לימודים של מרכז ניומן יחזור אליך תוך 15 דקות בוואטסאפ או בטלפון לשיחת ייעוץ אישית.',
-        btnDone: 'סגירת חלון'
+        btnDone: 'סגירת חלון',
+        opts: {
+          kids: '👶 אקדמיית AI לילדים ונוער (9–16): וייב קודינג ומשחקים',
+          voucher: '🎫 סבסוד / הנחה עד 80% (שובר משרד הקליטה / פיקדון)',
+          ai: '🤖 מסלול AI יישומי, וייב קודינג (Cursor, Claude, Copilot)',
+          hitech: '💻 הייטק: פיתוח Full-Stack, פייתון, ווב ואנדרואיד',
+          qa: '🧪 בדיקות תוכנה QA Manual & Automation',
+          business: '📊 הנהלת חשבונות 1+2 וחשבות שכר',
+          licensed: '🏢 מקצועות ברישוי (CNC, חשמלאים, מיזוג אוויר)',
+          beauty: '💄 יופי, טיפוח וקוסמטיקה',
+          hebrew: '🗣️ עברית מקצועית לקריירה',
+          other: '💡 פנייה אחרת או ייעוץ כללי'
+        }
       },
       en: {
         badge: 'Newman Center • Est. 1991',
@@ -341,7 +365,19 @@
         note: '🔒 Confidential. Routed directly to admissions coordinators.',
         succTitle: 'Thank You! Request Received',
         succDesc: 'A Newman Center academic coordinator will contact you within 15 minutes via WhatsApp or phone.',
-        btnDone: 'Got it, close window'
+        btnDone: 'Got it, close window',
+        opts: {
+          kids: '👶 Kids & Teens AI Academy (Ages 9–16): Vibe Coding & Games',
+          voucher: '🎫 Up to 80% Subsidy / Discount (gov.il Voucher / Pikadon)',
+          ai: '🤖 Applied AI, Neural Networks & Vibe Coding (Cursor, Claude)',
+          hitech: '💻 High-Tech: Full-Stack Dev, Python, Web & Android',
+          qa: '🧪 QA Manual & Automation Software Testing',
+          business: '📊 Bookkeeping 1+2 & Payroll Accounting',
+          licensed: '🏢 Licensed Trades (CNC, Electricians, HVAC)',
+          beauty: '💄 Aesthetics, Beauty & Cosmetology',
+          hebrew: '🗣️ Professional Career Hebrew',
+          other: '💡 Other Question or General Academic Advising'
+        }
       }
     };
 
@@ -359,6 +395,13 @@
       m.querySelector('.nm-succ-title').textContent = d.succTitle;
       m.querySelector('.nm-succ-desc').textContent = d.succDesc;
       m.querySelector('.nm-btn-done').textContent = d.btnDone;
+      var sel = m.querySelector('#nm-c-course');
+      if (sel && d.opts) {
+        for (var i = 0; i < sel.options.length; i++) {
+          var val = sel.options[i].value;
+          if (d.opts[val]) sel.options[i].textContent = d.opts[val];
+        }
+      }
     });
 
     window.openConsultationModal = function (prefTrack) {

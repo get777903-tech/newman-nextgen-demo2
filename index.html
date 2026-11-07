@@ -498,10 +498,10 @@
             <!-- Quick Category Tags -->
             <div class="flex flex-wrap items-center gap-1.5 text-xs">
               <span class="text-slate-500 dark:text-sky-200/70 text-[11px] font-bold" data-i18n="popular_tags">Топ направления (+15% к доходу):</span>
-              <button type="button" onclick="selectCategoryFilter('ai_marketing_geo')" class="px-2.5 py-1 rounded-lg bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white font-bold shadow-sm hover:opacity-95 transition-opacity">🤖 AI & GEO/AEO Трафик</button>
-              <button type="button" onclick="selectCategoryFilter('hitech_it')" class="px-2.5 py-1 rounded-lg bg-slate-800 text-sky-100 hover:bg-violet-600 hover:text-white font-semibold transition-colors">💻 QA, Full-Stack & Android</button>
-              <button type="button" onclick="selectCategoryFilter('accounting_finance_business')" class="px-2.5 py-1 rounded-lg bg-slate-800 text-sky-100 hover:bg-violet-600 hover:text-white font-semibold transition-colors">📊 Бухгалтерия 1+2</button>
-              <button type="button" onclick="selectCategoryFilter('real_estate_brokerage')" class="px-2.5 py-1 rounded-lg bg-slate-800 text-sky-100 hover:bg-violet-600 hover:text-white font-semibold transition-colors">🏢 Риелтор (Минюст)</button>
+              <button type="button" onclick="selectCategoryFilter('ai_marketing_geo')" class="px-2.5 py-1 rounded-lg bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white font-bold shadow-sm hover:opacity-95 transition-opacity" data-i18n="hero_tag_ai">🤖 AI & GEO/AEO Трафик</button>
+              <button type="button" onclick="selectCategoryFilter('hitech_it')" class="px-2.5 py-1 rounded-lg bg-slate-800 text-sky-100 hover:bg-violet-600 hover:text-white font-semibold transition-colors" data-i18n="hero_tag_it">💻 QA, Full-Stack & Android</button>
+              <button type="button" onclick="selectCategoryFilter('accounting_finance_business')" class="px-2.5 py-1 rounded-lg bg-slate-800 text-sky-100 hover:bg-violet-600 hover:text-white font-semibold transition-colors" data-i18n="hero_tag_acc">📊 Бухгалтерия 1+2</button>
+              <button type="button" onclick="selectCategoryFilter('real_estate_brokerage')" class="px-2.5 py-1 rounded-lg bg-slate-800 text-sky-100 hover:bg-violet-600 hover:text-white font-semibold transition-colors" data-i18n="hero_tag_realtor">🏢 Риелтор (Минюст)</button>
             </div>
           </div>
 
@@ -1141,10 +1141,11 @@
     </div>
   </section>
 
-  <!-- 9b. INTERACTIVE CONSULTATION FORM SECTION -->
+  <!-- 9b. INTERACTIVE CONSULTATION FORM SECTION (Trilingual: RU / HE / EN) -->
   <section id="consultation-section" class="relative z-10 py-12 sm:py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-emerald-400/40 shadow-2xl relative overflow-hidden bg-gradient-to-br from-slate-900/90 via-slate-950 to-emerald-950/40">
+      <!-- RU Version -->
+      <div data-l="ru" class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-emerald-400/40 shadow-2xl relative overflow-hidden bg-gradient-to-br from-slate-900/90 via-slate-950 to-emerald-950/40">
         <div class="max-w-3xl mb-8">
           <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-extrabold uppercase tracking-wider mb-2">
             Персональный методист • 1-на-1
@@ -1157,7 +1158,7 @@
           </p>
         </div>
 
-        <form id="index-consultation-form" onsubmit="event.preventDefault(); document.getElementById('index-consult-success').style.display='block'; this.reset();" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <form id="index-consultation-form-ru" onsubmit="event.preventDefault(); document.getElementById('index-consult-success-ru').style.display='block'; this.reset();" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="space-y-1.5">
             <label class="text-xs font-bold text-slate-300">Ваше имя:</label>
             <input type="text" required placeholder="Например, Анна" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
@@ -1189,8 +1190,110 @@
             </button>
           </div>
         </form>
-        <div id="index-consult-success" style="display:none;" class="mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-400 text-emerald-300 font-bold text-sm">
+        <div id="index-consult-success-ru" style="display:none;" class="mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-400 text-emerald-300 font-bold text-sm">
           ✅ Спасибо! Ваша заявка принята. Методист свяжется с вами в течение 15 минут в WhatsApp или по телефону.
+        </div>
+      </div>
+
+      <!-- HE Version -->
+      <div data-l="he" dir="rtl" class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-emerald-400/40 shadow-2xl relative overflow-hidden bg-gradient-to-br from-slate-900/90 via-slate-950 to-emerald-950/40 text-right">
+        <div class="max-w-3xl mb-8">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-extrabold uppercase tracking-wider mb-2">
+            יועץ לימודים אישי • 1-על-1
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
+            קבלו ייעוץ אקדמי חינם בנוגע למסלולי הלימוד וסבסוד עד 80%
+          </h2>
+          <p class="text-sky-100/90 text-sm mt-2 leading-relaxed">
+            מלאו את הפרטים כדי שיועץ לימודים יסייע בהתאמת התוכנית (כולל אקדמיית IT & AI לילדים ונוער), יבדוק זכאות לסבסוד שובר משרד העלייה או פיקדון צבאי ויענה על כל שאלה.
+          </p>
+        </div>
+
+        <form id="index-consultation-form-he" onsubmit="event.preventDefault(); document.getElementById('index-consult-success-he').style.display='block'; this.reset();" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">שם מלא:</label>
+            <input type="text" required placeholder="לדוגמה, דניאל" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">טלפון / WhatsApp:</label>
+            <input type="tel" required placeholder="050-000-0000" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="space-y-1.5 sm:col-span-2 lg:col-span-1">
+            <label class="text-xs font-bold text-slate-300">מסלול לימודים:</label>
+            <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+              <option>👶 אקדמיית IT & AI לילדים ונוער (9–16): וייב-קודינג ויצירת משחקים</option>
+              <option selected>🎫 סבסוד / הנחה עד 80% (שובר משרד העלייה / פיקדון צבאי)</option>
+              <option>🤖 AI יישומי, מודלי שפה ווייב-קודינג</option>
+              <option>💻 פיתוח Full-Stack, Python & אנדרואיד</option>
+              <option>🧪 בדיקות תוכנה QA</option>
+              <option>📊 הנהלת חשבונות 1+2 וחישוב שכר</option>
+              <option>🏢 מקצועות מורשים ורישוי תיווך</option>
+              <option>🗣️ עברית מקצועית לקריירה</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2 lg:col-span-3 space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">שאלה או הערה (אופציונלי):</label>
+            <input type="text" placeholder="עיר מגורים, גיל או שעה נוחה לשיחה..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="sm:col-span-2 lg:col-span-3 pt-2">
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-extrabold text-sm text-white bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-teal-400 shadow-xl border border-emerald-300/40 transition-all cursor-pointer">
+              שליחת פנייה לייעוץ לימודים ←
+            </button>
+          </div>
+        </form>
+        <div id="index-consult-success-he" style="display:none;" class="mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-400 text-emerald-300 font-bold text-sm">
+          ✅ תודה! פנייתכם התקבלה בהצלחה. יועץ לימודים יחזור אליכם תוך 15 דקות ב-WhatsApp או בטלפון.
+        </div>
+      </div>
+
+      <!-- EN Version -->
+      <div data-l="en" class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-emerald-400/40 shadow-2xl relative overflow-hidden bg-gradient-to-br from-slate-900/90 via-slate-950 to-emerald-950/40">
+        <div class="max-w-3xl mb-8">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-extrabold uppercase tracking-wider mb-2">
+            Personal Academic Advisor • 1-on-1
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
+            Get Free Consultation on Career Tracks & Subsidies up to 80%
+          </h2>
+          <p class="text-sky-100/90 text-sm mt-2 leading-relaxed">
+            Fill out the form below to receive expert guidance on track selection (including Kids AI Academy), verify government subsidy eligibility, and ask any questions.
+          </p>
+        </div>
+
+        <form id="index-consultation-form-en" onsubmit="event.preventDefault(); document.getElementById('index-consult-success-en').style.display='block'; this.reset();" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">Your Full Name:</label>
+            <input type="text" required placeholder="e.g. David Miller" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">Phone / WhatsApp:</label>
+            <input type="tel" required placeholder="+972-50-000-0000" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="space-y-1.5 sm:col-span-2 lg:col-span-1">
+            <label class="text-xs font-bold text-slate-300">Study Track:</label>
+            <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+              <option>👶 Kids &amp; Teens IT &amp; AI Academy (9–16 yrs): Vibe Coding &amp; Roblox/Python</option>
+              <option selected>🎫 Subsidy / Discount up to 80% (Voucher / IDF Pikadon)</option>
+              <option>🤖 Applied AI, LLMs &amp; Vibe Coding</option>
+              <option>💻 Full-Stack Development, Python &amp; Android</option>
+              <option>🧪 QA Software Testing</option>
+              <option>📊 Accounting 1+2 &amp; Payroll</option>
+              <option>🏢 Licensed Real Estate Brokerage</option>
+              <option>🗣️ Professional Hebrew for Career</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2 lg:col-span-3 space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">Question or Note (optional):</label>
+            <input type="text" placeholder="Your city, child's age or best time to call..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="sm:col-span-2 lg:col-span-3 pt-2">
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-extrabold text-sm text-white bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-teal-400 shadow-xl border border-emerald-300/40 transition-all cursor-pointer">
+              Submit Request for Consultation →
+            </button>
+          </div>
+        </form>
+        <div id="index-consult-success-en" style="display:none;" class="mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-400 text-emerald-300 font-bold text-sm">
+          ✅ Thank you! Your request has been received. An advisor will contact you within 15 minutes via WhatsApp or phone.
         </div>
       </div>
     </div>
@@ -1464,6 +1567,10 @@
         search_placeholder: 'Найти курс: AI, GEO/AEO трафик, QA, Full-Stack, Python, Android, Бухгалтерия...',
         search_btn: 'Все 40 курсов',
         popular_tags: 'Топ направления (+15% к доходу):',
+        hero_tag_ai: '🤖 AI & GEO/AEO Трафик',
+        hero_tag_it: '💻 QA, Full-Stack & Android',
+        hero_tag_acc: '📊 Бухгалтерия 1+2',
+        hero_tag_realtor: '🏢 Риелтор (Минюст)',
         hero_cta_primary: 'Рассчитать ваучер до 80% (7000₪) за 60 сек',
         hero_cta_secondary: 'Калькулятор зарплаты 15000–28000₪',
         campus_live_badge: 'Тель-Авив, Дерех ха-Агана 34 (2 мин от ж/д)',
@@ -1614,8 +1721,12 @@
         hook_btn3_title: 'חייל משוחרר (פיקדון)',
         hook_btn3_sub: 'עד 100% מהפיקדון (עד 15500₪)',
         search_placeholder: 'חפשו קורס: AI, קידום GEO/AEO, בדיקות QA, Full-Stack, Python, אנדרואיד, הנהלת חשבונות...',
-        search_btn: 'כל 20 הקורסים',
+        search_btn: 'כל 40 הקורסים',
         popular_tags: 'מגמות מובילות (+15% לשכר):',
+        hero_tag_ai: '🤖 תנועת AI & GEO/AEO',
+        hero_tag_it: '💻 QA, Full-Stack & אנדרואיד',
+        hero_tag_acc: '📊 הנהלת חשבונות 1+2',
+        hero_tag_realtor: '🏢 תיווך נדל״ן (משרד המשפטים)',
         hero_cta_primary: 'חשבו זכאות לשובר עד 80% (7000₪) ב-60 שניות',
         hero_cta_secondary: 'מחשבון שכר 15000–28000₪',
         campus_live_badge: 'תל אביב, דרך ההגנה 34 (2 דק\' מרכבת ההגנה)',
@@ -1768,6 +1879,10 @@
         search_placeholder: 'Search courses: AI, GEO/AEO Traffic, QA, Full-Stack, Python, Android, Accounting...',
         search_btn: 'All 40 Courses',
         popular_tags: 'Top ROI Tracks (+15% Income):',
+        hero_tag_ai: '🤖 AI & GEO/AEO Traffic',
+        hero_tag_it: '💻 QA, Full-Stack & Android',
+        hero_tag_acc: '📊 Accounting 1+2',
+        hero_tag_realtor: '🏢 Real Estate License',
         hero_cta_primary: 'Calculate Your 80% Voucher (7000₪) in 60s',
         hero_cta_secondary: 'Salary Calculator 15000–28000₪',
         campus_live_badge: 'Tel Aviv, Derech HaHagana 34 (2 min from train)',
