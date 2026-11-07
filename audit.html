@@ -143,16 +143,16 @@
 
       <!-- 4 DISTINCT ENLARGED EXTRA-BOLD HIGHLIGHTED NAVIGATION BUTTONS (Requirement: Ultra-Large Bold Font & Radiant High-Contrast Highlight for ALL Buttons) -->
       <nav class="hidden lg:flex items-center gap-3 bg-slate-950/95 border-[3px] border-violet-400/60 rounded-3xl p-3 shadow-2xl" aria-label="Main Navigation">
-        <a href="index.html" class="px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
+        <a href="index.html" class="nm-nav-btn px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
           <span class="text-xl">🏛️</span> <span data-i18n="nav_home">Главная</span>
         </a>
-        <a href="courses.html" class="px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
+        <a href="courses.html" class="nm-nav-btn px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
           <span class="text-xl">📚</span> <span data-i18n="nav_courses">Все 20 курсов</span>
         </a>
-        <a href="offer.html" class="px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
+        <a href="offer.html" class="nm-nav-btn px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
           <span class="text-xl">🎫</span> <span data-i18n="nav_offer">Калькулятор Ваучера 80%</span>
         </a>
-        <a href="audit.html" class="px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 scale-105 transition-all flex items-center gap-2.5">
+        <a href="audit.html" class="nm-nav-btn px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 scale-105 transition-all flex items-center gap-2.5">
           <span class="text-xl">📊</span> <span data-i18n="nav_audit">Аудит &amp; Стратегия Роста</span>
         </a>
       </nav>
@@ -189,12 +189,20 @@
       </div>
     </div>
 
-    <!-- Mobile Sub-nav -->
-    <div class="lg:hidden flex items-center justify-around border-t border-violet-500/20 bg-slate-950/90 px-1.5 py-2 text-[11px] font-bold">
-      <a href="index.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_home">1. Главная</a>
-      <a href="courses.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_courses">2. Все курсы</a>
-      <a href="offer.html" class="px-2 py-1 rounded-lg text-sky-200 hover:text-white" data-i18n="nav_offer">3. Ваучер 80%</a>
-      <a href="audit.html" class="px-2 py-1 rounded-lg bg-violet-600 text-white shadow-sm" data-i18n="nav_audit">4. Аудит &amp; ROI</a>
+    <!-- Mobile Sub-navigation bar (4 Ultra-Enlarged Highlighted Buttons) -->
+    <div class="lg:hidden grid grid-cols-2 sm:grid-cols-4 gap-2 border-t-2 border-violet-500/30 bg-slate-950/95 p-2.5 text-center">
+      <a href="index.html" class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black text-white bg-gradient-to-r from-violet-600 to-sky-500 border-2 border-sky-300 shadow-md flex items-center justify-center gap-1.5">
+        <span>🏛️</span> <span data-i18n="nav_home">Главная</span>
+      </a>
+      <a href="courses.html" class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black text-white bg-gradient-to-r from-fuchsia-600 to-violet-600 border-2 border-fuchsia-300 shadow-md flex items-center justify-center gap-1.5">
+        <span>📚</span> <span data-i18n="nav_courses_short">20 курсов</span>
+      </a>
+      <a href="offer.html" class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black text-white bg-gradient-to-r from-indigo-600 to-sky-600 border-2 border-indigo-300 shadow-md flex items-center justify-center gap-1.5">
+        <span>🎫</span> <span data-i18n="nav_offer_short">Ваучер 80%</span>
+      </a>
+      <a href="audit.html" class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black text-white bg-gradient-to-r from-sky-500 to-cyan-500 border-2 border-cyan-300 shadow-md ring-2 ring-sky-300 flex items-center justify-center gap-1.5 scale-102">
+        <span>📊</span> <span data-i18n="nav_audit_short">Аудит &amp; План</span>
+      </a>
     </div>
   </header>
 
@@ -611,7 +619,7 @@
               Запустите 20-дневный A/B сплит-тест без остановки основного сайта
             </h2>
             <p class="text-sky-100/90 text-sm sm:text-base mt-2" data-i18n="pitch_subtitle">
-              Не нужно ломать текущий сайт на `newman.co.il`. Направьте всего 20%–30% рекламного трафика на этот высокоскоростной 3-язычный прототип (RU / עב / EN) на 20 дней и замерьте прирост обращений в WhatsApp и по телефонам 1-800-22-06-07 и +972-3-560-30-46.
+              Не нужно ломать текущий сайт на `newman.co.il`. Направьте всего 20%–30% рекламного трафика на этот высокоскоростной 3-язычный прототип (RU / עב / EN) на 20 дней и замерьте реальный прирост целевых обращений и заявок.
             </p>
           </div>
           <div class="flex flex-col sm:flex-row gap-3 shrink-0">
@@ -738,6 +746,10 @@
         <a href="tel:+97235603046" class="px-3 py-1.5 rounded-lg bg-slate-800 border border-sky-400/40 text-sky-200 hover:text-white">+972-3-560-30-46</a>
       </div>
     </div>
+    <div class="max-w-7xl mx-auto mt-4 pt-3 border-t border-violet-500/25 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-sky-200/80">
+      <span>Прототип модернизации: <strong>Команда Академии ActiMind по GEO/AEO/SEO &amp; AI-модернизации</strong></span>
+      <span>Email: <a href="mailto:ContactUs@ActiMind.net" class="underline hover:text-white">ContactUs@ActiMind.net</a> • WhatsApp: +972-53-273-3777</span>
+    </div>
   </footer>
 
   <!-- MOBILE STICKY THUMB-ZONE BAR -->
@@ -810,7 +822,7 @@
         pitch_kicker: 'Zero-Risk Предложение для Newman Center',
         pitch_box_title: 'Официальный текст B2B-обращения к руководству Newman Center:',
         pitch_title: 'Запустите 20-дневный A/B сплит-тест без остановки основного сайта',
-        pitch_subtitle: 'Не нужно ломать текущий сайт на newman.co.il. Направьте всего 20%–30% рекламного трафика на этот высокоскоростной 3-язычный прототип (RU / עб / EN) на 20 дней и замерьте прирост обращений в WhatsApp и по телефонам 1-800-22-06-07 и +972-3-560-30-46.',
+        pitch_subtitle: 'Не нужно ломать текущий сайт на newman.co.il. Направьте всего 20%–30% рекламного трафика на этот высокоскоростной 3-язычный прототип (RU / עб / EN) на 20 дней и замерьте реальный прирост целевых обращений и заявок.',
         pitch_btn_wa: 'Обсудить запуск 20-дневного теста в WhatsApp',
         footer_copy: '© 1991–2026 מרכז ניומן • Тель-Авив, Хайфа, Иерусалим, Беэр-Шева, Нетания, Ашдод • 1-800-22-06-07 • +972-3-560-30-46',
         mob_calc_link: 'Калькулятор 80%',
@@ -844,12 +856,12 @@
         before_li_5: 'חוסר בנתונים מובנים Schema.org, המונע ממנועי בינה מלאכותית להמליץ על המרכז בשאילתות על שוברי לימודים.',
         after_tag: 'הארכיטקטורה החדשה של Newman Center',
         after_score: 'תוספת לידים: +25-35%',
-        after_title: 'כיצד אב-הטיפוס הופך מבקרים לפניות חמות ב-WhatsApp וב-1-800-22-06-07 / +972-3-560-30-46',
+        after_title: 'כיצד אב-הטיפוס הופך מבקרים לפניות חמות ב-WhatsApp ובמוקד הרישום',
         after_li_1: 'טעינה מיידית במובייל (0.8 שניות), עיצוב סגול-תכלת יוקרתי עם טקסט בהיר, מצב כהה/בהיר ומעבר חלק בין RU / עב / EN.',
         after_li_2: 'מחשבון שובר מאומת לפי gov.il עד 80% (7000₪) ופיקדון עד 100% עם הדגשת טופס ההתחייבות להשמה בעבודה.',
         after_li_3: 'הוספת מסלול יוקרתי ללימודי AI, שיווק דיגיטלי וטראפיק GEO / AEO / SEO המושך קהלים חדשים ורווחיים.',
         after_li_4: 'הבלטת המסרים המנצחים (תוכנית מודרנית — 85% פרקטיקה, מרצים מנוסים, סיוע בהשמה — 92%, אנדרואיד, ווב, שרתים ומשחקים) עם שכר של 15000–28000₪.',
-        after_li_5: 'ללא מערכות CRM מסורבלות באמצע — כל ליד מועבר בלחיצה אחת ישירות ל-WhatsApp של צוות הרישום ולמספר 1-800-22-06-07 / +972-3-560-30-46.',
+        after_li_5: 'ללא מערכות CRM מסורבלות באמצע — כל ליד מועבר בלחיצה אחת ישירות ל-WhatsApp של צוות הרישום.',
         roi_kicker: 'מודל כלכלי להנהלת Newman Center',
         roi_title: 'מחשבון תוספת הכנסה בהטמעת המשפך החדש (+25-35% להמרה)',
         roi_subtitle: 'הזיזו את מחוון התנועה החודשית וראו כמה תלמידים והכנסות נוספות יתקבלו במעבר מיחס המרה של 1.8% ל-2.4% באותו תקציב פרסום.',
@@ -872,7 +884,7 @@
         pitch_kicker: 'הצעה ללא סיכון להנהלת Newman Center',
         pitch_box_title: 'נוסח פנייה רשמי להנהלת מרכז ניומן:',
         pitch_title: 'הפעילו מבחן A/B של 20 ימים ללא השבתת האתר הקיים',
-        pitch_subtitle: 'אין צורך לשנות את האתר הקיים ב-newman.co.il. הפנו רק 20%–30% מתנועת הפרסום לאב-טיפוס תלת-לשוני זה (RU / עב / EN) למשך 20 ימים ומדדו את הזינוק בפניות ל-WhatsApp ול-1-800-22-06-07 / +972-3-560-30-46.',
+        pitch_subtitle: 'אין צורך לשנות את האתר הקיים ב-newman.co.il. הפנו רק 20%–30% מתנועת הפרסום לאב-טיפוס תלת-לשוני זה (RU / עב / EN) למשך 20 ימים ומדדו את הגידול הממשי בפניות איכותיות.',
         pitch_btn_wa: 'לתיאום פיילוט 20 ימים ב-WhatsApp',
         footer_copy: '© 1991–2026 מרכז ניומן • תל אביב, חיפה, ירושלים, באר שבע, נתניה, אשדוד • 1-800-22-06-07 / +972-3-560-30-46',
         mob_calc_link: 'מחשבון 80%',
@@ -906,12 +918,12 @@
         before_li_5: 'Missing Schema.org structured data (EducationalOrganization, Course, FAQPage), preventing AI engines from citing Newman Center.',
         after_tag: 'New Newman Center Architecture',
         after_score: 'Lead Volume Lift: +25-35%',
-        after_title: 'How this prototype turns visitors into hot WhatsApp & 1-800-22-06-07 / +972-3-560-30-46 inquiries',
+        after_title: 'How this prototype turns visitors into hot WhatsApp & admissions inquiries',
         after_li_1: 'Sub-second mobile load (0.8s), violet & sky-blue palette with crisp light typography, Dark/Light mode, and RU / עב / EN switcher.',
         after_li_2: 'Gov.il-verified 80% (7000₪) voucher & 100% Pikadon calculator highlighting the official written job placement commitment (התחייבות להשמה בעבודה).',
         after_li_3: 'Adds a flagship “AI, Digital Marketing & GEO / AEO / SEO Traffic” program attracting entrepreneurs, marketers, and career switchers.',
         after_li_4: 'Original hooks (“Modern training program—85% practice”, “Experienced instructors”, “Job placement support—92%”, Android, Web, Servers & Games) elevated with 15000–28000₪ salary proof.',
-        after_li_5: 'Zero complex intermediate CRM—every lead routes in 1 click directly to your admissions WhatsApp and short number 1-800-22-06-07 / +972-3-560-30-46.',
+        after_li_5: 'Zero complex intermediate CRM—every lead routes in 1 click directly to your admissions WhatsApp.',
         roi_kicker: 'Financial Model for Newman Center Leadership',
         roi_title: 'Incremental Revenue Calculator with the New Funnel (+25-35% conversion lift)',
         roi_subtitle: 'Slide your monthly traffic volume to see how many additional students and how much monthly revenue moving from 1.8% to 2.4% conversion generates on the exact same ad budget.',
@@ -934,7 +946,7 @@
         pitch_kicker: 'Zero-Risk Proposal for Newman Center',
         pitch_box_title: 'Official B2B Outreach Pitch to Newman Center Leadership:',
         pitch_title: 'Run a 20-day A/B split test without touching your main site',
-        pitch_subtitle: 'No need to disrupt newman.co.il. Route just 20%–30% of ad traffic to this high-speed 3-language prototype (RU / עב / EN) for 20 days and measure the surge in WhatsApp and 1-800-22-06-07 / +972-3-560-30-46 inquiries.',
+        pitch_subtitle: 'No need to disrupt newman.co.il. Route just 20%–30% of ad traffic to this high-speed 3-language prototype (RU / עב / EN) for 20 days and measure the real lift in qualified inquiries.',
         pitch_btn_wa: 'Launch 20-Day Split Test via WhatsApp',
         footer_copy: '© 1991–2026 מרכז ניומן • Tel Aviv, Haifa, Jerusalem, Beer Sheva, Netanya, Ashdod • 1-800-22-06-07 / +972-3-560-30-46',
         mob_calc_link: '80% Calculator',

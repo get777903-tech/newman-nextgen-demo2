@@ -123,4 +123,20 @@ html:not(.dark) .nm-quick input { color: #0f172a; background: #fff; }
 /* ---- Touch targets ---- */
 header a, header button { min-height: 44px; }
 #nm-drawer, #nm-fab { font-family: 'Manrope','Heebo',sans-serif; }
+
+/* ---- Navigation Buttons: Ultra-Bold, Radiant, Highly Visible across all pages ---- */
+.nm-nav-btn {
+  font-size: 1.125rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+  padding: 0.85rem 1.6rem !important;
+  border-radius: 1rem !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4) !important;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+  border: 3px solid #38bdf8 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+}
+
 @media print { #nm-glow, #nm-fab, .nm-chip, #nm-drawer { display: none !important; } }
