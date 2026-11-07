@@ -156,7 +156,7 @@
           <span class="text-xl">📚</span> <span data-i18n="nav_courses">Все 40 курсов</span>
         </a>
         <a href="offer.html" class="nm-nav-btn px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
-          <span class="text-xl">🎫</span> <span data-i18n="nav_offer">Калькулятор Ваучера 80%</span>
+          <span class="text-xl">🎫</span> <span data-i18n="nav_offer">Субсидия/скидка до 80%</span>
         </a>
         <a href="audit.html" class="nm-nav-btn px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 scale-105 transition-all flex items-center gap-2.5">
           <span class="text-xl">📊</span> <span data-i18n="nav_audit">Аудит &amp; Стратегия Роста</span>
@@ -176,6 +176,11 @@
         <button type="button" onclick="toggleTheme()" id="theme-toggle-btn" class="w-10 h-10 rounded-xl bg-slate-900/80 border border-violet-400/30 flex items-center justify-center text-sky-200 hover:text-white hover:border-sky-400 transition-all" aria-label="Toggle Theme">
           <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
           <svg id="theme-icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- Consultation Button -->
+        <button type="button" onclick="openConsultationModal()" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-teal-400 shadow-lg border border-emerald-300/40 hover:scale-105 transition-all flex items-center gap-1.5 cursor-pointer">
+          <span>💬</span> <span data-i18n="btn_consultation">Консультация</span>
         </button>
 
         <!-- Official Phones (1-800-22-06-07 and +972-3-560-30-46) -->
@@ -204,7 +209,7 @@
         <span>📚</span> <span data-i18n="nav_courses_short">40 курсов</span>
       </a>
       <a href="offer.html" class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black text-white bg-gradient-to-r from-indigo-600 to-sky-600 border-2 border-indigo-300 shadow-md flex items-center justify-center gap-1.5">
-        <span>🎫</span> <span data-i18n="nav_offer_short">Ваучер 80%</span>
+        <span>🎫</span> <span data-i18n="nav_offer_short">Субсидия 80%</span>
       </a>
       <a href="audit.html" class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black text-white bg-gradient-to-r from-sky-500 to-cyan-500 border-2 border-cyan-300 shadow-md ring-2 ring-sky-300 flex items-center justify-center gap-1.5 scale-102">
         <span>📊</span> <span data-i18n="nav_audit_short">Аудит &amp; План</span>
@@ -271,21 +276,21 @@
             Стратегическое предложение 2026
           </span>
           <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white">
-            3 ключевых направления для роста прибыли и масштабирования Newman Center
+            4 ключевых направления для роста прибыли и масштабирования Newman Center
           </h2>
           <p class="text-sky-100/90 text-sm sm:text-base mt-2">
             Собрано 10 AI-агентами без риска для текущего сайта. Измеримый прирост выручки и заявок с первого дня запуска.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Proposal 1 -->
           <div class="p-6 rounded-2xl bg-slate-900/90 border border-sky-400/35 flex flex-col justify-between space-y-4 hover:border-sky-400 transition-all">
             <div class="space-y-3">
               <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-300 font-extrabold flex items-center justify-center text-lg border border-sky-400/30">1</div>
               <h3 class="font-display font-extrabold text-lg text-white">Усовершенствование интернет-сайта</h3>
               <p class="text-xs sm:text-sm text-sky-100/85 leading-relaxed">
-                Максимальная генерация лидов и учеников. Загрузка на 45–50% быстрее (0.8 сек), оптимизация GEO/AEO/SEO под ChatGPT и Google AI. 60-секундный калькулятор ваучера 80% и Пикадона 100% со стартовыми зарплатами 9500–19500₪ даёт рост конверсии на <strong>+25-35%</strong>.
+                Максимальная генерация лидов и учеников. Загрузка на 45–50% быстрее (0.8 сек), оптимизация GEO/AEO/SEO под ChatGPT и Google AI. 60-секундный калькулятор субсидии до 80% и Пикадона 100% со стартовыми зарплатами 9500–19500₪ даёт рост конверсии на <strong>+25-35%</strong>.
               </p>
             </div>
             <div class="pt-3 border-t border-sky-400/20 text-xs font-bold text-sky-300">
@@ -318,6 +323,20 @@
             </div>
             <div class="pt-3 border-t border-fuchsia-400/20 text-xs font-bold text-fuchsia-300">
               ✓ Высокий чек • Предприниматели • Тренд 2026
+            </div>
+          </div>
+
+          <!-- Proposal 4: Kids & Teens AI Academy -->
+          <div class="p-6 rounded-2xl bg-slate-900/90 border border-emerald-400/35 flex flex-col justify-between space-y-4 hover:border-emerald-400 transition-all">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 font-extrabold flex items-center justify-center text-lg border border-emerald-400/30">4</div>
+              <h3 class="font-display font-extrabold text-lg text-white">Детская и подростковая IT &amp; AI Академия (9–16 лет)</h3>
+              <p class="text-xs sm:text-sm text-sky-100/85 leading-relaxed">
+                Флагманские курсы вайб-кодинга, создания игр (Roblox, Python) и управления нейросетями на базе диалоговой методики Ask Mia и метода Сократа. Ранняя подготовка к технологическим подразделениям ЦАХАЛ (Мамрам, 8200), родительский контроль с еженедельными отчётами и алмазная геймификация формируют долгосрочный семейный LTV.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-emerald-400/20 text-xs font-bold text-emerald-300">
+              ✓ Семейный LTV • Подготовка к 8200 • Вайб-кодинг и игры
             </div>
           </div>
         </div>
@@ -659,10 +678,11 @@
               <p><strong>Здравствуйте!</strong></p>
               <p>Мы предлагаем модернизировать сайт Newman Center для генерации большего потока целевых лидов и учеников, перевести теоретическую часть курсов на новую техническую базу с круглосуточными AI-ассистентами и алмазной геймификацией, а также запустить флагманскую программу по прикладному AI, вайб-кодингу и современной IT-архитектуре.</p>
               <p class="p-3 rounded-xl bg-violet-950/60 border border-sky-400/40 text-sky-300 font-bold">Интерактивный прототип: <a href="https://get777903-tech.github.io/newman-nextgen-demo2/index.html" target="_blank" class="underline hover:text-white">https://get777903-tech.github.io/newman-nextgen-demo2/index.html</a></p>
-              <p>Мы предлагаем три ключевых направления для роста прибыли и масштабирования Newman Center:</p>
-              <p><strong>1. Усовершенствовать интернет-сайт для создания и генерации больше лидов и учеников.</strong> Для центра уже разработан скоростной прототип (загрузка на 45–50% быстрее, стандарты GEO, AEO, SEO). Интерактивный калькулятор за 60 секунд проверяет право на ваучер gov.il (до 80% / 7 000 ₪) и армейский «Пикадон» (до 100%), честно показывает реальные стартовые зарплаты (9 500 – 19 500 ₪) и даже при самых пессимистических прогнозах гарантирует минимальный рост конверсии посетителей в заявки на +25%–+35% (с 1.7% до 2.2%–2.5%), обеспечивая от +35 до +55 дополнительных целевых лидов в месяц. Все тексты и эффекты мы вместе легко сможем отредактировать до начала показов рекламы.</p>
+              <p>Мы предлагаем четыре ключевых направления для роста прибыли и масштабирования Newman Center:</p>
+              <p><strong>1. Усовершенствовать интернет-сайт для создания и генерации больше лидов и учеников.</strong> Для центра уже разработан скоростной прототип (загрузка на 45–50% быстрее, стандарты GEO, AEO, SEO). Интерактивный калькулятор за 60 секунд проверяет право на государственную субсидию/скидку до 80% (до 7 000 ₪) по ваучеру gov.il и армейский «Пикадон» (до 100%), честно показывает реальные стартовые зарплаты (9 500 – 19 500 ₪) и даже при самых пессимистических прогнозах гарантирует минимальный рост конверсии посетителей в заявки на +25%–+35% (с 1.8% до 2.4%), обеспечивая от +35 до +55 дополнительных целевых лидов в месяц. Все тексты и эффекты мы вместе легко сможем отредактировать до начала показов рекламы.</p>
               <p><strong>2. Запустить проведение курсов на новой технической базе с удалённым обучением с помощью AI-ассистентов.</strong> Метод освобождает до 60% времени преподавателя по каждой специализации от рутинного повторения базовой теории и проверки стандартных тестов, направляя ресурс педагога на практический разбор сложных задач и наставничество. Независимо от эксперта, это позволяет обучать до 200% учеников от прежнего потока. Студенты проходят теорию и тесты из дома круглосуточно с поддержкой AI-ассистента. В процесс обучения встроен план геймификации с алмазами: за каждое действие или важное выполнение задания учеником даётся от 1 до 10 алмазов в зависимости от сложности, они суммируются и проговариваются каждый второй диалог. AI-ассистент за прохождение материала награждает алмазами, обеспечивая высокую вовлеченность и 100% прозрачный контроль количества пройденного материала. Затраты на проведение курса снижаются на 60–70% (до 700–1 500 ₪ на ученика), что снимает физическое ограничение аудитории в 20 мест и позволяет не только набирать потоки со всего Израиля (Хайфа, Беэр-Шева, Иерусалим, Ашдод), но и выйти на международный уровень — присоединяя русскоязычных и англоязычных студентов из других стран (США, Европа, страны СНГ и мировое сообщество).</p>
               <p><strong>3. Создать новые востребованные курсы: «Прикладной AI: управление нейросетями в работе и бизнесе», обучение вайб-кодингу с помощью AI-инструментов (Cursor, Claude, Antigravity, Copilot) + знание IT-архитектуры.</strong> Практическое создание цифровых продуктов, ботов и веб-сервисов без рутины написания шаблонного кода в сочетании с фундаментальным пониманием архитектуры систем привлекает платёжеспособную аудиторию предпринимателей и специалистов.</p>
+              <p><strong>4. Создать флагманское направление «Детская и подростковая IT &amp; AI Академия» (возраст 9–16 лет).</strong> Обучение вайб-кодингу, созданию собственных игр (Roblox, Python, веб-приложения), алгоритмическому мышлению и управлению нейросетями на базе интерактивной методики Ask Mia и сократовского диалога (тренажёр мышления, защищающий от когнитивной лени). Подготовка к поступлению в профильные технологические подразделения ЦАХАЛ (Мамрам, 8200) и будущей IT-карьере. Интеграция родительского контроля с еженедельными отчётами об усвоении материала и алмазной геймификацией формирует непрерывный семейный LTV, привлекает платёжеспособных родителей в Израиле и среди международной диаспоры.</p>
               <p>Мы предлагаем провести параллельный 20-дневный тест на 20–30% рекламного трафика без малейшего риска для основного сайта newman.co.il.</p>
               <p>Готовы ли вы провести короткую онлайн-встречу на 20 минут для обсуждения сотрудничества и согласования запуска?</p>
               <div class="pt-3 border-t border-violet-400/20 text-xs sm:text-sm text-sky-200 space-y-1">
@@ -686,10 +706,11 @@
               <p><strong>להנהלת Newman Center שלום רב,</strong></p>
               <p>אנו מציעים לשדרג את אתר האינטרנט של Newman Center למיקסום פניות והרשמות תלמידים, להשיק מתכונת למידה מרחוק על בסיס טכנולוגי חדשני בליווי עוזרי AI אישיים וגיימיפיקציה עם יהלומים, וכן לפתוח מסלול לימודים מבוקש ב-AI יישומי, וייב קודינג וארכיטקטורת IT מודרנית.</p>
               <p class="p-3 rounded-xl bg-sky-950/60 border border-sky-400/40 text-sky-300 font-bold" dir="ltr">אב-טיפוס אינטראקטיבי: <a href="https://get777903-tech.github.io/newman-nextgen-demo2/index.html" target="_blank" class="underline hover:text-white">https://get777903-tech.github.io/newman-nextgen-demo2/index.html</a></p>
-              <p>אנו מציעים שלושה כיוונים מרכזיים להגדלת הרווחיות והצמיחה של Newman Center:</p>
-              <p><strong>1. שדרוג אתר האינטרנט לייצור והגדלת כמות הלידים והתלמידים.</strong> עבורכם כבר נבנה אב-טיפוס מהיר הנטען ב-45%–50% מהר יותר ומותאם לתקני GEO, AEO, SEO. מחשבון אינטראקטיבי בודק זכאות לשובר משרד העלייה (עד 80%, עד 7,000 ₪) ולפיקדון צבאי (עד 100%) תוך 60 שניות, מציג שכר ריאלי (9,500–19,500 ₪) וגם בתחזית הפסימית והשמרנית ביותר מבטיח עלייה מינימלית של +25% עד +35% בהמרה לפניות (מ-1.7% ל-2.2%–2.5%) ותוספת של +35 עד +55 לידים איכותיים בחודש. נוכל לערוך יחד בקלות את כל הטקסטים והאפקטים לפני תחילת הפרסום.</p>
+              <p>אנו מציעים ארבעה כיוונים מרכזיים להגדלת הרווחיות והצמיחה של Newman Center:</p>
+              <p><strong>1. שדרוג אתר האינטרנט לייצור והגדלת כמות הלידים והתלמידים.</strong> עבורכם כבר נבנה אב-טיפוס מהיר הנטען ב-45%–50% מהר יותר ומותאם לתקני GEO, AEO, SEO. מחשבון אינטראקטיבי בודק זכאות לסבסוד/הנחה עד 80% (עד 7,000 ₪) לפי שובר משרד העלייה ולפיקדון צבאי (עד 100%) תוך 60 שניות, מציג שכר ריאלי (9,500–19,500 ₪) וגם בתחזית הפסימית והשמרנית ביותר מבטיח עלייה מינימלית של +25% עד +35% בהמרה לפניות (מ-1.8% ל-2.4%) ותוספת של +35 עד +55 לידים איכותיים בחודש. נוכל לערוך יחד בקלות את כל הטקסטים והאפקטים לפני תחילת הפרסום.</p>
               <p><strong>2. קורסים על בסיס טכנולוגי חדש עם למידה מרחוק באמצעות עוזרי AI.</strong> השיטה משחררת עד 60% מזמנו של המרצה בכל התמחות מהסברים בסיסיים ובדיקת מבחנים, ומאפשרת לו להתמקד בהנחיה מעשית. ללא תלות במומחה, ניתן ללמד עד 200% תלמידים ממחזור רגיל. התלמידים לומדים את החומר העיוני ועוברים מבחנים מהבית 24/7 בליווי AI-אסיסטנט. בתהליך הלמידה מוטמעת תוכנית גיימיפיקציה עם יהלומים: על כל פעולה או ביצוע משימה חשובה מקבל התלמיד מ-1 עד 10 יהלומים בהתאם לרמת הקושי, היהלומים נצברים והיתרה נאמרת בקול כל דיאלוג שני. ה-AI-אסיסטנט מעניק יהלומים על מעבר חומר, מה שמעניק מוטיבציה גבוהה ובקרה מלאה של 100% על כמות החומר שעבר כל תלמיד. עלות התפעול יורדת ב-60%–70% (ל-700–1,500 ₪ לתלמיד), ומאפשרת לא רק לגייס מחזורים מכל רחבי הארץ (חיפה, באר שבע, ירושלים ואשדוד), אלא לפרוץ לרמה בינלאומית — ולצרף סטודנטים דוברי עברית, רוסית ואנגלית ממדינות נוספות (ארה"ב, אירופה וחבר העמים) ללא כל מגבלה פיזית של כיתות.</p>
               <p><strong>3. יצירת קורסים חדשים ומבוקשים: «AI יישומי: ניהול רשתות נוירונים בעבודה ובעסקים», לימוד וייב קודינג באמצעות כלי AI (Cursor, Claude, Antigravity, Copilot) + ידע בארכיטקטורת IT.</strong> פיתוח מוצרים דיגיטליים, בוטים ושירותים ללא תכנות שגרתי לצד הבנה מעמיקה של ארכיטקטורת מערכות מושכים קהל יעד משלם של בעלי עסקים ומקצוענים.</p>
+              <p><strong>4. השקת מסלול דגל: «אקדמיית IT ו-AI לילדים ולנוער» (גילאי 9–16).</strong> לימודי וייב קודינג, פיתוח משחקים (Roblox, Python, אפליקציות ווב), חשיבה אלגוריתמית וניהול כלי בינה מלאכותית מבוססי מתודולוגיית Ask Mia ודיאלוג סוקרטי (אימון חשיבה עצמאית ומניעת עצלות קוגניטיבית). הכנה למסלולים טכנולוגיים מובחרים ויחידות עילית בצה"ל (ממר"ם, 8200) ולקריירת הייטק עתידית. ליווי הורים באמצעות דוחות התקדמות תקופתיים וגיימיפיקציה של יהלומים יוצרים LTV משפחתי ארוך טווח ומושכים קהל הורים איכותי ומשלם בישראל וברחבי העולם.</p>
               <p>אנו מציעים לערוך פיילוט מקביל של 20 ימים על 20%–30% מתנועת הפרסום ללא כל סיכון לאתר הראשי newman.co.il.</p>
               <p>האם נוכל לתאם שיחה קצרה של 20 דקות לדיון בהזדמנויות לשיתוף פעולה ובתיאום ההשקה?</p>
               <div class="pt-3 border-t border-sky-400/20 text-xs sm:text-sm text-sky-200 space-y-1">
@@ -713,10 +734,11 @@
               <p><strong>Dear Newman Center Leadership,</strong></p>
               <p>We propose upgrading the Newman Center website to generate a higher volume of qualified student leads, migrating theoretical coursework to an innovative remote platform powered by 24/7 personal AI assistants with diamond gamification, and launching a flagship program in Applied AI, vibe coding, and modern IT architecture.</p>
               <p class="p-3 rounded-xl bg-violet-950/60 border border-sky-400/40 text-sky-300 font-bold">Interactive prototype: <a href="https://get777903-tech.github.io/newman-nextgen-demo2/index.html" target="_blank" class="underline hover:text-white">https://get777903-tech.github.io/newman-nextgen-demo2/index.html</a></p>
-              <p>We propose 3 strategic growth initiatives for Newman Center:</p>
-              <p><strong>1. Upgrade the website to generate more leads and student enrollments.</strong> A high-speed prototype is already live, loading 45–50% faster with GEO, AEO, and SEO best practices. The 60-second interactive calculator verifies gov.il voucher eligibility (up to 80% / 7,000₪) and IDF Pikadon (up to 100%), honestly showcases entry-level salaries (9,500–19,500₪), and even under the most conservative, pessimistic forecast guarantees a baseline conversion lift of +25% to +35% (from 1.7% to 2.2%–2.5%), delivering +35 to +55 qualified incremental leads monthly. We can easily edit all copy and visual effects together prior to launching the ad campaigns.</p>
+              <p>We propose 4 strategic growth initiatives for Newman Center:</p>
+              <p><strong>1. Upgrade the website to generate more leads and student enrollments.</strong> A high-speed prototype is already live, loading 45–50% faster with GEO, AEO, and SEO best practices. The 60-second interactive calculator verifies state subsidy/discount eligibility up to 80% (up to 7,000₪) via gov.il vouchers and IDF Pikadon (up to 100%), honestly showcases entry-level salaries (9,500–19,500₪), and even under the most conservative, pessimistic forecast guarantees a baseline conversion lift of +25% to +35% (from 1.8% to 2.4%), delivering +35 to +55 qualified incremental leads monthly. We can easily edit all copy and visual effects together prior to launching the ad campaigns.</p>
               <p><strong>2. Deliver courses on an advanced technical foundation with remote learning guided by AI assistants.</strong> The methodology frees up to 60% of instructor time across each specialization from repetitive theoretical lecturing and basic grading, channeling faculty energy into practical mentoring. Regardless of the expert, this makes it possible to teach up to 200% of the previous student intake. Students study theory and complete tests from home 24/7 guided by an AI assistant. The curriculum features a diamond gamification system: for every action or completed milestone task, the student earns between 1 and 10 diamonds depending on complexity, which are accumulated and voiced every second dialogue. The AI assistant awards diamonds upon material mastery, providing continuous engagement and 100% transparent tracking of student progress. Delivery costs drop by 60–70% (700–1,500₪/student), enabling nationwide student enrollment without 20-seat classroom limits, and unlocking international expansion — admitting English- and Russian-speaking students from abroad (USA, Europe, CIS, worldwide diaspora) into remote cohorts.</p>
               <p><strong>3. Introduce high-demand curricula: "Applied AI: Managing Neural Networks in Work and Business", hands-on vibe coding training using AI tools (Cursor, Claude, Antigravity, Copilot) + IT architecture knowledge.</strong> Rapidly building digital products, bots, and automations without manual boilerplate code combined with foundational IT architecture attracts paying business owners and technical professionals.</p>
+              <p><strong>4. Launch a flagship "Kids &amp; Teens IT &amp; AI Academy" (ages 9–16).</strong> Hands-on vibe coding, game development (Roblox, Python, web apps), algorithmic problem-solving, and neural network management powered by the Ask Mia interactive methodology and Socratic dialogue (a cognitive gym preventing mental offloading). Early preparation for elite tech tracks, IDF technological units (Mamram, Unit 8200), and future high-tech careers. Integrated parental dashboard with progress insights and diamond gamification drives multi-year family LTV and attracts premium paying parents across Israel and global diaspora communities.</p>
               <p>We propose conducting a parallel 20-day split test on 20–30% of advertising traffic with zero risk to your primary website newman.co.il.</p>
               <p>Would you be open to a 20-minute online meeting to discuss cooperation opportunities and align on launch parameters?</p>
               <div class="pt-3 border-t border-violet-400/20 text-xs sm:text-sm text-sky-200 space-y-1">
@@ -779,7 +801,9 @@
         nav_home: 'Главная',
         nav_courses: 'Все 40 курсов',
         nav_courses_short: '40 курсов',
-        nav_offer: 'Калькулятор Ваучера 80%',
+        nav_offer: 'Субсидия/скидка до 80%',
+        nav_offer_short: 'Субсидия/скидка 80%',
+        btn_consultation: 'Консультация',
         nav_audit: 'Аудит & Стратегия Роста',
         audit_badge: 'Аналитический разбор потенциала newman.co.il • GEO / AEO / SEO 2026',
         audit_title_1: 'Как увеличить конверсию трафика Newman Center на',
@@ -835,7 +859,7 @@
         pitch_subtitle: 'Не нужно ломать текущий сайт на newman.co.il. Направьте всего 20%–30% рекламного трафика на этот высокоскоростной 3-язычный прототип (RU / עб / EN) на 20 дней и замерьте реальный прирост целевых обращений и заявок.',
         pitch_btn_wa: 'Обсудить запуск 20-дневного теста в WhatsApp',
         footer_copy: '© 1991–2026 מרכז ניומן • Тель-Авив, Хайфа, Иерусалим, Беэр-Шева, Нетания, Ашдод • 1-800-22-06-07 • +972-3-560-30-46',
-        mob_calc_link: 'Калькулятор 80%',
+        mob_calc_link: 'Субсидия 80%',
         mob_wa_cta: 'Запустить 20-дневный сплит-тест'
       },
       he: {
@@ -843,7 +867,9 @@
         nav_home: 'ראשי',
         nav_courses: 'כל 40 הקורסים',
         nav_courses_short: '40 קורסים',
-        nav_offer: 'מחשבון שובר 80%',
+        nav_offer: 'מחשבון סבסוד/הנחה עד 80%',
+        nav_offer_short: 'סבסוד/הנחה 80%',
+        btn_consultation: 'ייעוץ אישי',
         nav_audit: 'אודיט ואסטרטגיית צמיחה',
         audit_badge: 'ניתוח פוטנציאל הצמיחה של newman.co.il • GEO / AEO / SEO 2026',
         audit_title_1: 'כיצד להגדיל את יחס ההמרה של Newman Center ב-',
@@ -899,7 +925,7 @@
         pitch_subtitle: 'אין צורך לשנות את האתר הקיים ב-newman.co.il. הפנו רק 20%–30% מתנועת הפרסום לאב-טיפוס תלת-לשוני זה (RU / עב / EN) למשך 20 ימים ומדדו את הגידול הממשי בפניות איכותיות.',
         pitch_btn_wa: 'לתיאום פיילוט 20 ימים ב-WhatsApp',
         footer_copy: '© 1991–2026 מרכז ניומן • תל אביב, חיפה, ירושלים, באר שבע, נתניה, אשדוד • 1-800-22-06-07 / +972-3-560-30-46',
-        mob_calc_link: 'מחשבון 80%',
+        mob_calc_link: 'סבסוד 80%',
         mob_wa_cta: 'הפעילו פיילוט 20 ימים (+25-35%)'
       },
       en: {
@@ -907,7 +933,9 @@
         nav_home: 'Home',
         nav_courses: 'All 40 Courses',
         nav_courses_short: '40 Courses',
-        nav_offer: '80% Voucher Calculator',
+        nav_offer: '80% Subsidy/Discount Calculator',
+        nav_offer_short: 'Subsidy/Discount 80%',
+        btn_consultation: 'Consultation',
         nav_audit: 'Audit & Growth Strategy',
         audit_badge: 'Executive Growth Audit of newman.co.il • GEO / AEO / SEO 2026',
         audit_title_1: 'How to increase Newman Center traffic conversion by',
@@ -963,7 +991,7 @@
         pitch_subtitle: 'No need to disrupt newman.co.il. Route just 20%–30% of ad traffic to this high-speed 3-language prototype (RU / עב / EN) for 20 days and measure the real lift in qualified inquiries.',
         pitch_btn_wa: 'Launch 20-Day Split Test via WhatsApp',
         footer_copy: '© 1991–2026 מרכז ניומן • Tel Aviv, Haifa, Jerusalem, Beer Sheva, Netanya, Ashdod • 1-800-22-06-07 / +972-3-560-30-46',
-        mob_calc_link: '80% Calculator',
+        mob_calc_link: '80% Subsidy',
         mob_wa_cta: 'Start 20-Day Test (+25-35%)'
       }
     };

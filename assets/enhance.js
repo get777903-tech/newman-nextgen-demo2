@@ -70,8 +70,9 @@
       var links = [
         ['index.html', '🏛️', T({ ru: 'Главная', he: 'ראשי', en: 'Home' })],
         ['courses.html', '📚', T({ ru: 'Все 40 курсов', he: 'כל 40 הקורסים', en: 'All 40 Courses' })],
-        ['offer.html', '🎫', T({ ru: 'Калькулятор Ваучера 80%', he: 'מחשבון שובר 80%', en: '80% Voucher Calculator' })],
-        ['audit.html', '📊', T({ ru: 'Аудит & Стратегия Роста', he: 'אודיט ואסטרטגיית צמיחה', en: 'Audit & Growth Strategy' })]
+        ['offer.html', '🎫', T({ ru: 'Субсидия/скидка до 80%', he: 'סבסוד/הנחה עד 80%', en: 'Subsidy/Discount up to 80%' })],
+        ['audit.html', '📊', T({ ru: 'Аудит & Стратегия Роста', he: 'אודיט ואסטרטגיית צמיחה', en: 'Audit & Growth Strategy' })],
+        ['#consultation', '💬', T({ ru: 'Консультация методиста', he: 'ייעוץ אישי והכוונה', en: 'Academic Consultation' })]
       ];
       d.innerHTML = '<div class="nm-d-top"><strong style="font-size:20px;font-family:\'Plus Jakarta Sans\',sans-serif">Newman Center</strong><button type="button" class="nm-d-close" aria-label="Close">✕</button></div>' +
         links.map(function (x) { return '<a class="nm-d-link" href="' + x[0] + '"><span>' + x[1] + '</span><span>' + esc(x[2]) + '</span></a>'; }).join('') +
@@ -214,11 +215,187 @@
     register(function () { b.textContent = T(PDF.btn); });
   }
 
+  /* ---------- 7.5. Interactive Consultation Modal & Form ---------- */
+  function initConsultationModal() {
+    var m = document.getElementById('nm-consult-modal');
+    if (!m) {
+      m = document.createElement('div');
+      m.id = 'nm-consult-modal';
+      m.className = 'nm-modal-backdrop';
+      m.innerHTML = '<div class="nm-modal-content" role="dialog" aria-modal="true">' +
+        '<button type="button" class="nm-modal-close" aria-label="Close">✕</button>' +
+        '<div id="nm-modal-form-wrap">' +
+          '<div style="margin-bottom:18px">' +
+            '<span style="display:inline-block;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:800;background:rgba(124,58,237,.3);border:1px solid rgba(125,211,252,.4);color:#7dd3fc;text-transform:uppercase" class="nm-m-badge">Newman Center • Est. 1991</span>' +
+            '<h3 style="font-size:22px;font-weight:900;margin:8px 0 4px;color:#fff" class="nm-m-title">Бесплатная консультация методиста</h3>' +
+            '<p style="font-size:13px;color:#cbd5e1;line-height:1.5" class="nm-m-sub">Подбор курса, расчет субсидии до 80% или запись в Детскую AI Академию (9–16 лет).</p>' +
+          '</div>' +
+          '<form id="nm-consult-form">' +
+            '<div class="nm-field">' +
+              '<label for="nm-c-name" class="nm-lbl-name">Ваше имя:</label>' +
+              '<input type="text" id="nm-c-name" required placeholder="Например, Александр">' +
+            '</div>' +
+            '<div class="nm-field">' +
+              '<label for="nm-c-phone" class="nm-lbl-phone">Телефон или WhatsApp:</label>' +
+              '<input type="tel" id="nm-c-phone" required placeholder="+972-50-000-0000">' +
+            '</div>' +
+            '<div class="nm-field">' +
+              '<label for="nm-c-course" class="nm-lbl-course">Интересующее направление:</label>' +
+              '<select id="nm-c-course">' +
+                '<option value="kids">👶 Детская & подростковая AI Академия (9–16 лет): Вайб-кодинг & Игры</option>' +
+                '<option value="voucher" selected>🎫 Субсидия / скидка до 80% (Ваучер gov.il / Пикадон)</option>' +
+                '<option value="ai">🤖 Прикладной AI, нейросети и вайб-кодинг (Cursor, Claude, Copilot)</option>' +
+                '<option value="hitech">💻 Hi-Tech: Full-Stack разработка, Python, Web & Android</option>' +
+                '<option value="qa">🧪 QA Manual & Automation Testing</option>' +
+                '<option value="business">📊 Бухгалтерия 1+2 и расчет зарплат</option>' +
+                '<option value="licensed">🏢 Лицензированные профессии (ЧПУ, Электрики, Кондиционеры)</option>' +
+                '<option value="beauty">💄 Красота, здоровье и косметология</option>' +
+                '<option value="hebrew">🗣️ Профессиональный иврит для карьеры</option>' +
+                '<option value="other">💡 Другой вопрос или консультация методиста</option>' +
+              '</select>' +
+            '</div>' +
+            '<div class="nm-field">' +
+              '<label for="nm-c-msg" class="nm-lbl-msg">Ваш вопрос или пожелание (необязательно):</label>' +
+              '<textarea id="nm-c-msg" rows="2" placeholder="Укажите город, возраст ребёнка или удобное время для звонка..."></textarea>' +
+            '</div>' +
+            '<button type="submit" style="width:100%;min-height:50px;border-radius:14px;font-size:15px;font-weight:900;color:#fff;background:linear-gradient(90deg,#10b981,#06b6d4);border:2px solid #6ee7b7;box-shadow:0 10px 25px rgba(16,185,129,.4);cursor:pointer;transition:all .2s" class="nm-btn-submit">Получить бесплатную консультацию →</button>' +
+            '<p style="font-size:11px;color:#94a3b8;margin-top:10px;text-align:center" class="nm-lbl-note">🔒 Конфиденциально. Отправка напрямую методисту филиалов.</p>' +
+          '</form>' +
+        '</div>' +
+        '<div id="nm-modal-success" style="display:none;text-align:center;padding:24px 8px">' +
+          '<div style="font-size:52px;line-height:1;margin-bottom:14px">🎉</div>' +
+          '<h3 style="font-size:24px;font-weight:900;color:#6ee7b7;margin-bottom:8px" class="nm-succ-title">Спасибо! Обращение принято</h3>' +
+          '<p style="font-size:14px;color:#e2e8f0;line-height:1.6;max-width:400px;margin:0 auto 20px" class="nm-succ-desc">Методист Newman Center свяжется с вами в течение 15 минут в WhatsApp или по указанному телефону для подробной консультации.</p>' +
+          '<button type="button" class="nm-btn-done" style="padding:12px 28px;border-radius:12px;background:#1e293b;border:1px solid #7dd3fc;color:#fff;font-weight:800;cursor:pointer">Понятно, закрыть окно</button>' +
+        '</div>' +
+      '</div>';
+      document.body.appendChild(m);
+
+      m.querySelector('.nm-modal-close').addEventListener('click', function () {
+        m.classList.remove('open');
+      });
+      m.querySelector('.nm-btn-done').addEventListener('click', function () {
+        m.classList.remove('open');
+      });
+      m.addEventListener('click', function (e) {
+        if (e.target === m) m.classList.remove('open');
+      });
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && m.classList.contains('open')) m.classList.remove('open');
+      });
+
+      var form = m.querySelector('#nm-consult-form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        m.querySelector('#nm-modal-form-wrap').style.display = 'none';
+        m.querySelector('#nm-modal-success').style.display = 'block';
+        setTimeout(function () {
+          m.classList.remove('open');
+          setTimeout(function () {
+            form.reset();
+            m.querySelector('#nm-modal-form-wrap').style.display = 'block';
+            m.querySelector('#nm-modal-success').style.display = 'none';
+          }, 400);
+        }, 4500);
+      });
+    }
+
+    var dict = {
+      ru: {
+        badge: 'Newman Center • Est. 1991',
+        title: 'Бесплатная консультация методиста',
+        sub: 'Подбор курса, расчет субсидии/скидки до 80% или запись в Детскую AI Академию (9–16 лет).',
+        lblName: 'Ваше имя:',
+        lblPhone: 'Телефон или WhatsApp:',
+        lblCourse: 'Интересующее направление:',
+        lblMsg: 'Ваш вопрос или пожелание (необязательно):',
+        btnSubmit: 'Получить бесплатную консультацию →',
+        note: '🔒 Конфиденциально. Отправка напрямую методисту филиалов.',
+        succTitle: 'Спасибо! Обращение принято',
+        succDesc: 'Методист Newman Center свяжется с вами в течение 15 минут в WhatsApp или по указанному телефону для подробной консультации.',
+        btnDone: 'Понятно, закрыть окно'
+      },
+      he: {
+        badge: 'מרכז ניומן • Est. 1991',
+        title: 'ייעוץ לימודים והכוונה אישית חינם',
+        sub: 'התאמת מסלול לימודים, בדיקת סבסוד/הנחה עד 80% או הרשמה לאקדמיית AI לילדים ונוער (9–16).',
+        lblName: 'שם מלא:',
+        lblPhone: 'טלפון או וואטסאפ:',
+        lblCourse: 'תחום לימודים מבוקש:',
+        lblMsg: 'שאלה או בקשה (לא חובה):',
+        btnSubmit: 'קבלת ייעוץ אישי חינם ←',
+        note: '🔒 פרטיות מובטחת. הפנייה מועברת ישירות ליועץ הלימודים.',
+        succTitle: 'תודה! הפנייה התקבלה בהצלחה',
+        succDesc: 'יועץ לימודים של מרכז ניומן יחזור אליך תוך 15 דקות בוואטסאפ או בטלפון לשיחת ייעוץ אישית.',
+        btnDone: 'סגירת חלון'
+      },
+      en: {
+        badge: 'Newman Center • Est. 1991',
+        title: 'Free Academic Consultation',
+        sub: 'Course selection, up to 80% subsidy/discount verification, or Kids & Teens AI Academy enrollment (ages 9–16).',
+        lblName: 'Your Full Name:',
+        lblPhone: 'Phone or WhatsApp:',
+        lblCourse: 'Preferred Track:',
+        lblMsg: 'Questions or notes (optional):',
+        btnSubmit: 'Get Free Consultation →',
+        note: '🔒 Confidential. Routed directly to admissions coordinators.',
+        succTitle: 'Thank You! Request Received',
+        succDesc: 'A Newman Center academic coordinator will contact you within 15 minutes via WhatsApp or phone.',
+        btnDone: 'Got it, close window'
+      }
+    };
+
+    register(function () {
+      var d = dict[L()] || dict.ru;
+      m.querySelector('.nm-m-badge').textContent = d.badge;
+      m.querySelector('.nm-m-title').textContent = d.title;
+      m.querySelector('.nm-m-sub').textContent = d.sub;
+      m.querySelector('.nm-lbl-name').textContent = d.lblName;
+      m.querySelector('.nm-lbl-phone').textContent = d.lblPhone;
+      m.querySelector('.nm-lbl-course').textContent = d.lblCourse;
+      m.querySelector('.nm-lbl-msg').textContent = d.lblMsg;
+      m.querySelector('.nm-btn-submit').textContent = d.btnSubmit;
+      m.querySelector('.nm-lbl-note').textContent = d.note;
+      m.querySelector('.nm-succ-title').textContent = d.succTitle;
+      m.querySelector('.nm-succ-desc').textContent = d.succDesc;
+      m.querySelector('.nm-btn-done').textContent = d.btnDone;
+    });
+
+    window.openConsultationModal = function (prefTrack) {
+      if (prefTrack) {
+        var sel = m.querySelector('#nm-c-course');
+        if (sel) {
+          for (var i = 0; i < sel.options.length; i++) {
+            if (sel.options[i].value === prefTrack || sel.options[i].text.indexOf(prefTrack) !== -1) {
+              sel.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      }
+      m.classList.add('open');
+      setTimeout(function () {
+        var inp = m.querySelector('#nm-c-name');
+        if (inp) inp.focus();
+      }, 100);
+    };
+
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest('a[href="#consultation"], [data-open-consultation]');
+      if (t) {
+        e.preventDefault();
+        var pref = t.getAttribute('data-track') || '';
+        window.openConsultationModal(pref);
+      }
+    });
+  }
+
   /* ---------- 8. Boot ---------- */
   function boot() {
     initGlow();
     if (page === 'index.html' || page === '') initChips();
     initFab(); initDrawer();
+    initConsultationModal();
     if (page === 'index.html' || page === '') initQuick();
     if (page === 'offer.html') { initGauge(); initPdf(); }
     new MutationObserver(refreshAll).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });

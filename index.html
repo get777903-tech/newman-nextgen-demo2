@@ -287,7 +287,7 @@
           <span class="text-xl">📚</span> <span data-i18n="nav_courses">Все 40 курсов</span>
         </a>
         <a href="offer.html" class="nm-nav-btn px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
-          <span class="text-xl">🎫</span> <span data-i18n="nav_offer">Калькулятор Ваучера 80%</span>
+          <span class="text-xl">🎫</span> <span data-i18n="nav_offer">Субсидия/скидка до 80%</span>
         </a>
         <a href="audit.html" class="nm-nav-btn px-7 py-3.5 rounded-2xl text-lg font-black text-white bg-gradient-to-r from-violet-600 via-purple-600 to-sky-500 shadow-2xl border-[3px] border-sky-300 ring-4 ring-sky-400/50 hover:scale-105 transition-all flex items-center gap-2.5">
           <span class="text-xl">📊</span> <span data-i18n="nav_audit">Аудит &amp; Стратегия Роста</span>
@@ -310,6 +310,11 @@
           <span id="themeIcon">☀️</span>
         </button>
 
+        <!-- Consultation Button -->
+        <button type="button" onclick="openConsultationModal()" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-teal-400 shadow-lg border border-emerald-300/40 hover:scale-105 transition-all flex items-center gap-1.5 cursor-pointer">
+          <span>💬</span> <span data-i18n="btn_consultation">Консультация</span>
+        </button>
+
         <!-- Real Phone Numbers -->
         <div class="hidden sm:flex flex-col items-end text-right">
           <a href="tel:1800220607" class="font-display font-extrabold text-xs sm:text-sm text-sky-400 hover:text-sky-300">1-800-22-06-07</a>
@@ -330,7 +335,7 @@
         <span>📚</span> <span data-i18n="nav_courses_short">40 курсов</span>
       </a>
       <a href="offer.html" class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black text-white bg-gradient-to-r from-indigo-600 to-sky-600 border-2 border-indigo-300 shadow-md flex items-center justify-center gap-1.5">
-        <span>🎫</span> <span data-i18n="nav_offer_short">Ваучер 80%</span>
+        <span>🎫</span> <span data-i18n="nav_offer_short">Субсидия 80%</span>
       </a>
       <a href="audit.html" class="py-2.5 px-3 rounded-xl text-xs sm:text-sm font-black text-white bg-gradient-to-r from-sky-500 to-cyan-500 border-2 border-cyan-300 shadow-md flex items-center justify-center gap-1.5">
         <span>📊</span> <span data-i18n="nav_audit_short">Аудит &amp; План</span>
@@ -507,7 +512,7 @@
               <span data-i18n="hero_cta_courses">Список всех 40 курсов по группам →</span>
             </a>
             <a href="#quiz-advisor" class="px-5 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-violet-500/40 text-sky-100 font-bold text-sm flex items-center justify-center gap-2 transition-colors shadow-lg">
-              <span class="text-white" data-i18n="hero_cta_primary">Рассчитать ваучер 80% (7000₪)</span>
+              <span class="text-white" data-i18n="hero_cta_primary">Рассчитать субсидию/скидку до 80% (7000₪)</span>
             </a>
             <a href="offer.html" class="px-4 py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-violet-500/30 text-sky-200 font-semibold text-xs sm:text-sm flex items-center justify-center gap-1.5 transition-colors">
               <span>🧮</span>
@@ -575,10 +580,10 @@
             ⚡ Стратегия Роста 2026 • Newman Center
           </span>
           <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-tight" data-i18n="exec_title">
-            3 ключевых решения: поток заявок, AI-ассистенты и вайб-кодинг
+            4 ключевых решения: поток заявок, AI-ассистенты, вайб-кодинг и детская академия
           </h2>
           <p class="text-sm sm:text-base text-sky-100/90 mt-2 max-w-3xl leading-relaxed" data-i18n="exec_desc">
-            Мы предлагаем модернизировать сайт для кратного роста заявок, запустить онлайн-обучение из дома с персональным AI-ассистентом и геймификацией алмазами, а также открыть флагманский курс по прикладному AI, вайб-кодингу и IT-архитектуре.
+            Мы предлагаем модернизировать сайт для кратного роста заявок, запустить онлайн-обучение с персональным AI-ассистентом и геймификацией алмазами, открыть флагманский курс по прикладному AI и вайб-кодингу, а также развернуть детско-подростковую IT & AI Академию (9–16 лет).
           </p>
         </div>
         <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0">
@@ -591,8 +596,8 @@
         </div>
       </div>
 
-      <!-- 3 Strategic Pillar Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+      <!-- 4 Strategic Pillar Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
         <!-- Pillar 1 -->
         <div class="p-6 rounded-2xl bg-slate-900/90 border-2 border-sky-400/40 hover:border-sky-300 transition-all flex flex-col justify-between">
           <div class="space-y-3">
@@ -602,12 +607,12 @@
             </div>
             <h3 class="font-display font-extrabold text-lg text-white" data-i18n="exec_p1_title">Усовершенствовать интернет-сайт для генерации лидов и учеников</h3>
             <p class="text-xs sm:text-sm text-sky-100/85 leading-relaxed" data-i18n="exec_p1_desc">
-              Мультиязычный Next-Gen прототип (RU, עב, EN) со стандартами генеративного поиска GEO/AEO. Интерактивный калькулятор за 60 секунд рассчитывает ваучер до 80% (до 7 000 ₪) и армейский «Пикадон» с мгновенной отправкой в WhatsApp.
+              Мультиязычный Next-Gen прототип (RU, עב, EN) со стандартами генеративного поиска GEO/AEO. Интерактивный калькулятор за 60 секунд рассчитывает субсидию/скидку до 80% (до 7 000 ₪) и армейский «Пикадон» с мгновенной отправкой в WhatsApp.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-violet-400/20">
             <a href="offer.html" class="text-xs font-black text-sky-300 hover:text-white flex items-center gap-1" data-i18n="exec_p1_link">
-              Открыть Калькулятор Ваучера 80% →
+              Субсидия/скидка до 80% →
             </a>
           </div>
         </div>
@@ -621,7 +626,7 @@
             </div>
             <h3 class="font-display font-extrabold text-lg text-white" data-i18n="exec_p2_title">Удалённое обучение с AI-ассистентами и геймификацией алмазами</h3>
             <p class="text-xs sm:text-sm text-sky-100/85 leading-relaxed" data-i18n="exec_p2_desc">
-              Студенты изучают теорию дома 24/7 с AI-ассистентом. План геймификации с алмазами: за каждое действие или выполнение задания учеником начисляется от 1 до 10 алмазов по сложности, баллы суммируются и проговариваются каждый второй диалог!
+              Студенты изучают теорию дома 24/7 с AI-ассистентом. До 60% времени преподавателя свободно, а геймификация с алмазами (от 1 до 10 за задание, озвучивание каждый 2-й диалог) открывает набор студентов по всей стране и в мире.
             </p>
           </div>
           <div class="pt-4 mt-4 border-t border-violet-400/20">
@@ -646,6 +651,25 @@
           <div class="pt-4 mt-4 border-t border-violet-400/20">
             <a href="courses.html#group-ai-marketing" class="text-xs font-black text-fuchsia-300 hover:text-white flex items-center gap-1" data-i18n="exec_p3_link">
               Программа курса Прикладной AI →
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-6 rounded-2xl bg-slate-900/90 border-2 border-emerald-400/40 hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-3xl">👶</span>
+              <span class="text-xs font-black px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40" data-i18n="exec_p4_tag">Пункт 4</span>
+            </div>
+            <h3 class="font-display font-extrabold text-lg text-white" data-i18n="exec_p4_title">Детская и подростковая IT & AI Академия (9–16 лет)</h3>
+            <p class="text-xs sm:text-sm text-sky-100/85 leading-relaxed" data-i18n="exec_p4_desc">
+              Вайб-кодинг, Roblox, Python и AI-мышление по методу Сократа (Ask Mia). Подготовка к элитным подразделениям 8200 и Мамрам, защита от когнитивной лени и еженедельный отчёт родителям.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-violet-400/20">
+            <a href="courses.html#group-kids-ai" class="text-xs font-black text-emerald-300 hover:text-white flex items-center gap-1" data-i18n="exec_p4_link">
+              Программа Детской AI Академии →
             </a>
           </div>
         </div>
@@ -1117,6 +1141,61 @@
     </div>
   </section>
 
+  <!-- 9b. INTERACTIVE CONSULTATION FORM SECTION -->
+  <section id="consultation-section" class="relative z-10 py-12 sm:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-emerald-400/40 shadow-2xl relative overflow-hidden bg-gradient-to-br from-slate-900/90 via-slate-950 to-emerald-950/40">
+        <div class="max-w-3xl mb-8">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-extrabold uppercase tracking-wider mb-2">
+            Персональный методист • 1-на-1
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
+            Получите бесплатную консультацию методиста по курсам и субсидиям до 80%
+          </h2>
+          <p class="text-sky-100/90 text-sm mt-2 leading-relaxed">
+            Заполните форму ниже, чтобы методист помог выбрать программу (включая детскую AI Академию), проверил право на государственное финансирование и ответил на любые вопросы.
+          </p>
+        </div>
+
+        <form id="index-consultation-form" onsubmit="event.preventDefault(); document.getElementById('index-consult-success').style.display='block'; this.reset();" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">Ваше имя:</label>
+            <input type="text" required placeholder="Например, Анна" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">Телефон / WhatsApp:</label>
+            <input type="tel" required placeholder="+972-50-000-0000" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="space-y-1.5 sm:col-span-2 lg:col-span-1">
+            <label class="text-xs font-bold text-slate-300">Направление обучения:</label>
+            <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+              <option>👶 Детская &amp; подростковая AI Академия (9–16 лет): Вайб-кодинг &amp; Игры</option>
+              <option selected>🎫 Субсидия / скидка до 80% (Ваучер / Пикадон)</option>
+              <option>🤖 Прикладной AI, нейросети и вайб-кодинг</option>
+              <option>💻 Full-Stack разработка, Python &amp; Android</option>
+              <option>🧪 QA Тестирование ПО</option>
+              <option>📊 Бухгалтерия 1+2 и расчет зарплат</option>
+              <option>🏢 Лицензированные профессии</option>
+              <option>🗣️ Профессиональный иврит для карьеры</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2 lg:col-span-3 space-y-1.5">
+            <label class="text-xs font-bold text-slate-300">Вопрос или комментарий (необязательно):</label>
+            <input type="text" placeholder="Укажите город, возраст или удобное время для звонка..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-violet-400/40 text-white text-sm outline-none focus:border-sky-400">
+          </div>
+          <div class="sm:col-span-2 lg:col-span-3 pt-2">
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-extrabold text-sm text-white bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-teal-400 shadow-xl border border-emerald-300/40 transition-all cursor-pointer">
+              Отправить заявку на консультацию →
+            </button>
+          </div>
+        </form>
+        <div id="index-consult-success" style="display:none;" class="mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-400 text-emerald-300 font-bold text-sm">
+          ✅ Спасибо! Ваша заявка принята. Методист свяжется с вами в течение 15 минут в WhatsApp или по телефону.
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 10. FOOTER (Zero CRM mentions, English Brand Name, Violet/Sky Palette) -->
   <footer class="relative z-10 border-t border-slate-200 dark:border-violet-500/25 bg-slate-950 text-white py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1331,29 +1410,34 @@
         brand_sub: 'Тель-Авив, Дерех ха-Агана 34 • Финансирование до 80%–100% • 1-800-22-06-07 / +972-3-560-30-46',
                 nav_hub: 'Главная',
         nav_courses: 'Все 40 курсов',
-        nav_offer: 'Калькулятор Ваучера 80%',
+        nav_offer: 'Субсидия/скидка до 80%',
         nav_audit: 'Аудит & Стратегия Роста',
         nav_hub_short: 'Главная',
         nav_courses_short: '40 курсов',
-        nav_offer_short: 'Ваучер 80%',
+        nav_offer_short: 'Субсидия 80%',
         nav_audit_short: 'Аудит & План',
+        btn_consultation: 'Консультация',
         exec_badge: '⚡ Стратегия Роста 2026 • Newman Center',
-        exec_title: '3 ключевых решения: поток заявок, AI-ассистенты и вайб-кодинг',
-        exec_desc: 'Мы предлагаем модернизировать сайт для кратного роста заявок, запустить онлайн-обучение из дома с персональным AI-ассистентом и геймификацией алмазами, а также открыть флагманский курс по прикладному AI, вайб-кодингу и IT-архитектуре.',
+        exec_title: '4 ключевых решения: поток заявок, AI-ассистенты, вайб-кодинг и детская академия',
+        exec_desc: 'Мы предлагаем модернизировать сайт для кратного роста заявок, запустить онлайн-обучение с персональным AI-ассистентом и геймификацией алмазами, открыть флагманский курс по прикладному AI и вайб-кодингу, а также развернуть детско-подростковую IT & AI Академию (9–16 лет).',
         exec_cta_audit: '📊 Читать полный аудит и питч →',
         exec_cta_wa: '💬 WhatsApp (+972-53-273-3777)',
         exec_p1_tag: 'Пункт 1',
         exec_p1_title: 'Усовершенствовать интернет-сайт для генерации лидов и учеников',
-        exec_p1_desc: 'Мультиязычный Next-Gen прототип (RU, עב, EN) со стандартами генеративного поиска GEO/AEO. Интерактивный калькулятор за 60 секунд рассчитывает ваучер до 80% (до 7 000 ₪) и армейский «Пикадон» с мгновенной отправкой в WhatsApp.',
-        exec_p1_link: 'Открыть Калькулятор Ваучера 80% →',
+        exec_p1_desc: 'Мультиязычный Next-Gen прототип (RU, עב, EN) со стандартами генеративного поиска GEO/AEO. Интерактивный калькулятор за 60 секунд рассчитывает субсидию/скидку до 80% (до 7 000 ₪) и армейский «Пикадон» с мгновенной отправкой в WhatsApp.',
+        exec_p1_link: 'Субсидия/скидка до 80% →',
         exec_p2_tag: 'Пункт 2',
         exec_p2_title: 'Удалённое обучение с AI-ассистентами и геймификацией алмазами',
-        exec_p2_desc: 'Студенты изучают теорию дома 24/7 с AI-ассистентом. План геймификации с алмазами: за каждое действие или выполнение задания учеником начисляется от 1 до 10 алмазов по сложности, баллы суммируются и проговариваются каждый второй диалог!',
+        exec_p2_desc: 'Студенты изучают теорию дома 24/7 с AI-ассистентом. До 60% времени преподавателя свободно, а геймификация с алмазами (от 1 до 10 за задание, озвучивание каждый 2-й диалог) открывает набор студентов по всей стране и в мире.',
         exec_p2_link: 'Смотреть демо геймификации в каталоге →',
         exec_p3_tag: 'Пункт 3',
         exec_p3_title: 'Прикладной AI, Вайб-кодинг с AI-инструментами + IT-архитектура',
         exec_p3_desc: 'Флагманский курс для реальных задач бизнеса: обучение вайб-кодингу с помощью AI-инструментов (Cursor, Claude, Antigravity, Copilot) + знание IT-архитектуры, создание персональных ботов и разработка решений для бизнеса.',
         exec_p3_link: 'Программа курса Прикладной AI →',
+        exec_p4_tag: 'Пункт 4',
+        exec_p4_title: 'Детская и подростковая IT & AI Академия (9–16 лет)',
+        exec_p4_desc: 'Вайб-кодинг, Roblox, Python и AI-мышление по методу Сократа (Ask Mia). Подготовка к элитным подразделениям 8200 и Мамрам, защита от когнитивной лени и еженедельный отчёт родителям.',
+        exec_p4_link: 'Программа Детской AI Академии →',
         exec_test_title: 'Мы предлагаем провести параллельный 20-дневный тест',
         exec_test_desc: 'Без остановки и без изменений на сайте newman.co.il. Направьте 20–30% трафика и оцените рост заявок (+25-35%).',
         exec_test_btn: 'Запустить 20-дневный тест (+25-35%)',
@@ -1483,29 +1567,34 @@
         brand_sub: 'תל אביב, דרך ההגנה 34 • מימון ממשלתי עד 80%–100% • 3331*',
                 nav_hub: 'דף ראשי',
         nav_courses: 'כל 40 הקורסים',
-        nav_offer: 'מחשבון שובר 80%',
+        nav_offer: 'סבסוד / הנחה עד 80%',
         nav_audit: 'ביקורת ואסטרטגיה',
         nav_hub_short: 'ראשי',
         nav_courses_short: '40 קורסים',
-        nav_offer_short: 'שובר 80%',
+        nav_offer_short: 'סבסוד 80%',
         nav_audit_short: 'ביקורת',
+        btn_consultation: 'ייעוץ אישי',
         exec_badge: '⚡ אסטרטגיית צמיחה 2026 • Newman Center',
-        exec_title: '3 מהלכים מרכזיים: גידול בהרשמות, עוזרי AI ווייב קודינג',
-        exec_desc: 'אנו מציעים לשדרג את האתר לגידול בפניות, להשיק למידה מרחוק עם עוזרי AI אישיים וגיימיפיקציה עם יהלומים, ולפתוח מסלול מוביל ב-AI יישומי, וייב קודינג וארכיטקטורת IT.',
+        exec_title: '4 מהלכים מרכזיים: פניות, עוזרי AI, וייב קודינג ואקדמיה לילדים',
+        exec_desc: 'אנו מציעים לשדרג את האתר לגידול בפניות, להשיק למידה מרחוק עם עוזרי AI אישיים וגיימיפיקציה, לפתוח מסלול מוביל ב-AI יישומי ווייב קודינג, ולהשיק אקדמיית AI לנוער וילדים (9–16).',
         exec_cta_audit: '📊 לקריאת דוח הביקורת והפנייה המלאה ←',
         exec_cta_wa: '💬 וואטסאפ (053-273-3777)',
         exec_p1_tag: 'סעיף 1',
         exec_p1_title: 'שדרוג אתר האינטרנט לייצור לידים ונרשמים',
-        exec_p1_desc: 'אב-טיפוס מהיר ותלת-לשוני עם תקני GEO/AEO. מחשבון שובר 80% (עד 7,000 ₪) ופיקדון חיילים ב-60 שניות עם פנייה ישירה ל-WhatsApp.',
-        exec_p1_link: 'לפתיחת מחשבון שובר 80% ←',
+        exec_p1_desc: 'אב-טיפוס מהיר ותלת-לשוני עם תקני GEO/AEO. מחשבון סבסוד/הנחה עד 80% (עד 7,000 ₪) ופיקדון חיילים ב-60 שניות עם פנייה ישירה ל-WhatsApp.',
+        exec_p1_link: 'סבסוד / הנחה עד 80% ←',
         exec_p2_tag: 'סעיף 2',
         exec_p2_title: 'למידה מרחוק עם עוזרי AI וגיימיפיקציה עם יהלומים',
-        exec_p2_desc: 'למידת תיאוריה מהבית 24/7 עם עוזר AI. תוכנית גיימיפיקציה עם יהלומים: 1 עד 10 יהלומים על כל משימה, צבירה והקראה קולית בכל דיאלוג שני!',
+        exec_p2_desc: 'למידת תיאוריה מהבית 24/7 עם עוזר AI. עד 60% מזמן המרצה מתפנה, וגיימיפיקציה (1 עד 10 יהלומים) פותחת גיוס תלמידים בכל הארץ ובעולם.',
         exec_p2_link: 'צפייה בהדגמת גיימיפיקציה בקטלוג ←',
         exec_p3_tag: 'סעיף 3',
         exec_p3_title: 'AI יישומי, וייב קודינג עם כלי AI וארכיטקטורת IT',
         exec_p3_desc: 'מסלול מוביל לצרכים עסקיים אמיתיים: לימוד וייב קודינג באמצעות כלי AI מובילים (Cursor, Claude, Antigravity, Copilot) + ידע בארכיטקטורת IT, בניית בוטים ופתרונות חכמים.',
         exec_p3_link: 'סילבוס קורס AI יישומי ←',
+        exec_p4_tag: 'סעיף 4',
+        exec_p4_title: 'אקדמיית IT & AI לילדים ונוער (גילאי 9–16)',
+        exec_p4_desc: 'וייב קודינג, פיתוח משחקים ב-Roblox ו-Python וחשיבת AI בשיטת סוקרטס (Ask Mia). הכנה ליחידות 8200 וממר"ם, מניעת ניוון קוגניטיבי ודוח שבועי להורים.',
+        exec_p4_link: 'תוכנית אקדמיית ה-AI לילדים ←',
         exec_test_title: 'אנו מציעים לקיים פיילוט מקביל למשך 20 ימים',
         exec_test_desc: 'ללא שינוי באתר newman.co.il. הפנו 20%–30% מתנועת הפרסום ומדדו את הזינוק בפניות (+25-35%).',
         exec_test_btn: 'להפעלת פיילוט 20 ימים (+25-35%)',
@@ -1635,29 +1724,34 @@
         brand_sub: 'Tel Aviv, Derech HaHagana 34 • Up to 80%–100% Gov Funding • 1-800-22-06-07 / +972-3-560-30-46',
                 nav_hub: 'Home',
         nav_courses: 'All 40 Courses',
-        nav_offer: '80% Voucher Calculator',
+        nav_offer: 'Up to 80% Subsidy / Discount',
         nav_audit: 'Audit & Strategy',
         nav_hub_short: 'Home',
         nav_courses_short: '40 Courses',
-        nav_offer_short: 'Voucher 80%',
+        nav_offer_short: '80% Subsidy',
         nav_audit_short: 'Audit',
+        btn_consultation: 'Consultation',
         exec_badge: '⚡ Growth Strategy 2026 • Newman Center',
-        exec_title: '3 Core Decisions: Lead Flow, AI Assistants & Vibe Coding',
-        exec_desc: 'We propose upgrading the website to surge lead volume, launching remote learning with 24/7 personal AI assistants and diamond gamification, and introducing flagship coursework in Applied AI, Vibe Coding, and IT Architecture.',
+        exec_title: '4 Core Strategic Pillars: Leads, AI Tutors, Vibe Coding & Kids Academy',
+        exec_desc: 'We propose upgrading the site for rapid lead growth, launching remote learning with 24/7 personal AI assistants and gamification, opening flagship courses in Applied AI and Vibe Coding, and rolling out the Kids & Teens IT & AI Academy (Ages 9–16).',
         exec_cta_audit: '📊 Read Full Audit & Executive Pitch →',
         exec_cta_wa: '💬 WhatsApp (+972-53-273-3777)',
         exec_p1_tag: 'Point 1',
         exec_p1_title: 'Upgrading the Website to Drive Leads & Enrollments',
-        exec_p1_desc: 'High-speed 3-language prototype (RU, HE, EN) built for GEO/AEO generative search. 60-second interactive calculator for 80% voucher (up to 7,000 ILS) and IDF Pikadon routing straight to WhatsApp.',
-        exec_p1_link: 'Open 80% Voucher Calculator →',
+        exec_p1_desc: 'High-speed 3-language prototype (RU, HE, EN) built for GEO/AEO generative search. 60-second interactive calculator for up to 80% subsidy/discount (up to 7,000 ILS) and IDF Pikadon routing straight to WhatsApp.',
+        exec_p1_link: 'Up to 80% Subsidy / Discount →',
         exec_p2_tag: 'Point 2',
         exec_p2_title: 'Remote Learning with AI Assistants & Diamond Gamification',
-        exec_p2_desc: 'Students master theory 24/7 from home with AI assistants. Diamond gamification plan: 1 to 10 diamonds awarded per milestone based on difficulty, aggregated and voiced every second dialogue!',
+        exec_p2_desc: 'Students master theory 24/7 from home with AI assistants. Up to 60% of instructor time freed, while diamond gamification (1 to 10 per task) opens enrollment across Israel and worldwide.',
         exec_p2_link: 'View Gamification Demo in Catalog →',
         exec_p3_tag: 'Point 3',
         exec_p3_title: 'Applied AI, Vibe Coding with AI Tools & IT Architecture',
         exec_p3_desc: 'Flagship curriculum for business needs: hands-on vibe coding with AI tools (Cursor, Claude, Antigravity, Copilot) + IT architecture knowledge, building custom bots, and business automation.',
         exec_p3_link: 'Applied AI Syllabus & Details →',
+        exec_p4_tag: 'Point 4',
+        exec_p4_title: 'Kids & Teens IT & AI Academy (Ages 9–16)',
+        exec_p4_desc: 'Vibe coding, Roblox & Python game dev, and Socratic AI thinking (Ask Mia). Elite IDF 8200 & Mamram prep, cognitive offloading protection, and weekly progress reports for parents.',
+        exec_p4_link: 'Kids AI Academy Program →',
         exec_test_title: 'We Propose Conducting a Parallel 20-Day Pilot Test',
         exec_test_desc: 'Zero disruption to newman.co.il. Route 20%–30% of current ad traffic and measure lead surge (+25-35%).',
         exec_test_btn: 'Launch 20-Day Pilot (+25-35%)',
